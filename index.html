@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuralLift - Brain Energy Optimization | Dr. B.D., MD</title>
+    <meta name="description" content="Brain energy optimization through therapeutic ketosis. Supplement recommendations and SKLeTT Protocol coaching with Dr. B.D., practicing physician with 30+ years experience.">
+    
+    <!-- MailerLite Universal -->
+    <script>
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '1078798');
+    </script>
+    <!-- End MailerLite Universal -->
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #ffffff;
+        }
+        
+        .disclaimer-bar {
+            background: #1a1a2e;
+            color: #f39c12;
+            padding: 12px 20px;
+            text-align: center;
+            font-size: 14px;
+            border-bottom: 3px solid #f39c12;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 80px 20px 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(243, 156, 18, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3.5em;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #ecf0f1;
+            font-weight: 300;
+        }
+        
+        .hero .tagline {
+            font-size: 1.3em;
+            color: #f39c12;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        
+        .hero .credentials {
+            font-size: 1.1em;
+            color: #bdc3c7;
+            margin-bottom: 40px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #f39c12;
+            color: #1a1a2e;
+            padding: 18px 45px;
+            font-size: 1.2em;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+            border: 3px solid #f39c12;
+        }
+        
+        .cta-button:hover {
+            background: transparent;
+            color: #f39c12;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(243, 156, 18, 0.3);
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 80px 20px;
+        }
+        
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #1a1a2e;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2em;
+            color: #7f8c8d;
+            margin-bottom: 50px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Two Path Section */
+        .two-paths {
+            background: #f8f9fa;
+        }
+        
+        .paths-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .path-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .path-card h3 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #1a1a2e;
+        }
+        
+        .path-card p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        
+        .path-highlight {
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        /* Supplements Section */
+        .supplements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .supplement-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s;
+        }
+        
+        .supplement-card:hover {
+            border-color: #f39c12;
+            box-shadow: 0 8px 25px rgba(243, 156, 18, 0.2);
+            transform: translateY(-5px);
+        }
+        
+        .supplement-card h3 {
+            font-size: 1.8em;
+            color: #1a1a2e;
+            margin-bottom: 15px;
+        }
+        
+        .supplement-tag {
+            display: inline-block;
+            background: #f39c12;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        
+        .supplement-card ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .supplement-card li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .supplement-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #f39c12;
+            font-weight: bold;
+        }
+        
+        .supplement-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 30px;
+            background: #1a1a2e;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+        
+        .supplement-link:hover {
+            background: #f39c12;
+            color: #1a1a2e;
+        }
+        
+        /* About Section */
+        .about {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+        }
+        
+        .about h2 {
+            color: white;
+        }
+        
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+        
+        .about-content p {
+            margin-bottom: 25px;
+        }
+        
+        .location-note {
+            background: rgba(243, 156, 18, 0.2);
+            border-left: 4px solid #f39c12;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .location-note strong {
+            color: #f39c12;
+            font-size: 1.1em;
+        }
+        
+        /* SKLeTT Section */
+        .sklett {
+            background: #f8f9fa;
+        }
+        
+        .sklett-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .who-for-box {
+            background: white;
+            border-left: 5px solid #27ae60;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .who-not-box {
+            background: white;
+            border-left: 5px solid #e74c3c;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .who-for-box h3,
+        .who-not-box h3 {
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .who-for-box ul,
+        .who-not-box ul {
+            list-style: none;
+        }
+        
+        .who-for-box li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .who-for-box li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        .who-not-box li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .who-not-box li:before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        /* Truth Section */
+        .hard-truth {
+            background: #1a1a2e;
+            color: white;
+            padding: 60px 40px;
+            border-radius: 12px;
+            margin: 50px 0;
+        }
+        
+        .hard-truth h3 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #f39c12;
+        }
+        
+        /* Case Studies */
+        .case-studies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .case-study {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 5px solid #f39c12;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .case-study-header {
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        
+        .case-study p {
+            font-style: italic;
+            color: #555;
+            line-height: 1.7;
+        }
+        
+        /* Legal Section */
+        .legal {
+            background: #ecf0f1;
+            padding: 50px 20px;
+        }
+        
+        .legal-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 0.95em;
+            color: #555;
+        }
+        
+        .legal h3 {
+            color: #1a1a2e;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .legal p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a1a2e;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2em;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.2em;
+            }
+            
+            .hero .tagline {
+                font-size: 1.1em;
+            }
+            
+            section h2 {
+                font-size: 2em;
+            }
+            
+            .supplements-grid,
+            .paths-container,
+            .case-studies-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Disclaimer Bar -->
+    <div class="disclaimer-bar">
+        ⚠️ EDUCATIONAL COACHING ONLY - NOT MEDICAL ADVICE | Dr. B.D. provides health optimization coaching and education. For medical treatment in New York, in-office appointments available. Online coaching does not constitute medical treatment. Consult your physician before making dietary or supplement changes.
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Optimize Your Brain Energy.<br>Restore Your Mental Edge.</h1>
+            <p class="subtitle">Evidence-Based Brain Energy Optimization Through Therapeutic Ketosis</p>
+            <p class="tagline">Two Pathways: Simple Supplements or Complete Protocol Coaching</p>
+            <p class="credentials">Dr. B.D., MD | Practicing Physician | 30+ Years Experience<br>Metabolic Medicine & Brain Energy Optimization</p>
+            <a href="mailto:b-d@nebula.me?subject=NeuralLift%20Inquiry" class="cta-button">Request Discovery Call</a>
+        </div>
+    </section>
+
+    <!-- Two Paths Section -->
+    <section class="two-paths">
+        <div class="container">
+            <h2>Choose Your Path to Better Brain Energy</h2>
+            <p class="section-subtitle">Whether you want simple supplement recommendations or comprehensive protocol coaching, there's a path for you.</p>
+            
+            <div class="paths-container">
+                <!-- Path 1: Supplements -->
+                <div class="path-card">
+                    <h3>Path 1: Quick Start</h3>
+                    <div class="path-highlight">Simple Supplement Recommendations</div>
+                    <p><strong>For anyone experiencing:</strong></p>
+                    <ul style="text-align: left; margin: 20px 0;">
+                        <li>Brain fog or mental fatigue</li>
+                        <li>Afternoon energy crashes</li>
+                        <li>Difficulty focusing</li>
+                        <li>Memory concerns</li>
+                        <li>Low brain energy</li>
+                    </ul>
+                    <p>Get started with evidence-based supplements that support brain energy metabolism. Easy to implement, no complicated protocols.</p>
+                    <a href="#supplements" class="cta-button" style="font-size: 1em; padding: 12px 25px;">Explore Supplements</a>
+                </div>
+                
+                <!-- Path 2: SKLeTT -->
+                <div class="path-card" style="border: 3px solid #f39c12;">
+                    <h3>Path 2: Transformation</h3>
+                    <div class="path-highlight">SKLeTT Protocol Coaching</div>
+                    <p><strong>For high-performers who want:</strong></p>
+                    <ul style="text-align: left; margin: 20px 0;">
+                        <li>Measurable cognitive enhancement</li>
+                        <li>Sustained mental clarity</li>
+                        <li>Competitive performance edge</li>
+                        <li>Precision brain optimization</li>
+                        <li>Therapeutic ketone levels (2.0-4.0 mmol/L)</li>
+                    </ul>
+                    <p>Comprehensive coaching program for achieving therapeutic ketosis. Requires discipline and commitment. Real results.</p>
+                    <a href="#sklett" class="cta-button" style="font-size: 1em; padding: 12px 25px;">Learn About SKLeTT</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supplements Section -->
+    <section id="supplements">
+        <div class="container">
+            <h2>Brain Energy Supplement Guide</h2>
+            <p class="section-subtitle">Evidence-based supplements for brain energy optimization. From beginner-friendly ketone sources to advanced mitochondrial support.</p>
+            
+            <!-- Supplement Categories Teaser -->
+            <div class="supplements-grid">
+                <!-- Category 1: Ketone Sources -->
+                <div class="supplement-card">
+                    <span class="supplement-tag">CATEGORY 1</span>
+                    <h3>Ketone Sources</h3>
+                    <p><strong>Direct Brain Fuel</strong></p>
+                    <ul>
+                        <li>MCT Oil (C8/Brain Octane)</li>
+                        <li>Exogenous Ketone Esters</li>
+                        <li>Ketone Salts</li>
+                        <li>Immediate cognitive boost</li>
+                        <li>No dietary changes required</li>
+                    </ul>
+                    <p style="margin-top: 15px; color: #555;">Raises blood ketone levels naturally or directly for instant brain energy enhancement.</p>
+                </div>
+                
+                <!-- Category 2: Mitochondrial Support -->
+                <div class="supplement-card">
+                    <span class="supplement-tag">CATEGORY 2</span>
+                    <h3>Mitochondrial Support</h3>
+                    <p><strong>Cellular Energy Production</strong></p>
+                    <ul>
+                        <li>Ubiquinol (CoQ10)</li>
+                        <li>PQQ (Pyrroloquinoline Quinone)</li>
+                        <li>Alpha-Lipoic Acid</li>
+                        <li>Supports ATP production</li>
+                        <li>Protects mitochondria from damage</li>
+                    </ul>
+                    <p style="margin-top: 15px; color: #555;">Optimize the cellular powerhouses that generate energy for your brain.</p>
+                </div>
+                
+                <!-- Category 3: Brain Optimization -->
+                <div class="supplement-card">
+                    <span class="supplement-tag">CATEGORY 3</span>
+                    <h3>Brain Optimization</h3>
+                    <p><strong>Cognitive Enhancement</strong></p>
+                    <ul>
+                        <li>Omega-3 Fish Oil (DHA/EPA)</li>
+                        <li>Creatine Monohydrate</li>
+                        <li>Acetyl-L-Carnitine</li>
+                        <li>Supports brain structure</li>
+                        <li>Enhances memory and focus</li>
+                    </ul>
+                    <p style="margin-top: 15px; color: #555;">Build and maintain optimal brain health for long-term cognitive performance.</p>
+                </div>
+                
+                <!-- Category 4: Measurement Tools -->
+                <div class="supplement-card">
+                    <span class="supplement-tag">CATEGORY 4</span>
+                    <h3>Measurement & Tracking</h3>
+                    <p><strong>Data-Driven Optimization</strong></p>
+                    <ul>
+                        <li>Blood Ketone Meter</li>
+                        <li>Glucose Meter</li>
+                        <li>Test strips</li>
+                        <li>Track your progress</li>
+                        <li>Optimize supplement dosing</li>
+                    </ul>
+                    <p style="margin-top: 15px; color: #555;">Essential for SKLeTT Protocol. Verify your results with precision measurement.</p>
+                </div>
+            </div>
+            
+            <!-- Lead Magnet CTA -->
+            <div style="background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); color: white; padding: 50px 40px; margin-top: 60px; border-radius: 12px; text-align: center;">
+                <h3 style="font-size: 2.2em; margin-bottom: 20px; color: white;">Get The Complete Supplement Guide</h3>
+                <p style="font-size: 1.3em; margin-bottom: 15px; line-height: 1.6;">Download the full Brain Energy Supplement Guide with:</p>
+                <ul style="list-style: none; font-size: 1.2em; margin: 30px 0; line-height: 2;">
+                    <li>✓ Specific brand recommendations</li>
+                    <li>✓ Precise dosing protocols</li>
+                    <li>✓ Optimal timing and stacking</li>
+                    <li>✓ Scientific rationale for each supplement</li>
+                    <li>✓ Where to buy (with affiliate links)</li>
+                </ul>
+                <button onclick="ml('show', '6KyA5S', true)" class="cta-button" style="background: white; color: #1a1a2e; font-size: 1.2em; padding: 18px 45px; cursor: pointer; border: none;">Download Free Guide Now</button>
+                <p style="margin-top: 20px; font-size: 0.95em; opacity: 0.9;">Free PDF • Evidence-Based • Physician-Curated</p>
+            </div>
+            
+            <div style="background: #fff3cd; border-left: 4px solid #f39c12; padding: 20px; margin-top: 40px; border-radius: 8px;">
+                <p><strong>Important Supplement Guidance:</strong></p>
+                <p style="margin-top: 10px;">These are educational recommendations for brain energy optimization, not medical prescriptions. Always discuss supplements with your physician before use, especially if you have medical conditions or take medications. The complete guide includes affiliate links that support this educational content.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Dr. B.D. Section -->
+    <section class="about">
+        <div class="container">
+            <h2>About Dr. B.D.</h2>
+            <div class="about-content">
+                <p>I'm a practicing physician with over 30 years of medical experience. Early in my career, I was on the conventional surgical training pathway, but I realized something: I was more passionate about prevention and metabolic health than procedures.</p>
+                
+                <p>Weight loss, brain energy optimization, and metabolic medicine fascinated me far more than the operating room. So I transitioned to research and metabolic medicine, dedicating years to studying therapeutic ketosis, brain energy metabolism, and nutritional interventions.</p>
+                
+                <p>Today, I continue to practice medicine while also coaching individuals who want to optimize their cognitive function and metabolic health through evidence-based interventions that go beyond conventional approaches.</p>
+                
+                <div class="location-note">
+                    <p><strong>Two Ways to Work Together:</strong></p>
+                    <p style="margin-top: 15px;"><strong>1. In-Office Medical Care (New York):</strong> If you're in the New York area or willing to travel, you can become my patient. I can provide full medical treatment, prescribe medications, and manage your care comprehensively as your physician.</p>
+                    <p style="margin-top: 15px;"><strong>2. Online Health Optimization Coaching (All Locations):</strong> For those outside New York or preferring remote support, I offer educational coaching on brain energy optimization and therapeutic ketosis protocols. This is coaching and education, not medical treatment. You'll need to work with your local physician for medical care while I guide you through the optimization process.</p>
+                </div>
+                
+                <p>I focus on results. I've seen patients in their 90s regain cognitive function. High-performers restore their mental edge. Individuals with chronic brain fog find sustained clarity—all through precise metabolic interventions.</p>
+                
+                <p>This is medicine and coaching done differently. This is NeuralLift.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKLeTT Protocol Section -->
+    <section id="sklett" class="sklett">
+        <div class="container">
+            <h2>The SKLeTT Protocol</h2>
+            <p class="section-subtitle">Precision brain energy optimization through therapeutic ketosis. This isn't a diet—it's a metabolic intervention for high-performers.</p>
+            
+            <div class="sklett-content">
+                <p style="font-size: 1.2em; margin-bottom: 30px;">You'll learn to achieve and maintain therapeutic ketone levels (2.0-4.0 mmol/L BHB)—the zone where your brain operates at peak efficiency.</p>
+                
+                <div class="who-for-box">
+                    <h3>WHO THIS IS FOR:</h3>
+                    <ul>
+                        <li>High-performers who want their mental edge back</li>
+                        <li>Executives who need sustained focus and clarity</li>
+                        <li>Entrepreneurs optimizing for competitive advantage</li>
+                        <li>Professionals experiencing cognitive decline</li>
+                        <li>Anyone willing to do what most people won't</li>
+                        <li>Those who value results over comfort</li>
+                    </ul>
+                </div>
+                
+                <div class="who-not-box">
+                    <h3>WHO THIS IS NOT FOR:</h3>
+                    <ul>
+                        <li>People looking for easy solutions</li>
+                        <li>Those unwilling to change eating patterns</li>
+                        <li>Anyone expecting results without commitment</li>
+                        <li>People seeking medical treatment without physician involvement</li>
+                        <li>Those who prioritize food comfort over results</li>
+                    </ul>
+                </div>
+                
+                <div class="hard-truth">
+                    <h3>The Hard Truth About Therapeutic Ketosis</h3>
+                    <p style="font-size: 1.1em; line-height: 1.8;">Let me be honest with you.</p>
+                    <p style="font-size: 1.1em; line-height: 1.8; margin-top: 15px;">I've encountered people who were bedridden, on oxygen, unable to leave their homes—people who SHOULD have been desperate for change. You know what many of them chose? Their old eating patterns over their health. Food comfort over freedom.</p>
+                    <p style="font-size: 1.1em; line-height: 1.8; margin-top: 15px;">That's why I focus on high-performers. You're already successful. You do hard things regularly. You're willing to invest in yourself. You value measurable results over temporary comfort.</p>
+                    <p style="font-size: 1.1em; line-height: 1.8; margin-top: 15px;">The initiation is intense. The discipline is real. But the results? Game-changing.</p>
+                    <p style="font-size: 1.1em; line-height: 1.8; margin-top: 15px;">If you want easy, this isn't it. If you want EFFECTIVE, keep reading.</p>
+                </div>
+                
+                <div style="text-align: center; margin-top: 50px;">
+                    <a href="mailto:b-d@nebula.me?subject=SKLeTT%20Protocol%20Inquiry" class="cta-button">Request SKLeTT Discovery Call</a>
+                    <p style="margin-top: 20px; color: #777; font-size: 0.95em;">During our call, we'll discuss your goals, determine if SKLeTT is right for you,<br>and clarify whether you're seeking in-office medical care or online coaching.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section style="background: #f8f9fa;">
+        <div class="container">
+            <h2>Real Results from Real People</h2>
+            <p class="section-subtitle">High-performers using therapeutic ketosis for cognitive optimization</p>
+            
+            <div class="case-studies-grid">
+                <div class="case-study">
+                    <div class="case-study-header">Michael, 52 - Tech Executive</div>
+                    <p>"I was forgetting details in meetings. My team noticed. I needed my edge back. Within 3 weeks on SKLeTT, I hit 2.5 mmol/L BHB consistently. My focus is sharper than it's been in a decade. I'm back."</p>
+                </div>
+                
+                <div class="case-study">
+                    <div class="case-study-header">Sarah, 38 - Startup Founder</div>
+                    <p>"I compete in a brutal industry. Cognitive performance IS my competitive advantage. SKLeTT gave me sustained mental energy without crashes. I'm outthinking competitors half my age."</p>
+                </div>
+                
+                <div class="case-study">
+                    <div class="case-study-header">James, 45 - Investor</div>
+                    <p>"I've tried every biohack. Cold plunges, red light, nootropics. Nothing compared to therapeutic ketosis. Dr. B.D. taught me precision—not just 'keto,' but MEASURED brain energy optimization. Game changer."</p>
+                </div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 30px; color: #777; font-style: italic;">*Individual results may vary. These are real experiences from coaching clients, not guaranteed outcomes.</p>
+        </div>
+    </section>
+
+    <!-- Legal Disclaimer Section -->
+    <section class="legal">
+        <div class="container">
+            <div class="legal-content">
+                <h3>Important Legal Disclosures</h3>
+                
+                <p><strong>Medical Practice vs. Health Coaching:</strong> Dr. B.D. is a licensed practicing physician in New York. For individuals in the New York area who wish to establish a doctor-patient relationship, in-office medical care is available, including medical treatment, prescriptions, and comprehensive health management.</p>
+                
+                <p>For individuals outside New York or those preferring remote support, Dr. B.D. offers health optimization coaching and education. This online coaching does NOT constitute medical treatment, does NOT create a doctor-patient relationship, and is NOT a substitute for medical care from your licensed physician.</p>
+                
+                <p><strong>Not Medical Advice:</strong> Information provided through NeuralLift's website, emails, and educational materials is for informational and educational purposes only. It is not intended as medical advice, diagnosis, or treatment. Always consult with your qualified healthcare provider before making any dietary changes, starting supplements, or beginning any health optimization program.</p>
+                
+                <p><strong>Supplement Recommendations:</strong> Supplement suggestions are educational recommendations, not medical prescriptions. Discuss all supplements with your physician before use, especially if you have medical conditions, take medications, or are pregnant/nursing.</p>
+                
+                <p><strong>Therapeutic Ketosis Cautions:</strong> Therapeutic ketosis is not appropriate for everyone. Contraindications include certain medical conditions, medications, pregnancy, and breastfeeding. The SKLeTT Protocol requires medical supervision from YOUR licensed physician. Dr. B.D.'s online coaching supplements—but does not replace—care from your doctor.</p>
+                
+                <p><strong>Results Disclaimer:</strong> Results from SKLeTT Protocol and supplement recommendations vary by individual. Testimonials represent individual experiences and are not guarantees of similar outcomes. Your results depend on many factors including baseline health, compliance, medical conditions, and individual metabolism.</p>
+                
+                <p><strong>Affiliate Disclosure:</strong> NeuralLift may earn commissions from affiliate links to supplement products. These commissions support educational content creation and do not influence recommendations, which are based solely on clinical evidence and Dr. B.D.'s professional judgment.</p>
+                
+                <p><strong>No Guarantees:</strong> Dr. B.D. and NeuralLift make no guarantees regarding health outcomes, cognitive improvements, weight loss, or any other results from coaching programs or supplement recommendations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 NeuralLift | Dr. B.D., MD</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Health Optimization Coaching | In-Office Medical Care (NY) | Brain Energy Education</p>
+            <p style="margin-top: 15px;"><a href="mailto:b-d@nebula.me" style="color: #f39c12; text-decoration: none;">b-d@nebula.me</a></p>
+        </div>
+    </footer>
+</body>
+</html>
