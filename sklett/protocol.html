@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The SKLeTT Protocol – Specific Ketone Level Titration Therapy</title>
+    <title>The SKLeTT Protocol &#8211; Specific Ketone Level Titration Therapy</title>
     <style>
         * {
             margin: 0;
@@ -122,35 +122,71 @@
             border-radius: 4px;
         }
         
-        .citation {
-            font-size: 0.9em;
-            color: #7f8c8d;
-            font-style: italic;
-            margin-top: 5px;
+        .success-box {
+            background: #eafaf1;
+            border-left: 5px solid #27ae60;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th {
+            background: #2c3e50;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        td {
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+        }
+        
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .phase-box {
+            background: #f8f9fa;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        
+        .phase-box h3 {
+            color: #2980b9;
+            margin-top: 0;
         }
         
         a {
             color: #3498db;
             text-decoration: none;
-            border-bottom: 1px dotted #3498db;
         }
         
         a:hover {
             color: #2980b9;
-            border-bottom: 1px solid #2980b9;
+            text-decoration: underline;
         }
         
-        strong {
-            color: #2c3e50;
-            font-weight: 600;
+        .citation {
+            font-size: 0.85em;
+            color: #7f8c8d;
+            font-style: italic;
         }
         
         .toc {
             background: #f8f9fa;
+            border-left: 4px solid #3498db;
             padding: 25px;
             margin: 30px 0;
-            border-radius: 6px;
-            border: 1px solid #dee2e6;
+            border-radius: 4px;
         }
         
         .toc h3 {
@@ -158,73 +194,85 @@
             color: #2c3e50;
         }
         
-        .toc ul {
-            margin-left: 0;
-            list-style-position: inside;
+        .toc ol {
+            margin: 10px 0 0 20px;
         }
         
-        .section-number {
-            color: #3498db;
-            font-weight: 600;
-            margin-right: 8px;
+        .toc li {
+            margin: 6px 0;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 50px 0;
+        }
+        
+        .cta-section h3 {
+            color: #f39c12;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        
+        .cta-section p {
+            color: #ecf0f1;
+            font-size: 1.1em;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #f39c12;
+            color: #1a1a2e;
+            padding: 16px 40px;
+            font-size: 1.1em;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: #e67e22;
+            color: #1a1a2e;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #ecf0f1;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 0.9em;
         }
         
         @media (max-width: 768px) {
-            .container {
-                padding: 25px;
-            }
-            
-            h1 {
-                font-size: 1.8em;
-            }
-            
-            h2 {
-                font-size: 1.5em;
-            }
-        }
-        
-        .faq-section {
-            margin-top: 50px;
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 8px;
-        }
-        
-        .faq-item {
-            margin-bottom: 30px;
-            background: white;
-            padding: 20px;
-            border-radius: 6px;
-            border-left: 4px solid #3498db;
-        }
-        
-        .faq-question {
-            font-size: 1.2em;
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 12px;
-        }
-        
-        .faq-answer {
-            color: #34495e;
-            line-height: 1.7;
+            .container { padding: 25px; }
+            h1 { font-size: 1.8em; }
+            h2 { font-size: 1.5em; }
+            table { font-size: 0.85em; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>
-                The SKLeTT Protocol
+            <h1>The SKLeTT Protocol
                 <span class="acronym">Specific Ketone Level Titration Therapy</span>
             </h1>
-            <p class="subtitle">A Physician-Supervised Program for Brain Energy Optimization Through Therapeutic Ketosis</p>
-            <p class="author">Developed by Dr. B.D., M.D. | 30+ Years Clinical Experience</p>
+            <p class="subtitle">A Physician-Supervised Program for Therapeutic Ketosis &amp; Brain Energy Optimization</p>
+            <p class="author">Dr. B.D., MD | Practicing Physician | 30+ Years Experience</p>
         </header>
 
         <div class="toc">
             <h3>Table of Contents</h3>
-            <ul>
+            <ol>
                 <li><a href="#overview">Protocol Overview</a></li>
                 <li><a href="#what-is-sklett">What Makes SKLeTT Different</a></li>
                 <li><a href="#target-ketone">Target Ketone Levels</a></li>
@@ -235,239 +283,232 @@
                 <li><a href="#nutrition">Nutrition Guidelines</a></li>
                 <li><a href="#electrolytes">Electrolyte Protocol</a></li>
                 <li><a href="#exercise">Exercise Guidance</a></li>
-                <li><a href="#monitoring">Monitoring & Tracking</a></li>
+                <li><a href="#monitoring">Monitoring &amp; Tracking</a></li>
                 <li><a href="#medications">Medication Considerations</a></li>
-                <li><a href="#contraindications">Contraindications & Safety</a></li>
+                <li><a href="#contraindications">Contraindications &amp; Safety</a></li>
                 <li><a href="#faq">Frequently Asked Questions</a></li>
                 <li><a href="#next-steps">Getting Started</a></li>
-            </ul>
+            </ol>
         </div>
 
         <section id="overview">
-            <h2><span class="section-number">1.</span> Protocol Overview</h2>
-            <p>The SKLeTT Protocol is a physician-supervised therapeutic ketosis program designed to achieve and maintain blood ketone levels ≥4.0 mmol/L—the threshold at which significant neurological and metabolic benefits occur.</p>
-            
-            <p>Unlike typical ketogenic diets that aim for mild ketosis (0.5–2.0 mmol/L), SKLeTT targets <strong>therapeutic ketosis</strong> (4.0–6.0 mmol/L), comparable to levels achieved through prolonged fasting but sustained through strategic nutrition and medical oversight.</p>
-            
+            <h2>1. Protocol Overview</h2>
+            <p>The SKLeTT Protocol is a physician-supervised therapeutic ketosis program designed to achieve and maintain blood ketone levels &#8805;4.0 mmol/L&#8212;the threshold at which significant neurological and metabolic benefits occur.</p>
+
+            <p>Unlike typical ketogenic diets that aim for mild ketosis (0.5&#8211;2.0 mmol/L), SKLeTT targets <strong>therapeutic ketosis</strong> (4.0&#8211;6.0 mmol/L), comparable to levels achieved through prolonged fasting but sustained through strategic nutrition and medical oversight.</p>
+
             <div class="highlight-box">
-                <strong>Key Distinction:</strong> Therapeutic ketosis (4.0+ mmol/L) is NOT the same as diabetic ketoacidosis (DKA). DKA occurs when ketones exceed 10–15 mmol/L in the absence of insulin, combined with hyperglycemia. SKLeTT protocols maintain ketones in a safe, beneficial range with normal blood glucose control.
+                <strong>Key Distinction:</strong> Therapeutic ketosis (4.0+ mmol/L) is NOT the same as diabetic ketoacidosis (DKA). DKA occurs when ketones exceed 10&#8211;15 mmol/L in the absence of insulin, combined with hyperglycemia. SKLeTT protocols maintain ketones in a safe, beneficial range with normal blood glucose control.
             </div>
         </section>
 
         <section id="what-is-sklett">
-            <h2><span class="section-number">2.</span> What Makes SKLeTT Different</h2>
-            
+            <h2>2. What Makes SKLeTT Different</h2>
             <h3>Not Just Another "Keto Diet"</h3>
             <p>The SKLeTT Protocol differs from popular ketogenic diets in several critical ways:</p>
-            
             <ul>
-                <li><strong>Precise Ketone Targets:</strong> We aim for ≥4.0 mmol/L, not "just getting into ketosis"</li>
+                <li><strong>Precise Ketone Targets:</strong> We aim for &#8805;4.0 mmol/L, not "just getting into ketosis"</li>
                 <li><strong>Medical Supervision:</strong> Required physician oversight, especially for those on medications</li>
-                <li><strong>Honest Timeline:</strong> We acknowledge the difficult first 2 weeks and the 4–8 week adaptation period</li>
+                <li><strong>Honest Timeline:</strong> We acknowledge the difficult first 2 weeks and the 4&#8211;8 week adaptation period</li>
                 <li><strong>Evidence-Based:</strong> Built on 60+ peer-reviewed studies on therapeutic ketosis</li>
                 <li><strong>Comprehensive Support:</strong> Daily ketone tracking, weekly check-ins, electrolyte protocol, medication adjustment</li>
-                <li><strong>Exit Strategy:</strong> Planned transition after 1–3 months with long-term maintenance guidance</li>
+                <li><strong>Exit Strategy:</strong> Planned transition after 1&#8211;3 months with long-term maintenance guidance</li>
             </ul>
         </section>
 
         <section id="target-ketone">
-            <h2><span class="section-number">3.</span> Target Ketone Levels</h2>
-            
-            <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
-                <thead>
-                    <tr style="background: #3498db; color: white;">
-                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Ketone Level (mmol/L)</th>
-                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Classification</th>
-                        <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Typical Context</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="padding: 10px; border: 1px solid #ddd;">0.0–0.5</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">Not in ketosis</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">Standard diet</td>
-                    </tr>
-                    <tr style="background: #f8f9fa;">
-                        <td style="padding: 10px; border: 1px solid #ddd;">0.5–1.5</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">Light ketosis</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">Low-carb diet, light fasting</td>
-                    </tr>
-                    <tr>
-                        <td style="padding: 10px; border: 1px solid #ddd;">1.5–3.0</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">Nutritional ketosis</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">Typical "keto diet"</td>
-                    </tr>
-                    <tr style="background: #ebf5fb;">
-                        <td style="padding: 10px; border: 1px solid #ddd;"><strong>4.0–6.0</strong></td>
-                        <td style="padding: 10px; border: 1px solid #ddd;"><strong>Therapeutic ketosis</strong></td>
-                        <td style="padding: 10px; border: 1px solid #ddd;"><strong>SKLeTT Protocol target</strong></td>
-                    </tr>
-                    <tr style="background: #fef5e7;">
-                        <td style="padding: 10px; border: 1px solid #ddd;">6.0–10.0</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">Deep ketosis</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">Extended fasting (requires monitoring)</td>
-                    </tr>
-                    <tr style="background: #fadbd8;">
-                        <td style="padding: 10px; border: 1px solid #ddd;">>10.0</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">Ketoacidosis risk</td>
-                        <td style="padding: 10px; border: 1px solid #ddd;">Medical emergency (diabetics)</td>
-                    </tr>
-                </tbody>
+            <h2>3. Target Ketone Levels</h2>
+            <table>
+                <tr>
+                    <th>Ketone Level (mmol/L)</th>
+                    <th>Classification</th>
+                    <th>Typical Context</th>
+                </tr>
+                <tr>
+                    <td>0.0&#8211;0.5</td>
+                    <td>Not in ketosis</td>
+                    <td>Standard diet</td>
+                </tr>
+                <tr>
+                    <td>0.5&#8211;1.5</td>
+                    <td>Light ketosis</td>
+                    <td>Low-carb diet, light fasting</td>
+                </tr>
+                <tr>
+                    <td>1.5&#8211;3.0</td>
+                    <td>Nutritional ketosis</td>
+                    <td>Typical "keto diet"</td>
+                </tr>
+                <tr style="background: #ebf5fb; font-weight: bold;">
+                    <td>4.0&#8211;6.0</td>
+                    <td>Therapeutic ketosis</td>
+                    <td>SKLeTT Protocol target</td>
+                </tr>
+                <tr>
+                    <td>6.0&#8211;10.0</td>
+                    <td>Deep ketosis</td>
+                    <td>Extended fasting (requires monitoring)</td>
+                </tr>
+                <tr style="background: #fadbd8;">
+                    <td>&gt;10.0</td>
+                    <td>Ketoacidosis risk</td>
+                    <td>Medical emergency (diabetics)</td>
+                </tr>
             </table>
         </section>
 
         <section id="science">
-            <h2><span class="section-number">4.</span> The Science Behind Therapeutic Ketosis</h2>
-            
+            <h2>4. The Science Behind Therapeutic Ketosis</h2>
             <h3>Why 4.0 mmol/L Matters</h3>
-            <p>At ketone levels ≥4.0 mmol/L, β-hydroxybutyrate (BHB) triggers several key biological pathways:</p>
-            
+            <p>At ketone levels &#8805;4.0 mmol/L, &#946;-hydroxybutyrate (BHB) triggers several key biological pathways:</p>
+
             <h4>1. Mitochondrial Biogenesis</h4>
-            <p>BHB activates the SIRT1/AMPK/PGC-1α/FOXO3a pathway, triggering the production of new mitochondria—the cellular "power plants" that generate energy.</p>
+            <p>BHB activates the SIRT1/AMPK/PGC-1&#945;/FOXO3a pathway, triggering the production of new mitochondria&#8212;the cellular "power plants" that generate energy.</p>
             <p class="citation">Reference: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10779133/" target="_blank">Int J Mol Sci. 2024;25(2):698</a></p>
-            
+
             <h4>2. BDNF Up-Regulation</h4>
-            <p>Brain-derived neurotrophic factor (BDNF) increases by 17–40% at therapeutic ketone levels, supporting neuroplasticity, learning, and memory.</p>
+            <p>Brain-derived neurotrophic factor (BDNF) increases by 17&#8211;40% at therapeutic ketone levels, supporting neuroplasticity, learning, and memory.</p>
             <p class="citation">Reference: <a href="https://pubmed.ncbi.nlm.nih.gov/27238280/" target="_blank">eLife. 2016;5:e15092</a></p>
-            
+
             <h4>3. Anti-Inflammatory Effects</h4>
             <p>BHB inhibits the NLRP3 inflammasome, reducing neuroinflammation associated with brain fog, depression, and neurodegenerative conditions.</p>
             <p class="citation">Reference: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5550422/" target="_blank">Sci Rep. 2017;7:8917</a></p>
-            
+
             <h4>4. Cognitive Enhancement</h4>
             <p>Studies show BHB infusion to 2.4 mmol/L improves working memory by ~17%. Higher ketone levels (4.0+) may amplify these effects.</p>
-            <p class="citation">Reference: <a href="https://pubmed.ncbi.nlm.nih.gov/31821157/" target="_blank">Eur J Endocrinol. 2020;182(1):133–142</a></p>
-            
+            <p class="citation">Reference: <a href="https://pubmed.ncbi.nlm.nih.gov/31821157/" target="_blank">Eur J Endocrinol. 2020;182(1):133&#8211;142</a></p>
+
             <h4>5. Sleep Quality Improvement</h4>
             <p>Ketone supplementation to ~3.0 mmol/L increases sleep efficiency by 3% and restores REM sleep patterns.</p>
             <p class="citation">Reference: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10581428/" target="_blank">Physiol Rep. 2023;11(20):e15829</a></p>
         </section>
 
         <section id="who">
-            <h2><span class="section-number">5.</span> Who Should Consider SKLeTT</h2>
-            
-            <div class="highlight-box">
-                <h3>Ideal Candidates</h3>
-                <ul>
-                    <li>High-performers experiencing cognitive decline, brain fog, or mental fatigue</li>
-                    <li>Individuals with metabolic syndrome seeking comprehensive intervention</li>
-                    <li>Patients with treatment-resistant depression or anxiety (under psychiatric care)</li>
-                    <li>Those seeking optimization of brain health, focus, and mental clarity</li>
-                    <li>Patients with early signs of cognitive decline or family history of dementia</li>
-                    <li>Athletes or executives looking for sustained mental and physical performance</li>
-                </ul>
-            </div>
-            
-            <div class="warning-box">
-                <h3>Required Commitment</h3>
-                <ul>
-                    <li><strong>Time:</strong> 1–3 months of strict adherence to therapeutic protocol</li>
-                    <li><strong>Daily Monitoring:</strong> Blood ketone testing (1–2x daily) during induction</li>
-                    <li><strong>Weekly Check-ins:</strong> Physician consultations for first 4 weeks</li>
-                    <li><strong>Lifestyle Changes:</strong> Significant dietary modification, meal planning, electrolyte supplementation</li>
-                    <li><strong>Honesty Required:</strong> Weeks 1–2 are difficult; expect fatigue, irritability, and "keto flu"</li>
-                </ul>
-            </div>
+            <h2>5. Who Should Consider SKLeTT</h2>
+            <h3>Ideal Candidates</h3>
+            <ul>
+                <li>High-performers experiencing cognitive decline, brain fog, or mental fatigue</li>
+                <li>Individuals with metabolic syndrome seeking comprehensive intervention</li>
+                <li>Patients with treatment-resistant depression or anxiety (under psychiatric care)</li>
+                <li>Those seeking optimization of brain health, focus, and mental clarity</li>
+                <li>Patients with early signs of cognitive decline or family history of dementia</li>
+                <li>Athletes or executives looking for sustained mental and physical performance</li>
+            </ul>
+
+            <h3>Required Commitment</h3>
+            <ul>
+                <li><strong>Time:</strong> 1&#8211;3 months of strict adherence to therapeutic protocol</li>
+                <li><strong>Daily Monitoring:</strong> Blood ketone testing (1&#8211;2x daily) during induction</li>
+                <li><strong>Weekly Check-ins:</strong> Physician consultations for first 4 weeks</li>
+                <li><strong>Lifestyle Changes:</strong> Significant dietary modification, meal planning, electrolyte supplementation</li>
+                <li><strong>Honesty Required:</strong> Weeks 1&#8211;2 are difficult; expect fatigue, irritability, and "keto flu"</li>
+            </ul>
         </section>
 
         <section id="phases">
-            <h2><span class="section-number">6.</span> Protocol Phases</h2>
-            
-            <h3>Phase 1: Preparation (Week Before Start)</h3>
-            <ul>
-                <li>Comprehensive medical evaluation (history, current medications, labs)</li>
-                <li>Baseline blood work: fasting glucose, HbA1c, lipid panel, electrolytes, liver/kidney function</li>
-                <li>Acquire blood ketone meter and test strips</li>
-                <li>Meal planning and electrolyte protocol education</li>
-                <li>Set realistic expectations and timeline</li>
-            </ul>
-            
-            <h3>Phase 2: Induction (Weeks 1–2)</h3>
-            <p><strong>Goal:</strong> Achieve ketone levels ≥2.0 mmol/L and begin adaptation.</p>
-            <ul>
-                <li>Strict macronutrient targets: 75–80% fat, 15–20% protein, <5% carbs</li>
-                <li>Total carbohydrates: <20 grams/day</li>
-                <li>Daily ketone and glucose testing (morning fasted, afternoon)</li>
-                <li>Aggressive electrolyte supplementation (see Electrolyte Protocol)</li>
-                <li>Check-in Days 3, 7, 14 (more frequent if on BP or diabetes medications)</li>
-            </ul>
-            
-            <div class="warning-box">
-                <strong>Week 1–2 Reality Check:</strong> This is the hardest part. Expect fatigue, irritability, headaches, muscle cramps, sleep disruption, and intense carb cravings. Most people feel worse before they feel better. This is normal and temporary. The breakthrough happens Week 3+.
+            <h2>6. Protocol Phases</h2>
+
+            <div class="phase-box">
+                <h3>Phase 1: Preparation (Week Before Start)</h3>
+                <ul>
+                    <li>Comprehensive medical evaluation (history, current medications, labs)</li>
+                    <li>Baseline blood work: fasting glucose, HbA1c, lipid panel, electrolytes, liver/kidney function</li>
+                    <li>Acquire blood ketone meter and test strips</li>
+                    <li>Meal planning and electrolyte protocol education</li>
+                    <li>Set realistic expectations and timeline</li>
+                </ul>
             </div>
-            
-            <h3>Phase 3: Optimization (Weeks 3–4)</h3>
-            <p><strong>Goal:</strong> Reach and stabilize at ≥4.0 mmol/L therapeutic ketosis.</p>
-            <ul>
-                <li>Fine-tune protein intake (some people need to reduce further to reach 4.0+)</li>
-                <li>Possible addition of exogenous ketones (MCT oil, ketone esters) if needed</li>
-                <li>Energy and mental clarity typically improve significantly</li>
-                <li>Check-ins weekly</li>
-            </ul>
-            
-            <h3>Phase 4: Maintenance (Weeks 5–12)</h3>
-            <p><strong>Goal:</strong> Sustain therapeutic ketosis for mitochondrial remodeling (6–12 weeks ideal).</p>
-            <ul>
-                <li>Continue ketone monitoring (can reduce to 3–4x/week once stable)</li>
-                <li>Check-ins bi-weekly</li>
-                <li>Month 3: Repeat labs to assess metabolic changes</li>
-                <li>Most patients report peak benefits around Week 8–10</li>
-            </ul>
-            
-            <h3>Phase 5: Transition & Long-Term Strategy (Post-Protocol)</h3>
-            <ul>
-                <li>Gradual carbohydrate re-introduction (increases of 10–20g/week)</li>
-                <li>Maintenance ketogenic or low-carb diet (many choose to stay 1.5–3.0 mmol/L)</li>
-                <li>Suggested cycle: 6–8 weeks therapeutic ketosis, 1–2x per year</li>
-                <li>Mitochondrial benefits persist 6–12 months after protocol ends</li>
-            </ul>
+
+            <div class="phase-box">
+                <h3>Phase 2: Induction (Weeks 1&#8211;2)</h3>
+                <p><strong>Goal:</strong> Achieve ketone levels &#8805;2.0 mmol/L and begin adaptation.</p>
+                <ul>
+                    <li>Strict macronutrient targets: 75&#8211;80% fat, 15&#8211;20% protein, &lt;5% carbs</li>
+                    <li>Total carbohydrates: &lt;20 grams/day</li>
+                    <li>Daily ketone and glucose testing (morning fasted, afternoon)</li>
+                    <li>Aggressive electrolyte supplementation (see Electrolyte Protocol)</li>
+                    <li>Check-in Days 3, 7, 14 (more frequent if on BP or diabetes medications)</li>
+                </ul>
+                <div class="warning-box" style="margin-top: 15px;">
+                    <strong>Week 1&#8211;2 Reality Check:</strong> This is the hardest part. Expect fatigue, irritability, headaches, muscle cramps, sleep disruption, and intense carb cravings. Most people feel worse before they feel better. This is normal and temporary. The breakthrough happens Week 3+.
+                </div>
+            </div>
+
+            <div class="phase-box">
+                <h3>Phase 3: Optimization (Weeks 3&#8211;4)</h3>
+                <p><strong>Goal:</strong> Reach and stabilize at &#8805;4.0 mmol/L therapeutic ketosis.</p>
+                <ul>
+                    <li>Fine-tune protein intake (some people need to reduce further to reach 4.0+)</li>
+                    <li>Possible addition of exogenous ketones (MCT oil, ketone esters) if needed</li>
+                    <li>Energy and mental clarity typically improve significantly</li>
+                    <li>Check-ins weekly</li>
+                </ul>
+            </div>
+
+            <div class="phase-box">
+                <h3>Phase 4: Maintenance (Weeks 5&#8211;12)</h3>
+                <p><strong>Goal:</strong> Sustain therapeutic ketosis for mitochondrial remodeling (6&#8211;12 weeks ideal).</p>
+                <ul>
+                    <li>Continue ketone monitoring (can reduce to 3&#8211;4x/week once stable)</li>
+                    <li>Check-ins bi-weekly</li>
+                    <li>Month 3: Repeat labs to assess metabolic changes</li>
+                    <li>Most patients report peak benefits around Week 8&#8211;10</li>
+                </ul>
+            </div>
+
+            <div class="phase-box">
+                <h3>Phase 5: Transition &amp; Long-Term Strategy (Post-Protocol)</h3>
+                <ul>
+                    <li>Gradual carbohydrate re-introduction (increases of 10&#8211;20g/week)</li>
+                    <li>Maintenance ketogenic or low-carb diet (many choose to stay 1.5&#8211;3.0 mmol/L)</li>
+                    <li>Suggested cycle: 6&#8211;8 weeks therapeutic ketosis, 1&#8211;2x per year</li>
+                    <li>Mitochondrial benefits persist 6&#8211;12 months after protocol ends</li>
+                </ul>
+            </div>
         </section>
 
         <section id="timeline">
-            <h2><span class="section-number">7.</span> What to Expect: The Honest Timeline</h2>
-            
-            <div style="background: #ecf0f1; padding: 20px; margin: 20px 0; border-radius: 6px;">
-                <h4>Days 1–3: The Drop</h4>
-                <p>Glycogen depletion. Fatigue, headache, irritability. Ketones rise to 0.5–1.5 mmol/L. You'll question why you started this.</p>
-                
-                <h4>Days 4–7: The Valley</h4>
-                <p>The hardest part. Brain still craves glucose, ketone transport into brain not yet optimized. Ketones 1.5–3.0 mmol/L but you feel worse than Day 1. Intense cravings. Many quit here.</p>
-                
-                <h4>Days 8–14: The Breakthrough</h4>
-                <p>Brain MCT1/MCT2 transporters up-regulate. Mental fog starts to lift. Ketones 3.0–4.0 mmol/L. Energy becomes more stable. You start to "feel it."</p>
-                
-                <h4>Weeks 3–4: The Ascent</h4>
-                <p>Ketones stabilize ≥4.0 mmol/L. Mental clarity noticeably improves. Physical energy returns. Cravings diminish. Sleep quality may improve. You understand why people do this.</p>
-                
-                <h4>Weeks 5–12: The Plateau (Therapeutic Window)</h4>
-                <p>Sustained therapeutic ketosis. Peak cognitive benefits. Mitochondrial biogenesis underway. Some report the best mental performance of their lives. This is where the transformation happens.</p>
-            </div>
-            
-            <div class="danger-box">
-                <strong>Critical Success Factor:</strong> Most failures happen in Days 4–7. Those who push through this "valley" and reach Week 3 have an 80%+ completion rate. The key is understanding that feeling terrible is part of the process, not a sign to quit.
+            <h2>7. What to Expect: The Honest Timeline</h2>
+
+            <h4>Days 1&#8211;3: The Drop</h4>
+            <p>Glycogen depletion. Fatigue, headache, irritability. Ketones rise to 0.5&#8211;1.5 mmol/L. You'll question why you started this.</p>
+
+            <h4>Days 4&#8211;7: The Valley</h4>
+            <p>The hardest part. Brain still craves glucose, ketone transport into brain not yet optimized. Ketones 1.5&#8211;3.0 mmol/L but you feel worse than Day 1. Intense cravings. Many quit here.</p>
+
+            <h4>Days 8&#8211;14: The Breakthrough</h4>
+            <p>Brain MCT1/MCT2 transporters up-regulate. Mental fog starts to lift. Ketones 3.0&#8211;4.0 mmol/L. Energy becomes more stable. You start to "feel it."</p>
+
+            <h4>Weeks 3&#8211;4: The Ascent</h4>
+            <p>Ketones stabilize &#8805;4.0 mmol/L. Mental clarity noticeably improves. Physical energy returns. Cravings diminish. Sleep quality may improve. You understand why people do this.</p>
+
+            <h4>Weeks 5&#8211;12: The Plateau (Therapeutic Window)</h4>
+            <p>Sustained therapeutic ketosis. Peak cognitive benefits. Mitochondrial biogenesis underway. Some report the best mental performance of their lives. This is where the transformation happens.</p>
+
+            <div class="highlight-box">
+                <strong>Critical Success Factor:</strong> Most failures happen in Days 4&#8211;7. Those who push through this "valley" and reach Week 3 have an 80%+ completion rate. The key is understanding that feeling terrible is part of the process, not a sign to quit.
             </div>
         </section>
 
         <section id="nutrition">
-            <h2><span class="section-number">8.</span> Nutrition Guidelines</h2>
-            
+            <h2>8. Nutrition Guidelines</h2>
             <h3>Macronutrient Targets</h3>
             <ul>
-                <li><strong>Fat:</strong> 75–80% of calories (prioritize quality: avocado, olive oil, nuts, fatty fish, grass-fed butter)</li>
-                <li><strong>Protein:</strong> 15–20% of calories (0.8–1.0 g/kg body weight; excess protein can inhibit ketosis)</li>
-                <li><strong>Carbohydrates:</strong> <20 grams total per day (NOT "net carbs"—count all carbs)</li>
+                <li><strong>Fat:</strong> 75&#8211;80% of calories (prioritize quality: avocado, olive oil, nuts, fatty fish, grass-fed butter)</li>
+                <li><strong>Protein:</strong> 15&#8211;20% of calories (0.8&#8211;1.0 g/kg body weight; excess protein can inhibit ketosis)</li>
+                <li><strong>Carbohydrates:</strong> &lt;20 grams total per day (NOT "net carbs"&#8212;count all carbs)</li>
             </ul>
-            
+
             <h3>Foods to Emphasize</h3>
             <ul>
                 <li>Fatty fish (salmon, mackerel, sardines)</li>
                 <li>Grass-fed meat, pasture-raised eggs</li>
                 <li>Avocados, olives, olive oil, coconut oil, MCT oil</li>
                 <li>Low-carb vegetables (leafy greens, broccoli, cauliflower, zucchini)</li>
-                <li>Nuts and seeds (macadamia, pecans, walnuts—in moderation)</li>
+                <li>Nuts and seeds (macadamia, pecans, walnuts&#8212;in moderation)</li>
                 <li>Full-fat dairy (if tolerated): butter, ghee, hard cheeses</li>
             </ul>
-            
+
             <h3>Foods to Avoid</h3>
             <ul>
                 <li>All grains (wheat, rice, oats, corn)</li>
@@ -478,147 +519,146 @@
                 <li>Processed "keto" products with hidden carbs (sugar alcohols can spike insulin)</li>
                 <li>Alcohol (inhibits ketosis and fat metabolism)</li>
             </ul>
-            
+
             <div class="warning-box">
                 <strong>The "Net Carbs" Myth:</strong> Many keto products subtract fiber and sugar alcohols to advertise low "net carbs." However, sugar alcohols like maltitol can still raise blood glucose and insulin in many people. SKLeTT counts TOTAL carbs to ensure true therapeutic ketosis.
             </div>
         </section>
 
         <section id="electrolytes">
-            <h2><span class="section-number">9.</span> Electrolyte Protocol</h2>
-            
+            <h2>9. Electrolyte Protocol</h2>
             <p><strong>Electrolyte deficiency is the #1 cause of "keto flu" and early dropout.</strong> Insulin drops on keto, causing kidneys to excrete more sodium and water. This leads to a cascade of electrolyte losses.</p>
-            
+
             <h3>Daily Targets (While in Ketosis)</h3>
             <ul>
-                <li><strong>Sodium:</strong> 3,000–5,000 mg/day (1–2 teaspoons of sea salt or pink Himalayan salt)</li>
-                <li><strong>Potassium:</strong> 2,000–3,000 mg/day (food sources: avocado, spinach, salmon; supplement if needed)</li>
-                <li><strong>Magnesium:</strong> 400–600 mg/day (magnesium glycinate or citrate; avoid oxide form)</li>
+                <li><strong>Sodium:</strong> 3,000&#8211;5,000 mg/day (1&#8211;2 teaspoons of sea salt or pink Himalayan salt)</li>
+                <li><strong>Potassium:</strong> 2,000&#8211;3,000 mg/day (food sources: avocado, spinach, salmon; supplement if needed)</li>
+                <li><strong>Magnesium:</strong> 400&#8211;600 mg/day (magnesium glycinate or citrate; avoid oxide form)</li>
             </ul>
-            
+
             <h3>Practical Implementation</h3>
             <ul>
                 <li>Add 1/2 teaspoon sea salt to water, drink 2x daily</li>
                 <li>"Keto-ade" recipe: 1 liter water + 1/2 tsp sea salt + 1/4 tsp potassium chloride (NoSalt) + squeeze of lemon</li>
                 <li>Take magnesium supplement before bed (also helps sleep)</li>
-                <li>Salt food generously—don't fear salt on keto</li>
+                <li>Salt food generously&#8212;don't fear salt on keto</li>
             </ul>
-            
+
             <div class="highlight-box">
                 <strong>Pro Tip:</strong> If you experience headaches, fatigue, muscle cramps, or dizziness in the first 2 weeks, increase sodium immediately. Many symptoms resolve within 30 minutes of drinking salted water.
             </div>
-            
+
             <p class="citation">Reference: <a href="https://pubmed.ncbi.nlm.nih.gov/35458111/" target="_blank">Nutrients. 2022;14(7):1410</a></p>
         </section>
 
         <section id="exercise">
-            <h2><span class="section-number">10.</span> Exercise Guidance</h2>
-            
-            <h3>Weeks 1–2: Go Easy</h3>
+            <h2>10. Exercise Guidance</h2>
+            <h3>Weeks 1&#8211;2: Go Easy</h3>
             <p>Your body is adapting to fat metabolism. High-intensity exercise will feel terrible and may impair ketone production.</p>
             <ul>
-                <li>Light walking: 20–30 minutes daily</li>
+                <li>Light walking: 20&#8211;30 minutes daily</li>
                 <li>Gentle yoga or stretching</li>
                 <li>Avoid HIIT, heavy lifting, or competitive sports</li>
             </ul>
-            
+
             <h3>Weeks 3+: Gradual Re-Introduction</h3>
-            <p>Once ketones are consistently ≥4.0 mmol/L and energy improves:</p>
+            <p>Once ketones are consistently &#8805;4.0 mmol/L and energy improves:</p>
             <ul>
                 <li>Resume moderate-intensity cardio (cycling, jogging, swimming)</li>
                 <li>Reintroduce resistance training gradually</li>
                 <li>Many athletes report <strong>better</strong> endurance and faster recovery in sustained ketosis</li>
             </ul>
-            
+
             <p class="citation">Reference: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10581428/" target="_blank">Physiol Rep. 2023;11(20):e15829</a></p>
         </section>
 
         <section id="monitoring">
-            <h2><span class="section-number">11.</span> Monitoring & Tracking</h2>
-            
+            <h2>11. Monitoring &amp; Tracking</h2>
             <h3>Required Equipment</h3>
             <ul>
-                <li><strong>Blood Ketone Meter:</strong> Precision Xtra, Keto-Mojo, or equivalent (~$20–$50)</li>
-                <li><strong>Ketone Test Strips:</strong> ~$1 per strip (budget $30–$60/month during induction)</li>
+                <li><strong>Blood Ketone Meter:</strong> Precision Xtra, Keto-Mojo, or equivalent (~$20&#8211;$50)</li>
+                <li><strong>Ketone Test Strips:</strong> ~$1 per strip (budget $30&#8211;$60/month during induction)</li>
                 <li><strong>Optional:</strong> Continuous glucose monitor (CGM) for real-time feedback on food responses</li>
             </ul>
-            
+
             <h3>Testing Schedule</h3>
             <ul>
-                <li><strong>Weeks 1–2:</strong> Test 2x daily (morning fasted, afternoon)</li>
-                <li><strong>Weeks 3–4:</strong> Test daily (morning fasted)</li>
-                <li><strong>Weeks 5+:</strong> Test 3–4x per week once stable</li>
+                <li><strong>Weeks 1&#8211;2:</strong> Test 2x daily (morning fasted, afternoon)</li>
+                <li><strong>Weeks 3&#8211;4:</strong> Test daily (morning fasted)</li>
+                <li><strong>Weeks 5+:</strong> Test 3&#8211;4x per week once stable</li>
             </ul>
-            
+
             <div class="warning-box">
                 <strong>Important:</strong> Urine ketone strips (Ketostix) are NOT accurate for monitoring therapeutic ketosis. They detect acetoacetate, not BHB, and become unreliable after the first week. ONLY blood ketone meters provide accurate data.
             </div>
-            
+
             <h3>What to Track</h3>
             <ul>
                 <li>Blood ketone levels (mmol/L)</li>
-                <li>Blood glucose (optional but recommended—aim for 70–90 mg/dL fasted)</li>
+                <li>Blood glucose (optional but recommended&#8212;aim for 70&#8211;90 mg/dL fasted)</li>
                 <li>Weight (weekly)</li>
-                <li>Subjective energy, mood, mental clarity (daily journal or 1–10 scale)</li>
+                <li>Subjective energy, mood, mental clarity (daily journal or 1&#8211;10 scale)</li>
                 <li>Sleep quality</li>
                 <li>Any side effects or symptoms</li>
             </ul>
         </section>
 
         <section id="medications">
-            <h2><span class="section-number">12.</span> Medication Considerations</h2>
-            
+            <h2>12. Medication Considerations</h2>
+
             <div class="danger-box">
-                <h3>⚠️ CRITICAL: Medication Adjustments Required</h3>
-                <p>Therapeutic ketosis significantly impacts blood pressure, blood sugar, and thyroid function. <strong>DO NOT attempt SKLeTT without physician supervision if you take any of the following medications:</strong></p>
+                <strong>&#9888;&#65039; CRITICAL: Medication Adjustments Required</strong><br>
+                Therapeutic ketosis significantly impacts blood pressure, blood sugar, and thyroid function. <strong>DO NOT attempt SKLeTT without physician supervision if you take any of the following medications:</strong>
             </div>
-            
+
             <h3>Blood Pressure Medications</h3>
-            <p><strong>Expected Change:</strong> Systolic BP drops 15–25 mmHg within 5–7 days due to sodium/water loss and improved insulin sensitivity.</p>
+            <p><strong>Expected Change:</strong> Systolic BP drops 15&#8211;25 mmHg within 5&#8211;7 days due to sodium/water loss and improved insulin sensitivity.</p>
             <ul>
                 <li><strong>Risk:</strong> Orthostatic hypotension (dizziness upon standing), dangerously low BP</li>
                 <li><strong>Action:</strong> BP meds often reduced by 50% on Day 1; some patients discontinue entirely by Week 2</li>
                 <li><strong>Monitoring:</strong> Daily home BP checks; check-in Days 3, 5, 7</li>
             </ul>
-            
+
             <h3>Diabetes Medications</h3>
-            <p><strong>Expected Change:</strong> Blood glucose drops rapidly—often within 48–72 hours.</p>
+            <p><strong>Expected Change:</strong> Blood glucose drops rapidly&#8212;often within 48&#8211;72 hours.</p>
             <ul>
                 <li><strong>High Risk Medications:</strong> Sulfonylureas (glipizide, glyburide), insulin</li>
-                <li><strong>Risk:</strong> Severe hypoglycemia (blood sugar <55 mg/dL); can occur within 3 days</li>
-                <li><strong>Action:</strong> Insulin/sulfonylureas often reduced 50–75% on Day 1; some patients stop entirely within 1 week under close supervision</li>
-                <li><strong>Monitoring:</strong> Blood glucose testing 3–4x daily in first week; immediate physician contact if <70 mg/dL</li>
+                <li><strong>Risk:</strong> Severe hypoglycemia (blood sugar &lt;55 mg/dL); can occur within 3 days</li>
+                <li><strong>Action:</strong> Insulin/sulfonylureas often reduced 50&#8211;75% on Day 1; some patients stop entirely within 1 week under close supervision</li>
+                <li><strong>Monitoring:</strong> Blood glucose testing 3&#8211;4x daily in first week; immediate physician contact if &lt;70 mg/dL</li>
             </ul>
-            
+
             <h3>Thyroid Medications</h3>
             <p><strong>Expected Change:</strong> Ketosis can affect T3/T4 conversion and TSH levels.</p>
             <ul>
-                <li><strong>Action:</strong> Recheck TSH at 4–6 weeks; dose adjustment may be needed</li>
+                <li><strong>Action:</strong> Recheck TSH at 4&#8211;6 weeks; dose adjustment may be needed</li>
                 <li><strong>Monitoring:</strong> Track symptoms of hypo- or hyperthyroidism</li>
             </ul>
-            
+
             <h3>Other Medications of Concern</h3>
             <ul>
                 <li><strong>Diuretics:</strong> Combined with keto's natural diuretic effect, may cause dangerous electrolyte imbalance</li>
                 <li><strong>Lithium:</strong> Ketosis can alter lithium levels; requires close monitoring</li>
-                <li><strong>SGLT2 Inhibitors (Jardiance, Farxiga):</strong> Increased risk of euglycemic ketoacidosis—generally contraindicated</li>
+                <li><strong>SGLT2 Inhibitors (Jardiance, Farxiga):</strong> Increased risk of euglycemic ketoacidosis&#8212;generally contraindicated</li>
             </ul>
         </section>
 
         <section id="contraindications">
-            <h2><span class="section-number">13.</span> Contraindications & Safety</h2>
-            
-            <h3>Absolute Contraindications (Do Not Attempt SKLeTT)</h3>
-            <ul>
-                <li>Type 1 diabetes (high ketoacidosis risk)</li>
-                <li>History of pancreatitis</li>
-                <li>Severe liver disease or cirrhosis</li>
-                <li>Severe kidney disease (GFR <30)</li>
-                <li>Pregnancy or breastfeeding</li>
-                <li>Active eating disorder (anorexia, bulimia)</li>
-                <li>Rare genetic disorders: carnitine deficiency, fatty acid oxidation disorders, pyruvate kinase deficiency</li>
-            </ul>
-            
+            <h2>13. Contraindications &amp; Safety</h2>
+
+            <div class="danger-box">
+                <strong>Absolute Contraindications (Do Not Attempt SKLeTT)</strong>
+                <ul style="margin-top: 10px;">
+                    <li>Type 1 diabetes (high ketoacidosis risk)</li>
+                    <li>History of pancreatitis</li>
+                    <li>Severe liver disease or cirrhosis</li>
+                    <li>Severe kidney disease (GFR &lt;30)</li>
+                    <li>Pregnancy or breastfeeding</li>
+                    <li>Active eating disorder (anorexia, bulimia)</li>
+                    <li>Rare genetic disorders: carnitine deficiency, fatty acid oxidation disorders, pyruvate kinase deficiency</li>
+                </ul>
+            </div>
+
             <h3>Relative Contraindications (Proceed with Extreme Caution)</h3>
             <ul>
                 <li>History of kidney stones (ketosis may increase risk)</li>
@@ -627,177 +667,148 @@
                 <li>Osteoporosis (long-term keto may affect bone density; ensure adequate vitamin D, K2, calcium)</li>
                 <li>Children under 18 (growth considerations; specialized supervision required)</li>
             </ul>
-            
+
             <h3>Side Effects (Common, Usually Temporary)</h3>
             <ul>
-                <li>"Keto flu" (headache, fatigue, irritability): Days 3–7, resolves with electrolytes</li>
+                <li>"Keto flu" (headache, fatigue, irritability): Days 3&#8211;7, resolves with electrolytes</li>
                 <li>Constipation: Increase fiber from low-carb vegetables, magnesium citrate</li>
-                <li>Bad breath (acetone): Temporary, resolves after Week 2–3</li>
-                <li>Muscle cramps: Electrolyte deficiency—increase sodium, potassium, magnesium</li>
-                <li>Sleep disturbances: Common Week 1–2; improves Week 3+</li>
+                <li>Bad breath (acetone): Temporary, resolves after Week 2&#8211;3</li>
+                <li>Muscle cramps: Electrolyte deficiency&#8212;increase sodium, potassium, magnesium</li>
+                <li>Sleep disturbances: Common Week 1&#8211;2; improves Week 3+</li>
                 <li>Increased urination: Normal due to diuretic effect and glycogen depletion</li>
             </ul>
-            
+
             <div class="danger-box">
-                <h3>⚠️ Stop Protocol & Contact Physician Immediately If:</h3>
-                <ul>
+                <strong>&#9888;&#65039; Stop Protocol &amp; Contact Physician Immediately If:</strong>
+                <ul style="margin-top: 10px;">
                     <li>Ketones exceed 8.0 mmol/L (especially if diabetic)</li>
                     <li>Severe nausea, vomiting, or abdominal pain</li>
-                    <li>Symptoms of hypoglycemia (shakiness, confusion, rapid heartbeat) and glucose <55 mg/dL</li>
+                    <li>Symptoms of hypoglycemia (shakiness, confusion, rapid heartbeat) and glucose &lt;55 mg/dL</li>
                     <li>Symptoms of severe dehydration (dark urine, dizziness, confusion)</li>
                     <li>Chest pain, shortness of breath, or irregular heartbeat</li>
                 </ul>
             </div>
         </section>
 
-        <section id="faq" class="faq-section">
-            <h2><span class="section-number">14.</span> Frequently Asked Questions</h2>
-            
-            <div class="faq-item">
-                <div class="faq-question">1. Is therapeutic ketosis safe? Won't ketones harm me?</div>
-                <div class="faq-answer">
-                    <p><strong>Short answer:</strong> Therapeutic ketosis (3–6 mmol/L) is safe for healthy individuals under medical supervision. It is NOT the same as diabetic ketoacidosis (DKA).</p>
-                    <p><strong>The distinction:</strong></p>
-                    <ul>
-                        <li><strong>Therapeutic ketosis:</strong> Ketones 3–6 mmol/L, normal blood glucose (70–100 mg/dL), normal pH. This is a natural metabolic state similar to fasting.</li>
-                        <li><strong>Ketoacidosis (DKA):</strong> Ketones >10 mmol/L, HIGH blood glucose (>250 mg/dL), acidic pH (<7.3). This is a medical emergency, almost always occurring in uncontrolled Type 1 diabetes when insulin is absent.</li>
-                    </ul>
-                    <p>Your body tightly regulates ketone production in the presence of adequate insulin. SKLeTT monitoring ensures you stay in the safe, beneficial range.</p>
-                    <p class="citation">Reference: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9914182/" target="_blank">Nutrients. 2023;15(3):579</a></p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">2. Do I have to fast completely to reach 4.0+ mmol/L ketones?</div>
-                <div class="faq-answer">
-                    <p><strong>No.</strong> While prolonged fasting (2–5 days) reliably produces ketones >4.0 mmol/L, SKLeTT achieves the same levels through strategic nutrition without extended fasting.</p>
-                    <p><strong>How we do it:</strong></p>
-                    <ul>
-                        <li>Very low carbohydrate intake (<20g/day)</li>
-                        <li>Moderate protein (excess protein converts to glucose via gluconeogenesis)</li>
-                        <li>High fat intake (75–80% of calories)</li>
-                        <li>Optional: MCT oil or exogenous ketones to boost levels</li>
-                        <li>Some patients use intermittent fasting (16:8 or 18:6) to accelerate results, but it's not required</li>
-                    </ul>
-                    <p>Most people reach 4.0+ mmol/L by Week 3–4 on the full protocol without extended fasting.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">3. How long until I see results?</div>
-                <div class="faq-answer">
-                    <p><strong>Honest answer:</strong> It depends on what "results" you're looking for.</p>
-                    <p><strong>Timeline:</strong></p>
-                    <ul>
-                        <li><strong>Week 1–2:</strong> You'll feel WORSE (fatigue, brain fog, irritability). This is adaptation, not failure.</li>
-                        <li><strong>Week 3:</strong> Mental clarity starts to improve. Energy stabilizes. Ketones reach 3.0–4.0 mmol/L.</li>
-                        <li><strong>Week 4–6:</strong> Most people report noticeable cognitive improvement—better focus, faster thinking, improved mood.</li>
-                        <li><strong>Week 8–12:</strong> Peak benefits. Mitochondrial biogenesis is underway. Many describe this as "the best my brain has felt in years."</li>
-                    </ul>
-                    <p><strong>Long-term:</strong> Mitochondrial remodeling takes 6–12 weeks. Benefits persist for 6–12 months after returning to normal diet.</p>
-                    <p class="citation">Reference: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10779133/" target="_blank">Int J Mol Sci. 2024;25(2):698</a></p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">4. Can I do this on my own without a doctor?</div>
-                <div class="faq-answer">
-                    <p><strong>Not recommended if you:</strong></p>
-                    <ul>
-                        <li>Take ANY medications (BP, diabetes, thyroid, diuretics, etc.)</li>
-                        <li>Have any chronic health conditions</li>
-                        <li>Are over 50 years old (higher risk of undiagnosed conditions)</li>
-                        <li>Have never done a ketogenic diet before</li>
-                    </ul>
-                    <p><strong>Why physician oversight matters:</strong></p>
-                    <ul>
-                        <li>Medications may need rapid adjustment (BP meds often cut by 50% within days)</li>
-                        <li>Diabetes medications can cause dangerous hypoglycemia within 48–72 hours</li>
-                        <li>Baseline labs identify hidden risks (kidney function, liver function, electrolytes)</li>
-                        <li>Close monitoring catches problems early (electrolyte imbalance, excessive ketone elevation)</li>
-                    </ul>
-                    <p><strong>If you're young, healthy, and on no medications,</strong> you can attempt nutritional ketosis (1.5–3.0 mmol/L) independently. But therapeutic ketosis (4.0+) carries higher risks and should be supervised.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">5. Will I lose muscle on the SKLeTT Protocol?</div>
-                <div class="faq-answer">
-                    <p><strong>Short answer:</strong> Not if you do it correctly.</p>
-                    <p><strong>How to preserve muscle:</strong></p>
-                    <ul>
-                        <li><strong>Adequate protein:</strong> 0.8–1.0 g/kg body weight (more for athletes). Too much protein inhibits ketosis; too little causes muscle loss.</li>
-                        <li><strong>Resistance training:</strong> Maintain (don't start new heavy programs during Week 1–2, but continue existing routines by Week 3+).</li>
-                        <li><strong>Sufficient calories:</strong> Don't combine therapeutic ketosis with severe calorie restriction.</li>
-                        <li><strong>Electrolytes:</strong> Muscle function requires adequate sodium, potassium, magnesium.</li>
-                    </ul>
-                    <p><strong>Research shows:</strong> Well-formulated ketogenic diets preserve lean mass comparable to higher-carb diets when protein and training are adequate.</p>
-                    <p class="citation">Reference: <a href="https://pubmed.ncbi.nlm.nih.gov/28244676/" target="_blank">J Int Soc Sports Nutr. 2017;14:16</a></p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">6. What if I have diabetes? Can I still do SKLeTT?</div>
-                <div class="faq-answer">
-                    <p><strong>Type 1 Diabetes:</strong> Absolute contraindication. Do not attempt. High risk of ketoacidosis.</p>
-                    <p><strong>Type 2 Diabetes:</strong> Often excellent candidates—BUT require very close supervision.</p>
-                    <p><strong>Why Type 2 diabetics benefit:</strong></p>
-                    <ul>
-                        <li>Ketogenic diets dramatically improve insulin sensitivity</li>
-                        <li>Blood glucose typically drops significantly within 48–72 hours</li>
-                        <li>HbA1c improvements of 1–2 points common over 3 months</li>
-                        <li>Many patients reduce or eliminate diabetes medications</li>
-                    </ul>
-                    <p><strong>Critical safety measures for Type 2 diabetics:</strong></p>
-                    <ul>
-                        <li>Baseline HbA1c, fasting glucose, kidney function (GFR) required</li>
-                        <li>Medication adjustment BEFORE starting (especially sulfonylureas, insulin)</li>
-                        <li>Blood glucose testing 3–4x daily in first 2 weeks</li>
-                        <li>Close physician contact Days 1, 3, 5, 7, 14</li>
-                        <li>Immediate reporting of hypoglycemia symptoms</li>
-                    </ul>
-                    <p class="citation">Reference: <a href="https://pubmed.ncbi.nlm.nih.gov/29522789/" target="_blank">Diabetes Ther. 2018;9(3):1263–1294</a></p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">7. How do I measure my ketone levels? Are urine strips accurate?</div>
-                <div class="faq-answer">
-                    <p><strong>Blood ketone meter = GOLD STANDARD.</strong></p>
-                    <p><strong>Why blood testing is necessary for SKLeTT:</strong></p>
-                    <ul>
-                        <li>Measures β-hydroxybutyrate (BHB)—the primary ketone responsible for therapeutic effects</li>
-                        <li>Accurate throughout all stages of ketosis</li>
-                        <li>Essential for monitoring therapeutic range (4.0+ mmol/L)</li>
-                    </ul>
-                    <p><strong>Urine ketone strips (Ketostix):</strong></p>
-                    <ul>
-                        <li>Measure acetoacetate (a different ketone)</li>
-                        <li>Only semi-reliable in first 1–2 weeks</li>
-                        <li>Become unreliable once "keto-adapted" (kidneys stop excreting ketones)</li>
-                        <li>Cannot accurately measure levels >3 mmol/L</li>
-                        <li><strong>Verdict:</strong> NOT suitable for SKLeTT Protocol</li>
-                    </ul>
-                    <p><strong>Breath ketone meters:</strong></p>
-                    <ul>
-                        <li>Measure acetone (a third ketone)</li>
-                        <li>Moderate correlation with blood ketones but less precise</li>
-                        <li>Useful for tracking trends, not for precise therapeutic monitoring</li>
-                        <li><strong>Verdict:</strong> Optional adjunct, but not a replacement for blood testing</li>
-                    </ul>
-                    <p><strong>Recommended meters:</strong> Precision Xtra, Keto-Mojo, or equivalent. Test strips cost ~$1 each.</p>
-                </div>
-            </div>
-            
+        <section id="faq">
+            <h2>14. Frequently Asked Questions</h2>
+
+            <h3>1. Is therapeutic ketosis safe? Won't ketones harm me?</h3>
+            <p><strong>Short answer:</strong> Therapeutic ketosis (3&#8211;6 mmol/L) is safe for healthy individuals under medical supervision. It is NOT the same as diabetic ketoacidosis (DKA).</p>
+            <p><strong>The distinction:</strong></p>
+            <ul>
+                <li><strong>Therapeutic ketosis:</strong> Ketones 3&#8211;6 mmol/L, normal blood glucose (70&#8211;100 mg/dL), normal pH. This is a natural metabolic state similar to fasting.</li>
+                <li><strong>Ketoacidosis (DKA):</strong> Ketones &gt;10 mmol/L, HIGH blood glucose (&gt;250 mg/dL), acidic pH (&lt;7.3). This is a medical emergency, almost always occurring in uncontrolled Type 1 diabetes when insulin is absent.</li>
+            </ul>
+            <p>Your body tightly regulates ketone production in the presence of adequate insulin. SKLeTT monitoring ensures you stay in the safe, beneficial range.</p>
+            <p class="citation">Reference: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9914182/" target="_blank">Nutrients. 2023;15(3):579</a></p>
+
+            <h3>2. Do I have to fast completely to reach 4.0+ mmol/L ketones?</h3>
+            <p><strong>No.</strong> While prolonged fasting (2&#8211;5 days) reliably produces ketones &gt;4.0 mmol/L, SKLeTT achieves the same levels through strategic nutrition without extended fasting.</p>
+            <p><strong>How we do it:</strong></p>
+            <ul>
+                <li>Very low carbohydrate intake (&lt;20g/day)</li>
+                <li>Moderate protein (excess protein converts to glucose via gluconeogenesis)</li>
+                <li>High fat intake (75&#8211;80% of calories)</li>
+                <li>Optional: MCT oil or exogenous ketones to boost levels</li>
+                <li>Some patients use intermittent fasting (16:8 or 18:6) to accelerate results, but it's not required</li>
+            </ul>
+            <p>Most people reach 4.0+ mmol/L by Week 3&#8211;4 on the full protocol without extended fasting.</p>
+
+            <h3>3. How long until I see results?</h3>
+            <p><strong>Honest answer:</strong> It depends on what "results" you're looking for.</p>
+            <p><strong>Timeline:</strong></p>
+            <ul>
+                <li><strong>Week 1&#8211;2:</strong> You'll feel WORSE (fatigue, brain fog, irritability). This is adaptation, not failure.</li>
+                <li><strong>Week 3:</strong> Mental clarity starts to improve. Energy stabilizes. Ketones reach 3.0&#8211;4.0 mmol/L.</li>
+                <li><strong>Week 4&#8211;6:</strong> Most people report noticeable cognitive improvement&#8212;better focus, faster thinking, improved mood.</li>
+                <li><strong>Week 8&#8211;12:</strong> Peak benefits. Mitochondrial biogenesis is underway. Many describe this as "the best my brain has felt in years."</li>
+            </ul>
+            <p><strong>Long-term:</strong> Mitochondrial remodeling takes 6&#8211;12 weeks. Benefits persist for 6&#8211;12 months after returning to normal diet.</p>
+            <p class="citation">Reference: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10779133/" target="_blank">Int J Mol Sci. 2024;25(2):698</a></p>
+
+            <h3>4. Can I do this on my own without a doctor?</h3>
+            <p><strong>Not recommended if you:</strong></p>
+            <ul>
+                <li>Take ANY medications (BP, diabetes, thyroid, diuretics, etc.)</li>
+                <li>Have any chronic health conditions</li>
+                <li>Are over 50 years old (higher risk of undiagnosed conditions)</li>
+                <li>Have never done a ketogenic diet before</li>
+            </ul>
+            <p><strong>Why physician oversight matters:</strong></p>
+            <ul>
+                <li>Medications may need rapid adjustment (BP meds often cut by 50% within days)</li>
+                <li>Diabetes medications can cause dangerous hypoglycemia within 48&#8211;72 hours</li>
+                <li>Baseline labs identify hidden risks (kidney function, liver function, electrolytes)</li>
+                <li>Close monitoring catches problems early (electrolyte imbalance, excessive ketone elevation)</li>
+            </ul>
+            <p><strong>If you're young, healthy, and on no medications,</strong> you can attempt nutritional ketosis (1.5&#8211;3.0 mmol/L) independently. But therapeutic ketosis (4.0+) carries higher risks and should be supervised.</p>
+
+            <h3>5. Will I lose muscle on the SKLeTT Protocol?</h3>
+            <p><strong>Short answer:</strong> Not if you do it correctly.</p>
+            <p><strong>How to preserve muscle:</strong></p>
+            <ul>
+                <li><strong>Adequate protein:</strong> 0.8&#8211;1.0 g/kg body weight (more for athletes). Too much protein inhibits ketosis; too little causes muscle loss.</li>
+                <li><strong>Resistance training:</strong> Maintain (don't start new heavy programs during Week 1&#8211;2, but continue existing routines by Week 3+).</li>
+                <li><strong>Sufficient calories:</strong> Don't combine therapeutic ketosis with severe calorie restriction.</li>
+                <li><strong>Electrolytes:</strong> Muscle function requires adequate sodium, potassium, magnesium.</li>
+            </ul>
+            <p><strong>Research shows:</strong> Well-formulated ketogenic diets preserve lean mass comparable to higher-carb diets when protein and training are adequate.</p>
+            <p class="citation">Reference: <a href="https://pubmed.ncbi.nlm.nih.gov/28244676/" target="_blank">J Int Soc Sports Nutr. 2017;14:16</a></p>
+
+            <h3>6. What if I have diabetes? Can I still do SKLeTT?</h3>
+            <p><strong>Type 1 Diabetes:</strong> Absolute contraindication. Do not attempt. High risk of ketoacidosis.</p>
+            <p><strong>Type 2 Diabetes:</strong> Often excellent candidates&#8212;BUT require very close supervision.</p>
+            <p><strong>Why Type 2 diabetics benefit:</strong></p>
+            <ul>
+                <li>Ketogenic diets dramatically improve insulin sensitivity</li>
+                <li>Blood glucose typically drops significantly within 48&#8211;72 hours</li>
+                <li>HbA1c improvements of 1&#8211;2 points common over 3 months</li>
+                <li>Many patients reduce or eliminate diabetes medications</li>
+            </ul>
+            <p><strong>Critical safety measures for Type 2 diabetics:</strong></p>
+            <ul>
+                <li>Baseline HbA1c, fasting glucose, kidney function (GFR) required</li>
+                <li>Medication adjustment BEFORE starting (especially sulfonylureas, insulin)</li>
+                <li>Blood glucose testing 3&#8211;4x daily in first 2 weeks</li>
+                <li>Close physician contact Days 1, 3, 5, 7, 14</li>
+                <li>Immediate reporting of hypoglycemia symptoms</li>
+            </ul>
+            <p class="citation">Reference: <a href="https://pubmed.ncbi.nlm.nih.gov/29522789/" target="_blank">Diabetes Ther. 2018;9(3):1263&#8211;1294</a></p>
+
+            <h3>7. How do I measure my ketone levels? Are urine strips accurate?</h3>
+            <p><strong>Blood ketone meter = GOLD STANDARD.</strong></p>
+            <p><strong>Why blood testing is necessary for SKLeTT:</strong></p>
+            <ul>
+                <li>Measures &#946;-hydroxybutyrate (BHB)&#8212;the primary ketone responsible for therapeutic effects</li>
+                <li>Accurate throughout all stages of ketosis</li>
+                <li>Essential for monitoring therapeutic range (4.0+ mmol/L)</li>
+            </ul>
+            <p><strong>Urine ketone strips (Ketostix):</strong></p>
+            <ul>
+                <li>Measure acetoacetate (a different ketone)</li>
+                <li>Only semi-reliable in first 1&#8211;2 weeks</li>
+                <li>Become unreliable once "keto-adapted" (kidneys stop excreting ketones)</li>
+                <li>Cannot accurately measure levels &gt;3 mmol/L</li>
+                <li><strong>Verdict:</strong> NOT suitable for SKLeTT Protocol</li>
+            </ul>
+            <p><strong>Breath ketone meters:</strong></p>
+            <ul>
+                <li>Measure acetone (a third ketone)</li>
+                <li>Moderate correlation with blood ketones but less precise</li>
+                <li>Useful for tracking trends, not for precise therapeutic monitoring</li>
+                <li><strong>Verdict:</strong> Optional adjunct, but not a replacement for blood testing</li>
+            </ul>
+            <p><strong>Recommended meters:</strong> Precision Xtra, Keto-Mojo, or equivalent. Test strips cost ~$1 each.</p>
+
             <div class="highlight-box">
-                <h3>Have More Questions?</h3>
-                <p>These 7 questions cover the most common concerns. For comprehensive answers to 15+ questions—including cognition research, sleep benefits, mood effects, differences from other keto programs, and detailed safety protocols—see our <strong>Extended FAQ</strong> on the website.</p>
+                <strong>Have More Questions?</strong> These 7 questions cover the most common concerns. For comprehensive answers to 15+ questions&#8212;including cognition research, sleep benefits, mood effects, differences from other keto programs, and detailed safety protocols&#8212;see our <strong>Extended FAQ</strong> on the website.
             </div>
         </section>
 
         <section id="next-steps">
-            <h2><span class="section-number">15.</span> Getting Started with SKLeTT</h2>
-            
+            <h2>15. Getting Started with SKLeTT</h2>
+
             <h3>Step 1: Schedule Your Consultation</h3>
             <p>We begin with a comprehensive 60-minute consultation to:</p>
             <ul>
@@ -806,7 +817,7 @@
                 <li>Order baseline laboratory testing</li>
                 <li>Answer all your questions about the protocol</li>
             </ul>
-            
+
             <h3>Step 2: Pre-Protocol Preparation (1 Week)</h3>
             <ul>
                 <li>Complete baseline labs</li>
@@ -815,7 +826,7 @@
                 <li>Set up tracking system (app or journal)</li>
                 <li>Mental preparation and expectation-setting</li>
             </ul>
-            
+
             <h3>Step 3: Launch Day</h3>
             <ul>
                 <li>Begin strict ketogenic macros</li>
@@ -823,50 +834,49 @@
                 <li>Initiate electrolyte supplementation</li>
                 <li>Check-in scheduled for Day 3</li>
             </ul>
-            
-            <h3>Step 4: Active Supervision (Weeks 1–4)</h3>
+
+            <h3>Step 4: Active Supervision (Weeks 1&#8211;4)</h3>
             <ul>
                 <li>Weekly check-ins (more frequent if on medications)</li>
                 <li>Troubleshooting and protocol adjustments</li>
                 <li>Medication titration as needed</li>
                 <li>Ongoing education and support</li>
             </ul>
-            
-            <h3>Step 5: Maintenance & Transition (Weeks 5–12+)</h3>
+
+            <h3>Step 5: Maintenance &amp; Transition (Weeks 5&#8211;12+)</h3>
             <ul>
                 <li>Bi-weekly check-ins once stable</li>
                 <li>Month 3 labs to assess progress</li>
                 <li>Long-term strategy discussion</li>
                 <li>Transition planning</li>
             </ul>
-            
-            <div class="highlight-box">
-                <h3>📅 Ready to Begin?</h3>
-                <p style="font-size: 1.1em; margin-top: 15px;"><strong><a href="#" style="color: #e74c3c; border-bottom: 2px solid #e74c3c;">Schedule Your SKLeTT Protocol Consultation →</a></strong></p>
-                <p style="margin-top: 15px; font-size: 0.95em; color: #7f8c8d;">Discovery calls available for those wanting to learn more before committing to the full protocol.</p>
-            </div>
         </section>
 
-        <section style="margin-top: 60px; padding-top: 30px; border-top: 2px solid #ecf0f1;">
+        <div class="cta-section">
+            <h3>Ready to Begin?</h3>
+            <p>Schedule your SKLeTT Protocol consultation to find out if therapeutic ketosis is right for you.</p>
+            <a href="https://calendly.com/hello-neuralift/30min" class="cta-button">Schedule Your SKLeTT Protocol Consultation &#8594;</a>
+            <p style="font-size: 0.9em; margin-top: 15px; color: #bdc3c7;">Discovery calls available for those wanting to learn more before committing to the full protocol.</p>
+        </div>
+
+        <section style="margin-top: 40px;">
             <h2>About Dr. B.D.</h2>
-            <p>Dr. B.D. is a physician with over 30 years of clinical experience who has spent approximately 40% of the past 3 years in therapeutic ketosis himself. His personal experience—combined with extensive research into the neurological and metabolic effects of ketones—has informed the development of the SKLeTT Protocol.</p>
-            
+            <p>Dr. B.D. is a physician with over 30 years of clinical experience who has spent approximately 40% of the past 3 years in therapeutic ketosis himself. His personal experience&#8212;combined with extensive research into the neurological and metabolic effects of ketones&#8212;has informed the development of the SKLeTT Protocol.</p>
+
             <p>Dr. B.D. has guided hundreds of patients through therapeutic ketosis, documenting real-world challenges like medication adjustments, electrolyte management, and the psychological barriers to sustained adherence. His goal this year: 6 consecutive months in deep therapeutic ketosis.</p>
-            
-            <p style="margin-top: 25px;"><em>"I've seen the transformation that therapeutic ketosis can create—not just in lab values, but in how people think, feel, and perform. The SKLeTT Protocol exists because I believe this level of intervention should be accessible to those willing to commit to the process."</em></p>
+
+            <p style="margin-top: 20px; font-style: italic;">"I've seen the transformation that therapeutic ketosis can create&#8212;not just in lab values, but in how people think, feel, and perform. The SKLeTT Protocol exists because I believe this level of intervention should be accessible to those willing to commit to the process."</p>
         </section>
 
-        <section style="margin-top: 40px; padding: 25px; background: #fef5e7; border-radius: 6px; border-left: 5px solid #f39c12;">
-            <h3 style="margin-top: 0; color: #e67e22;">⚠️ Important Disclaimer</h3>
+        <div class="warning-box" style="margin-top: 40px;">
+            <h3 style="margin-top: 0; color: #e67e22;">&#9888;&#65039; Important Disclaimer</h3>
             <p style="margin-bottom: 0;"><strong>The SKLeTT Protocol is educational in nature and does not constitute medical advice.</strong> Therapeutic ketosis requires physician supervision, especially for individuals on medications or with pre-existing health conditions. The information in this document is not a substitute for personalized medical consultation. Always consult your healthcare provider before beginning any new dietary or metabolic intervention. Dr. B.D.'s online coaching services provide education and guidance but do not establish a doctor-patient relationship for prescriptive medical treatment.</p>
-        </section>
+        </div>
 
-        <footer style="margin-top: 60px; padding-top: 30px; border-top: 2px solid #ecf0f1; text-align: center; color: #7f8c8d; font-size: 0.9em;">
-            <p><strong>The SKLeTT Protocol</strong><br>
-            Specific Ketone Level Titration Therapy</p>
-            <p style="margin-top: 15px;">© 2026 Dr. B.D. | All Rights Reserved<br>
-            <a href="#">neuralift.co</a> | <a href="#">Contact</a></p>
+        <footer>
+            <p>&#169; 2026 Dr. B.D. | NeuralLift | All Rights Reserved</p>
+            <p style="margin-top: 10px;"><a href="https://neuralift.co">neuralift.co</a> | <a href="mailto:b-d@nebula.me">b-d@nebula.me</a></p>
         </footer>
     </div>
 </body>
-</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+</html>
