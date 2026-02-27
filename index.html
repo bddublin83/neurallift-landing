@@ -484,7 +484,15 @@
             <p class="subtitle">Evidence-Based Brain Energy Optimization Through Therapeutic Ketosis</p>
             <p class="tagline">Two Pathways: Simple Supplements or Complete Protocol Coaching</p>
             <p class="credentials">Dr. B.D., MD | Practicing Physician | 30+ Years Experience<br>Metabolic Medicine & Brain Energy Optimization</p>
-            <a href="https://calendly.com/hello-neuralift/30min" target="_blank" class="cta-button" style="cursor: pointer; border: none; font-family: inherit; text-decoration: none; display: inline-block;">Request Discovery Call</a>
+            <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-top: 10px;">
+                <button class="ml-onclick-form cta-button" onclick="ml('show', 'Wv2lyp', true)" style="cursor: pointer; border: none; font-family: inherit; font-size: 1em; padding: 16px 32px; background: #f39c12; color: #1a1a2e;">
+                    Start with Supplements &rarr;
+                </button>
+                <a href="https://calendly.com/bddublin83/30min" target="_blank" class="cta-button" style="font-size: 1em; padding: 16px 32px; background: transparent; border: 3px solid #f39c12; color: #f39c12; text-decoration: none; display: inline-block;">
+                    Book SKLeTT Discovery Call &rarr;
+                </a>
+            </div>
+            <p style="margin-top: 14px; font-size: 0.9em; color: #bdc3c7;">Not sure which path? The supplement guide is the easiest place to start.</p>
         </div>
     </section>
 
@@ -690,19 +698,35 @@
                 </div>
 
                 <div style="text-align: center; margin-top: 50px;">
-                    <button class="ml-onclick-form cta-button" onclick="ml('show', 'wZt8nG', true)" style="cursor: pointer; border: none; font-family: inherit; font-size: inherit;">Request SKLeTT Discovery Call</button>
+                    <a href="https://calendly.com/bddublin83/30min" target="_blank" class="cta-button" style="text-decoration: none; display: inline-block; font-size: inherit;">Request SKLeTT Discovery Call</a>
                     <p style="margin-top: 20px; color: #777; font-size: 0.95em;">During our call, we'll discuss your goals, determine if SKLeTT is right for you,<br>and clarify whether you're seeking in-office medical care or online coaching.</p>
                 </div>
 
-                <div style="text-align: center; margin-top: 30px; padding: 30px; background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
-                    <p style="font-size: 1.05em; color: #ccc; margin-bottom: 15px;">Want to understand the mindset behind the protocol first? Read <em>The Chains We Choose</em> — free.</p>
-                    <button onclick="ml('show', 'wZt8nG', true);" style="display: inline-block; cursor: pointer; border: 4px solid #1a1a2e; background: transparent; color: #1a1a2e; font-family: inherit; font-size: 1em; font-weight: 700; padding: 14px 35px; border-radius: 50px; letter-spacing: 1px; transition: all 0.3s ease;"
-                        onmouseover="this.style.background='#1a1a2e'; this.style.color='#fff';"
-                        onmouseout="this.style.background='transparent'; this.style.color='#1a1a2e';">
+                <div style="text-align: center; margin-top: 30px; padding: 30px; background: #f8f9fa; border-radius: 12px; border: 1px solid #e0e0e0;">
+                    <p style="font-size: 1.05em; color: #555; margin-bottom: 8px;">Want to read the full science before booking a call?</p>
+                    <p style="font-size: 0.95em; color: #777; margin-bottom: 20px;">Enter your email and read <em>The Chains We Choose</em> — the complete SKLeTT Protocol document — right now on this site.</p>
+                    <button onclick="ml('show', 'wZt8nG', true);" style="display: inline-block; cursor: pointer; border: 3px solid #1a1a2e; background: #1a1a2e; color: #fff; font-family: inherit; font-size: 1em; font-weight: 700; padding: 14px 35px; border-radius: 6px; letter-spacing: 1px; transition: all 0.3s ease;"
+                        onmouseover="this.style.background='#f39c12'; this.style.borderColor='#f39c12'; this.style.color='#1a1a2e';"
+                        onmouseout="this.style.background='#1a1a2e'; this.style.borderColor='#1a1a2e'; this.style.color='#fff';">
                         Read the SKLeTT Protocol &rarr;
                     </button>
-                    <p style="margin-top: 12px; color: #777; font-size: 0.85em;">Free download &mdash; no commitment.</p>
+                    <p style="margin-top: 12px; color: #999; font-size: 0.85em;">Free &mdash; read instantly &mdash; no commitment.</p>
                 </div>
+
+                <script>
+                // After MailerLite form submit on Button 4, redirect to the SKLeTT reading page
+                document.addEventListener('DOMContentLoaded', function() {
+                    if (window.ml) {
+                        ml('webforms', 'subscribe', function(data) {
+                            if (data && data.formId === 'wZt8nG') {
+                                setTimeout(function() {
+                                    window.location.href = '/sklett-protocol.html';
+                                }, 1200);
+                            }
+                        });
+                    }
+                });
+                </script>
             </div>
         </div>
     </section>
