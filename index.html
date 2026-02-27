@@ -15,6 +15,12 @@
         ml('account', '2072436');
     </script>
     <!-- End MailerLite Universal -->
+    <!-- Auto-show entry popup after 3 seconds -->
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() { ml('show', 'z4jOeL', true); }, 3000);
+        });
+    </script>
 
     <style>
         * {
@@ -684,8 +690,18 @@
                 </div>
 
                 <div style="text-align: center; margin-top: 50px;">
-                    <button class="ml-onclick-form" onclick="ml('show', 'wZt8nG', true)" style="cursor: pointer; border: none; font-family: inherit; font-size: inherit;">Request SKLeTT Discovery Call</button>
+                    <button class="ml-onclick-form cta-button" onclick="ml('show', 'wZt8nG', true)" style="cursor: pointer; border: none; font-family: inherit; font-size: inherit;">Request SKLeTT Discovery Call</button>
                     <p style="margin-top: 20px; color: #777; font-size: 0.95em;">During our call, we'll discuss your goals, determine if SKLeTT is right for you,<br>and clarify whether you're seeking in-office medical care or online coaching.</p>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px; padding: 30px; background: rgba(255,255,255,0.05); border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+                    <p style="font-size: 1.05em; color: #ccc; margin-bottom: 15px;">Want to go deeper first? Read the full SKLeTT scientific manuscript — available after a quick email registration.</p>
+                    <button class="ml-onclick-form" onclick="ml('show', 'wZt8nG', true)" style="cursor: pointer; border: 2px solid #a78bfa; background: transparent; color: #a78bfa; font-family: inherit; font-size: 1em; padding: 14px 35px; border-radius: 50px; letter-spacing: 1px; transition: all 0.3s ease;"
+                        onmouseover="this.style.background='#a78bfa'; this.style.color='#fff';"
+                        onmouseout="this.style.background='transparent'; this.style.color='#a78bfa';">
+                        Read the SKLeTT Manuscript &rarr;
+                    </button>
+                    <p style="margin-top: 12px; color: #777; font-size: 0.85em;">Enter your email to unlock access &mdash; free, no commitment.</p>
                 </div>
             </div>
         </div>
