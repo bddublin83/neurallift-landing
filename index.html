@@ -15,6 +15,12 @@
         ml('account', '2072436');
     </script>
     <!-- End MailerLite Universal -->
+    <!-- Auto-popup: fires 3 seconds after page load -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() { ml('show', 'z4jOeL', true); }, 3000);
+        });
+    </script>
     
     <style>
         * {
