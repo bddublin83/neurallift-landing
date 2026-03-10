@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Brain Stack | NeuralLift — Physician-Curated Supplements</title>
+  <style>
+    :root {
+      --bg: #0a0e1a;
+      --bg2: #111827;
+      --bg3: #1a2235;
+      --accent: #3b82f6;
+      --accent2: #06b6d4;
+      --gold: #f59e0b;
+      --green: #10b981;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --border: #1e2d45;
+      --thorne: #2563eb;
+      --le: #7c3aed;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #0a0e1a 0%, #0f1e3d 50%, #0a0e1a 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 20px 50px;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(59,130,246,0.15);
+      border: 1px solid rgba(59,130,246,0.4);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #ffffff 0%, #93c5fd 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      font-size: clamp(16px, 2vw, 20px);
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0 auto 30px;
+    }
+    .hero-byline {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 40px;
+      padding: 8px 20px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .hero-byline span { color: var(--text); font-weight: 600; }
+
+    /* DISCLAIMER BAR */
+    .disclaimer-bar {
+      background: rgba(245,158,11,0.08);
+      border-top: 1px solid rgba(245,158,11,0.2);
+      border-bottom: 1px solid rgba(245,158,11,0.2);
+      padding: 12px 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #d4a017;
+    }
+
+    /* INTRO */
+    .intro {
+      max-width: 760px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+    .intro p {
+      font-size: 17px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .intro p strong { color: var(--text); }
+
+    /* HOW TO READ */
+    .how-to-read {
+      max-width: 900px;
+      margin: 0 auto 50px;
+      padding: 0 20px;
+    }
+    .how-to-read h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand-key {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .brand-thorne { background: rgba(37,99,235,0.15); border: 1px solid rgba(37,99,235,0.4); color: #93c5fd; }
+    .brand-le { background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.4); color: #c4b5fd; }
+    .brand-any { background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.3); color: #6ee7b7; }
+
+    /* SUPPLEMENT CARDS */
+    .stack {
+      max-width: 900px;
+      margin: 0 auto 60px;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .card:hover { border-color: rgba(59,130,246,0.4); }
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 24px 24px 0;
+    }
+    .card-num {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 800;
+      color: white;
+    }
+    .card-title-group { flex: 1; }
+    .card-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.2;
+    }
+    .card-subtitle {
+      font-size: 13px;
+      color: var(--accent2);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-top: 2px;
+    }
+    .card-body {
+      padding: 16px 24px 0;
+    }
+    .card-what {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 20px;
+      padding-left: 12px;
+      border-left: 3px solid var(--accent);
+    }
+
+    /* PROTOCOL BOX */
+    .protocol {
+      background: var(--bg3);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-bottom: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+    }
+    .protocol-item {}
+    .protocol-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .protocol-value {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .protocol-note {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* WHY THIS FORM */
+    .why-form {
+      background: rgba(6,182,212,0.06);
+      border: 1px solid rgba(6,182,212,0.2);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: #67e8f9;
+    }
+    .why-form strong { color: #a5f3fc; }
+
+    /* BUY BUTTONS */
+    .buy-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 0 24px 24px;
+      margin-top: 4px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.15s, opacity 0.15s;
+      cursor: pointer;
+    }
+    .btn:hover { transform: translateY(-2px); opacity: 0.92; }
+    .btn-thorne {
+      background: linear-gradient(135deg, #1d4ed8, #2563eb);
+      color: white;
+    }
+    .btn-le {
+      background: linear-gradient(135deg, #6d28d9, #7c3aed);
+      color: white;
+    }
+    .btn-any {
+      background: linear-gradient(135deg, #047857, #10b981);
+      color: white;
+    }
+    .btn-placeholder {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: var(--muted);
+      font-style: italic;
+      font-size: 13px;
+      cursor: default;
+    }
+    .btn-placeholder:hover { transform: none; opacity: 1; }
+    .affiliate-note {
+      font-size: 12px;
+      color: var(--muted);
+      padding: 0 24px 20px;
+      font-style: italic;
+    }
+
+    /* BEST PICK TAG */
+    .best-pick {
+      display: inline-block;
+      background: rgba(245,158,11,0.15);
+      border: 1px solid rgba(245,158,11,0.35);
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 6px;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+
+    /* QUICK REF TABLE */
+    .quick-ref {
+      max-width: 900px;
+      margin: 0 auto 60px;
+      padding: 0 20px;
+    }
+    .quick-ref h2 {
+      font-size: 26px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+    .ref-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .ref-table th {
+      background: var(--bg3);
+      color: var(--accent);
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 12px 14px;
+      text-align: left;
+      border-bottom: 2px solid var(--border);
+    }
+    .ref-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+      vertical-align: top;
+    }
+    .ref-table tr:last-child td { border-bottom: none; }
+    .ref-table tr:hover td { background: rgba(255,255,255,0.02); }
+    .ref-table td:first-child { color: var(--text); font-weight: 600; }
+    .ref-table .timing-am { color: #fbbf24; }
+    .ref-table .timing-pm { color: #818cf8; }
+    .ref-table .timing-any { color: #6ee7b7; }
+
+    /* FOOTER */
+    .footer {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .footer-logo {
+      font-size: 22px;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 12px;
+    }
+    .footer p {
+      font-size: 13px;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 8px;
+    }
+    .footer-disc {
+      font-size: 12px;
+      color: #475569;
+      margin-top: 16px;
+    }
+
+    @media (max-width: 600px) {
+      .card-header { flex-direction: column; }
+      .protocol { grid-template-columns: 1fr 1fr; }
+      .buy-row { flex-direction: column; }
+      .btn { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">NeuralLift Brain Stack</div>
+  <h1>The 9 Supplements That<br>Actually Work for Your Brain</h1>
+  <p class="hero-sub">Exact doses, timing, and food pairing for each — plus the specific brands and molecular forms used in the research. No guessing.</p>
+  <div class="hero-byline">
+    Curated by <span>Barry Dublin, MD</span> &nbsp;|&nbsp; Brain Energy & Performance Physician
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<div class="disclaimer-bar">
+  This page contains affiliate links. I only recommend products I would prescribe. Affiliate status does not change the recommendation — if a non-affiliate product is better, I say so.
+</div>
+
+<!-- INTRO -->
+<div class="intro">
+  <p>Every supplement below is from the guide you downloaded. What this page adds is the <strong>executable detail</strong> — exactly when to take it, with or without food, what to pair it with, and a direct link to the exact product I recommend.</p>
+  <p>I have included the best option for each supplement regardless of whether I earn a commission on it. If a brand without an affiliate link is the clear winner, it is listed. The goal is your result, not my revenue.</p>
+</div>
+
+<!-- HOW TO READ -->
+<div class="how-to-read">
+  <h2>How to Read This Page</h2>
+  <div class="brand-key">
+    <div class="brand-badge brand-thorne">&#9632; Thorne</div>
+    <div class="brand-badge brand-le">&#9632; Life Extension</div>
+    <div class="brand-badge brand-any">&#9632; Other / Any Brand</div>
+  </div>
+  <p style="font-size:14px; color:var(--muted);">Each card shows the protocol box first (dose, timing, food), then why the form matters, then the buy button. Thorne links are affiliate links. Life Extension links are affiliate links. Other recommendations are non-affiliate — listed because they are the best option.</p>
+</div>
+
+<!-- SUPPLEMENT CARDS -->
+<div class="stack">
+
+  <!-- 1. UBIQUINOL -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-num">1</div>
+      <div class="card-title-group">
+        <div class="card-title">Ubiquinol (CoQ10)</div>
+        <div class="card-subtitle">Mitochondrial Energy Production &amp; Antioxidant Protection</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="card-what">Powers the final step of cellular energy production in your mitochondria. After age 40 — or on a statin — your body loses the ability to convert standard CoQ10 into the active form. Ubiquinol skips that conversion entirely.</p>
+      <div class="protocol">
+        <div class="protocol-item">
+          <div class="protocol-label">Dose</div>
+          <div class="protocol-value">100–200mg</div>
+          <div class="protocol-note">100mg if under 50 and not on statins; 200mg if over 50 or on a statin</div>
+        </div>
+        <div class="protocol-item">
+          <div class="protocol-label">Timing</div>
+          <div class="protocol-value">With your largest meal</div>
+          <div class="protocol-note">Morning or lunch preferred — fat-soluble, needs dietary fat</div>
+        </div>
+        <div class="protocol-item">
+          <div class="protocol-label">Food Pairing</div>
+          <div class="protocol-value">Take with fat</div>
+          <div class="protocol-note">Absorption drops 30–50% on empty stomach or with a low-fat meal</div>
+        </div>
+        <div class="protocol-item">
+          <div class="protocol-label">Pair With</div>
+          <div class="protocol-value">PQQ</div>
+          <div class="protocol-note">CoQ10 powers existing mitochondria; PQQ grows new ones</div>
+        </div>
+      </div>
+      <div class="why-form"><strong>Why ubiquinol, not ubiquinone:</strong> Your body must convert standard CoQ10 (ubiquinone) to ubiquinol before it can be used. This conversion declines sharply with age and statin use. Virtually all commercial ubiquinol uses the same Kaneka ingredient — brand storytelling is irrelevant here. Dose and form are what matter.</div>
+    </div>
+    <div class="buy-row">
+      <a href="https://www.lifeextension.com/vitamins-supplements/item01426/super-ubiquinol-coq10?affiliate=PLACEHOLDER" class="btn btn-le" target="_blank" rel="noopener">&#9632; Life Extension Super Ubiquinol <span class="best-pick">Best Value</span></a>
+      <a href="https://www.thorne.com/products/dp/q-best?affiliate=PLACEHOLDER" class="btn btn-thorne" target="_blank" rel="noopener">&#9632; Thorne Q-Best</a>
+    </div>
+    <div class="affiliate-note">* Affiliate link — I earn a small commission at no extra cost to you. Both use Kaneka ubiquinol; compare price per dose.</div>
+  </div>
+
+  <!-- 2. PQQ -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-num">2</div>
+      <div class="card-title-group">
+        <div class="card-title">PQQ</div>
+        <div class="card-subtitle">Mitochondrial Biogenesis — Growing New Mitochondria</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="card-what">The only supplement with strong evidence for stimulating the growth of entirely new mitochondria. CoQ10 optimizes the ones you have — PQQ actually makes more. Activates CREB and PGC-1&#945; signaling involved in neuroprotection and long-term cognitive function.</p>
+      <div class="protocol">
+        <div class="protocol-item">
+          <div class="protocol-label">Dose</div>
+          <div class="protocol-value">10–20mg daily</div>
+          <div class="protocol-note">10mg is the trial dose; 20mg for accelerated effect</div>
+        </div>
+        <div class="protocol-item">
+          <div class="protocol-label">Timing</div>
+          <div class="protocol-value">Morning with food</div>
+          <div class="protocol-note">Takes days to weeks to accumulate — consistency matters more than exact timing</div>
+        </div>
+        <div class="protocol-item">
+          <div class="protocol-label">Food Pairing</div>
+          <div class="protocol-value">With or without food</div>
+          <div class="protocol-note">No meaningful absorption difference — take with morning routine</div>
+        </div>
+        <div class="protocol-item">
+          <div class="protocol-label">Pair With</div>
+          <div class="protocol-value">CoQ10</div>
+          <div class="protocol-note">Complementary mechanisms — take together for full mitochondrial support</div>
+        </div>
+      </div>
+      <div class="why-form"><strong>Why BioPQQ specifically:</strong> All published human trials used BioPQQ — produced by Mitsubishi Gas Chemical via bacterial fermentation. If a label does not specify BioPQQ, the ingredient is unverified. This is not interchangeable with generic PQQ.</div>
+    </div>
+    <div class="buy-row">
+      <a href="https://www.lifeextension.com/vitamins-supplements/item01447/pqq-caps?affiliate=PLACEHOLDER" class="btn btn-le" target="_blank" rel="noopener">&#9632; Life Extension PQQ Caps <span class="best-pick">Best Pick</span></a>
+      <a href="https://www.thorne.com/products/dp/memoractiv?affiliate=PLACEHOLDER" class="btn btn-thorne" target="_blank" rel="noopener">&#9632; Thorne MemorActiv</a>
+    </div>
+    <div class="affiliate-note">* Affiliate link — both specify BioPQQ at correct dose.</div>
+  </div>
+
+  <!-- 3. ALCAR -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-num">3</div>
+      <div class="card-title-group">
+        <div class="card-title">ALCAR</div>
+        <div class="card-subtitle">Acetyl-L-Carnitine — Brain Fuel Transport + Acetylcholine Precursor</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="card-what">Two mechanisms in one molecule: shuttles fatty acids into mitochondria for energy, and donates directly to acetylcholine synthesis in the brain. Regular L-Carnitine cannot cross the blood-brain barrier. ALCAR can — and does both jobs.</p>
+      <div class="protocol">
+        <div class="protocol-item">
+          <div class="protocol-label">Dose</div>
+          <div class="protocol-value">500–1000mg daily</div>
+          <div class="protocol-note">Start at 500mg; increase to 1000mg if well-tolerated after 2 weeks</div>
+        </div>
+        <div class="protocol-item">
+          <div class="protocol-label">Timing</div>
+          <div class="protocol-value">Morning, before noon</div>
+          <div class="protocol-note">Can be mildly stimulating — avoid taking after 2pm</div>
+        </div>
+        <div class="protocol-item">
+          <div class="protocol-label">Food Pairing</div>
+          <div class="protocol-value">With or without food</div>
+          <div class="protocol-note">Absorbed well either way; take with food if GI sensitivity</div>
+        </div>
+        <div class="protocol-item">
+          <div class="protocol-label">Pair With</div>
+          <div class="protocol-value">B Complex</div>
+          <div class="protocol-note">B vitamins support acetylcholine synthesis downstream</div>
+        </div>
+      </div>
+      <div class="why-form"><strong>Why ALCAR, not L-Carnitine:</strong> L-Carnitine is primarily a fat-transport molecule for muscle and heart. It does not meaningfully cross the blood-brain barrier. ALCAR is the neurologically active form. The cognitive evidence base is built exclusively on ALCAR — they are not interchangeable.</div>
+    </div>
+    <div class="buy-row">
+      <a href="https://www.thorne.com/products/dp/acetyl-l-carnitine?affiliate=PLACEHOLDER" class="btn btn-thorne" target="_blank" rel="noopener">&#9632; Thorne Acetyl-L-Carnitine <span class="best-pick">Best Pick</span></a>
+      <a href="https://www.lifeextension.com/vitamins-supplements/item00461/acetyl-l-carnitine-arginate?affiliate=PLACEHOLDER" class="btn btn-le" target="_blank" rel="noopener">&#9632; Life Extension ALCAR</a>
+    </div>
+    <div class="affiliate-note">* Affiliate link — both third-party verified. Choose Thorne for NSF Certified for Sport verification.</div>
+  </div>
+
+  <!-- 4. ACTIVE B COMPLEX -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-num">4</div>
+      <div class="card-title-group">
+        <div class="card-title">Active B Complex</div>
+        <div class="card-subtitle">All 5 Vitamins in Bioavailable Form — Methylation &amp; Neurotransmitter Synthesis</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="card-what">B vitamins run the methylation cycle — the engine behind neurotransmitter synthesis, DNA repair, and cellular energy. But inactive forms (the cheap ones in most supplements) require liver conversion that fails in ~40% of people due to the MTHFR genetic variant, or simply due to age and alcohol. Active forms bypass this entirely.</p>
+      <div class="protocol">
+        <div class="protocol-item">
+          <div class="protocol-label">Dose</div>
+          <div class="protocol-value">1 capsule daily</div>
+          <div class="protocol-note">Follow label on chosen product</div>
+        </div>
+        <div class="protocol-item">
+          <div class="protocol-label">Timing</div>
+          <div class="protocol-value">Morning with food</div>
+          <div class="protocol-note">B vitamins can be mildly energizing — mornings work best</div>
+        </div>
+        <div class="protocol-item">
+          <div class="protocol-label">Food Pairing</div>
+          <div class="protocol-value">Always with food</div>
+          <div class="protocol-note">Reduces nausea from B6 and B12 at higher doses</div>
+        </div>
+        <div class="protocol-item">
+          <div class="protocol-label">Key Form Check</div>
+          <div class="protocol-value">5 active forms required</div>
+          <div class="protocol-note">Benfotiamine, R5P, P5P, 5-MTHF, Methylcobalamin</div>
+        </div>
+      </div>
+      <div class="why-form"><strong>Why Life Extension wins here:</strong> Thorne Basic B uses folic acid (not methylfolate) and standard thiamine (not benfotiamine) — two meaningful gaps for brain optimization. Life Extension BioActive B-Complex uses all five active forms. This is the clearest brand differentiation in the entire stack — it is not close.</div>
+    </div>
+    <div class="buy-row">
+      <a href="https://www.lifeextension.com/vitamins-supplements/item02307/bioactive-complete-b-complex?affiliate=PLACEHOLDER" class="btn btn-le" target="_blank" rel="noopener">&#9632; Life Extension BioActive B-Complex <span class="best-pick">Clear Winner</span></a>
+    </div>
+    <div class="affiliate-note">* Affiliate link — this is the only product in the stack with a clear brand winner based on formulation. Thorne's B complex is not recommended for brain-optimization use due to inactive forms.</div>
+  </div>
+
+  <!-- 5. FISH OIL -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-num">5</div>
+      <div class="card-title-group">
+        <div class="card-title">Fish Oil (EPA/DHA)</div>
+        <div class="card-subtitle">Neuroinflammation, Synaptic Function &amp; Membrane Fluidity</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="card-what">EPA reduces neuroinflammation. DHA is a structural component of neuronal membranes — particularly at synapses. The biggest risk with fish oil is rancidity: rancid fish oil is pro-inflammatory, the exact opposite of the intended effect. Quality verification is non-negotiable.</p>
+      <div class="protocol">
+        <div class="protocol-item">
+          <div class="protocol-label">Dose</div>
+          <div class="protocol-value">1–2g EPA+DHA daily</div>
+          <div class="protocol-note">Check label for actual EPA+DHA content, not total fish oil weight</div>
+        </div>
+        <div class="protocol-item">
+          <div class="protocol-label">Timing</div>
+          <div class="protocol-value">With largest meal</div>
+          <div class="protocol-note">Fat in the meal drives absorption; splits across meals reduces fishy aftertaste</div>
+        </div>
+        <div class="protocol-item">
+          <div class="protocol-label">Food Pairing</div>
+          <div class="protocol-value">Always with dietary fat</div>
+          <div class="protocol-note">Absorption up to 3x higher with a fat-containing meal vs. fasted</div>
+        </div>
+        <div class="protocol-item">
+          <div class="protocol-label">Avoid</div>
+          <div class="protocol-value">Ethyl ester form</div>
+          <div class="protocol-note">rTG form absorbs 70% better — check for "re-esterified triglyceride" on label</div>
+        </div>
+      </div>
+      <div class="why-form"><strong>Why rTG form + IFOS certification:</strong> Most fish oils are ethyl ester (EE) — a less expensive form with significantly lower absorption. rTG form matches how omega-3s naturally occur in fish. IFOS (International Fish Oil Standards) is the only independent certification that specifically tests for oxidation. Nordic Naturals is widely marketed as premium but is not IFOS certified.</div>
+    </div>
+    <div class="buy-row">
+      <a href="https://www.thorne.com/products/dp/super-epa?affiliate=PLACEHOLDER" class="btn btn-thorne" target="_blank" rel="noopener">&#9632; Thorne Super EPA <span class="best-pick">Best Pick</span></a>
+      <a href="https://www.lifeextension.com/vitamins-supplements/item01988/mega-epa-dha?affiliate=PLACEHOLDER" class="btn btn-le" target="_blank" rel="noopener">&#9632; Life Extension Mega EPA/DHA</a>
+    </div>
+    <div class="affiliate-note">* Affiliate link — both rTG form, both IFOS certified.</div>
+  </div>
+
+  <!-- 6. NAD+ -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-num">6</div>
+      <div class="card-title-group">
+        <div class="card-title">NAD+ Precursor (NR)</div>
+        <div class="card-subtitle">Nicotinamide Riboside — Sirtuin Activation &amp; DNA Repair</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="card-what">NAD+ is the central electron carrier in metabolism and a required substrate for sirtuins — the longevity enzymes behind DNA repair, mitochondrial regulation, and stress resilience. NAD+ levels drop ~50% between age 40 and 60. NR is currently the better-supported precursor over NMN based on 2025-2026 trial data.</p>
+      <div class="protocol">
+        <div class="protocol-item">
+          <div class="protocol-label">Dose</div>
+          <div class="protocol-value">300mg NR daily</div>
+          <div class="protocol-note">The dose used in published human trials showing 2x blood NAD+ increase</div>
+        </div>
+        <div class="protocol-item">
+          <div class="protocol-label">Timing</div>
+          <div class="protocol-value">Morning</div>
+          <div class="protocol-note">Aligns with circadian NAD+ rhythms — morning dosing is best studied</div>
+        </div>
+        <div class="protocol-item">
+          <div class="protocol-label">Food Pairing</div>
+          <div class="protocol-value">With or without food</div>
+          <div class="protocol-note">Absorption not meaningfully affected by food</div>
+        </div>
+        <div class="protocol-item">
+          <div class="protocol-label">NR vs NMN</div>
+          <div class="protocol-value">NR currently preferred</div>
+          <div class="protocol-note">2025 Nature Metabolism analysis: NR raised NAD+ 2x more than NMN in direct comparison</div>
+        </div>
+      </div>
+      <div class="why-form"><strong>Why Tru Niagen (ChromaDex) sourcing matters:</strong> ChromaDex holds the primary NR patents and is the ingredient supplier for virtually all published human NR trials. Life Extension NAD+ Cell Regenerator uses Tru Niagen NR. This is a meaningful distinction — generic NR has not been independently validated in the same trials.</div>
+    </div>
+    <div class="buy-row">
+      <a href="https://www.lifeextension.com/vitamins-supplements/item02403/nad-cell-regenerator?affiliate=PLACEHOLDER" class="btn btn-le" target="_blank" rel="noopener">&#9632; Life Extension NAD+ Cell Regenerator <span class="best-pick">Best Pick</span></a>
+      <a href="https://www.thorne.com/products/dp/niacel-400?affiliate=PLACEHOLDER" class="btn btn-thorne" target="_blank" rel="noopener">&#9632; Thorne NiaCel 400</a>
+    </div>
+    <div class="affiliate-note">* Affiliate link — both use Tru Niagen (ChromaDex) NR at 300mg dose.</div>
+  </div>
+
+  <!-- 7. MAGNESIUM L-THREONATE -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-num">7</div>
+      <div class="card-title-group">
+        <div class="card-title">Magnesium L-Threonate</div>
+        <div class="card-subtitle">Magtein — Brain Magnesium, Synaptic Density &amp; Executive Function</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="card-what">The only form of magnesium shown to raise magnesium levels specifically in the brain. Human RCTs show improvements in working memory and executive function in aging adults. Also supports sleep quality as a secondary benefit — making it the ideal evening supplement.</p>
+      <div class="protocol">
+        <div class="protocol-item">
+          <div class="protocol-label">Dose</div>
+          <div class="protocol-value">1500–2000mg MgT</div>
+          <div class="protocol-note">Provides ~144mg elemental magnesium — different from the mg listed on other forms</div>
+        </div>
+        <div class="protocol-item">
+          <div class="protocol-label">Timing</div>
+          <div class="protocol-value">Evening, before bed</div>
+          <div class="protocol-note">The sleep-enhancing effect is a feature, not a side effect — take advantage of it</div>
+        </div>
+        <div class="protocol-item">
+          <div class="protocol-label">Food Pairing</div>
+          <div class="protocol-value">With or without food</div>
+          <div class="protocol-note">No meaningful absorption difference; avoid with high-calcium meals</div>
+        </div>
+        <div class="protocol-item">
+          <div class="protocol-label">Do Not Substitute</div>
+          <div class="protocol-value">Glycinate is not equivalent</div>
+          <div class="protocol-note">Glycinate is excellent for sleep but does NOT replicate the cognitive effects of MgT</div>
+        </div>
+      </div>
+      <div class="why-form"><strong>Why Magtein specifically:</strong> The threonate ion acts as a transporter across the blood-brain barrier. This is the only magnesium form that raises brain (not just serum) magnesium in RCTs. The patented Magtein form was developed at MIT (Guosong Liu lab). Generic MgT products have not been independently validated — Magtein is not interchangeable with commodity magnesium threonate.</div>
+    </div>
+    <div class="buy-row">
+      <a href="https://www.lifeextension.com/vitamins-supplements/item01603/neuro-mag-magnesium-l-threonate?affiliate=PLACEHOLDER" class="btn btn-le" target="_blank" rel="noopener">&#9632; Life Extension Neuro-Mag <span class="best-pick">Best Pick</span></a>
+    </div>
+    <div class="affiliate-note">* Affiliate link — Life Extension Neuro-Mag uses Magtein (the only validated form). This is the clear recommendation.</div>
+  </div>
+
+  <!-- 8. R-ALA -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-num">8</div>
+      <div class="card-title-group">
+        <div class="card-title">R-ALA</div>
+        <div class="card-subtitle">R-Alpha Lipoic Acid — Mitochondrial Antioxidant &amp; Insulin Sensitivity</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="card-what">A mitochondrial antioxidant that neutralizes free radicals in both water-soluble and fat-soluble environments — uniquely versatile. Regenerates vitamins C, E, and glutathione. Crosses the blood-brain barrier. Also supports insulin sensitivity, which matters for brain glucose metabolism.</p>
+      <div class="protocol">
+        <div class="protocol-item">
+          <div class="protocol-label">Dose</div>
+          <div class="protocol-value">100–300mg daily</div>
+          <div class="protocol-note">100mg sodium R-lipoate = roughly equivalent to 300mg racemic ALA in plasma levels</div>
+        </div>
+        <div class="protocol-item">
+          <div class="protocol-label">Timing</div>
+          <div class="protocol-value">With a meal</div>
+          <div class="protocol-note">Always take with food — can cause nausea or hypoglycemia-like symptoms fasted</div>
+        </div>
+        <div class="protocol-item">
+          <div class="protocol-label">Food Pairing</div>
+          <div class="protocol-value">Always with food</div>
+          <div class="protocol-note">This is the one supplement where taking fasted is genuinely not recommended</div>
+        </div>
+        <div class="protocol-item">
+          <div class="protocol-label">Do Not Substitute</div>
+          <div class="protocol-value">Racemic ALA is not equivalent</div>
+          <div class="protocol-note">The S-isomer in racemic ALA may compete with and reduce R-ALA uptake</div>
+        </div>
+      </div>
+      <div class="why-form"><strong>Why Thorne wins here:</strong> Thorne uses sodium R-lipoate — the stabilized salt form of R-ALA that produces ~2x the plasma levels of racemic ALA at equivalent doses. Life Extension's default ALA products are often racemic (R+S). Check labels carefully if buying from other brands — most products do not specify, which means they are likely racemic.</div>
+    </div>
+    <div class="buy-row">
+      <a href="https://www.thorne.com/products/dp/r-lipoic-acid?affiliate=PLACEHOLDER" class="btn btn-thorne" target="_blank" rel="noopener">&#9632; Thorne R-Lipoic Acid <span class="best-pick">Clear Winner</span></a>
+    </div>
+    <div class="affiliate-note">* Affiliate link — Thorne is the clear winner here. Life Extension is not recommended for this specific supplement due to formulation differences.</div>
+  </div>
+
+  <!-- 9. CREATINE -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-num">9</div>
+      <div class="card-title-group">
+        <div class="card-title">Creatine Monohydrate</div>
+        <div class="card-subtitle">Creapure — ATP Replenishment &amp; Cognitive Energy</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p class="card-what">Most known for athletic performance — but the evidence for cognitive benefit is strong and underappreciated. Creatine replenishes the fastest ATP regeneration pathway available. The brain is energetically expensive. Under sleep deprivation, high cognitive load, or mental fatigue, creatine supplementation measurably improves working memory and processing speed.</p>
+      <div class="protocol">
+        <div class="protocol-item">
+          <div class="protocol-label">Dose</div>
+          <div class="protocol-value">3–5g daily</div>
+          <div class="protocol-note">No loading phase needed for cognitive use — consistent daily dosing is sufficient</div>
+        </div>
+        <div class="protocol-item">
+          <div class="protocol-label">Timing</div>
+          <div class="protocol-value">Any time — be consistent</div>
+          <div class="protocol-note">Creatine works by tissue saturation over time, not acute dosing — same time daily matters more than which time</div>
+        </div>
+        <div class="protocol-item">
+          <div class="protocol-label">Food Pairing</div>
+          <div class="protocol-value">With carbohydrates</div>
+          <div class="protocol-note">Insulin aids creatine uptake into muscle and brain tissue — take with a carb-containing meal or shake</div>
+        </div>
+        <div class="protocol-item">
+          <div class="protocol-label">Form</div>
+          <div class="protocol-value">Monohydrate only</div>
+          <div class="protocol-note">HCl, buffered, and ethyl ester forms are marketing — no RCT evidence of superiority</div>
+        </div>
+      </div>
+      <div class="why-form"><strong>Why Creapure specifically:</strong> Creapure (AlzChem, Germany) is the quality standard — 99.99% pure creatine monohydrate, produced via a controlled synthesis process that eliminates impurities like dicyandiamide and dihydrotriazine. Many commodity creatine products from Asian manufacturers have failed independent purity testing. This is not brand storytelling — it is verified quality difference.</div>
+    </div>
+    <div class="buy-row">
+      <a href="https://www.thorne.com/products/dp/creatine?affiliate=PLACEHOLDER" class="btn btn-thorne" target="_blank" rel="noopener">&#9632; Thorne Creatine (Creapure) <span class="best-pick">Best Pick</span></a>
+    </div>
+    <div class="affiliate-note">* Affiliate link — Thorne Creatine uses Creapure and is NSF Certified for Sport. Affiliate program setup in progress — link will be updated with referral code.</div>
+  </div>
+
+</div>
+<!-- END STACK -->
+
+<!-- QUICK REFERENCE TABLE -->
+<div class="quick-ref">
+  <h2>Quick Reference: Timing at a Glance</h2>
+  <table class="ref-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Supplement</th>
+        <th>Dose</th>
+        <th>When</th>
+        <th>Food Required?</th>
+        <th>Top Pick</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Ubiquinol (CoQ10)</td>
+        <td>100–200mg</td>
+        <td class="timing-am">Morning/Lunch</td>
+        <td>Yes — with fat</td>
+        <td>Life Extension Super Ubiquinol</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>PQQ (BioPQQ)</td>
+        <td>10–20mg</td>
+        <td class="timing-am">Morning</td>
+        <td>Optional</td>
+        <td>Life Extension PQQ Caps</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>ALCAR</td>
+        <td>500–1000mg</td>
+        <td class="timing-am">Morning (before noon)</td>
+        <td>Optional</td>
+        <td>Thorne Acetyl-L-Carnitine</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Active B Complex</td>
+        <td>1 cap</td>
+        <td class="timing-am">Morning</td>
+        <td>Yes</td>
+        <td>Life Extension BioActive B-Complex</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Fish Oil (rTG)</td>
+        <td>1–2g EPA+DHA</td>
+        <td class="timing-any">Largest meal</td>
+        <td>Yes — with fat</td>
+        <td>Thorne Super EPA</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>NAD+ / NR</td>
+        <td>300mg NR</td>
+        <td class="timing-am">Morning</td>
+        <td>Optional</td>
+        <td>Life Extension NAD+ Cell Regenerator</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Magnesium L-Threonate</td>
+        <td>1500–2000mg MgT</td>
+        <td class="timing-pm">Evening / Before bed</td>
+        <td>Optional</td>
+        <td>Life Extension Neuro-Mag</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>R-ALA (Sodium R-Lipoate)</td>
+        <td>100–300mg</td>
+        <td class="timing-any">With any meal</td>
+        <td>Yes — always</td>
+        <td>Thorne R-Lipoic Acid</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>Creatine (Creapure)</td>
+        <td>3–5g</td>
+        <td class="timing-any">Any time — be consistent</td>
+        <td>With carbs preferred</td>
+        <td>Thorne Creatine</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-logo">NeuralLift</div>
+  <p>Brain Energy &amp; Performance — Physician Curated</p>
+  <p>Barry Dublin, MD</p>
+  <p class="footer-disc">This page contains affiliate links. I earn a small commission when you purchase through these links at no extra cost to you. Affiliate status does not influence recommendations — if a non-affiliate product is superior, it is listed as such. This content is for educational purposes only and does not constitute medical advice. Consult your physician before starting any supplement protocol.</p>
+</footer>
+
+</body>
+</html>
