@@ -1,6 +1,10 @@
 {
   "version": 2,
   "routes": [
-    { "src": "/(.*)", "dest": "/$1" }
+    { "src": "/brain-energy-guide", "dest": "/brain-energy-guide/index.html" },
+    { "src": "/brain-stack", "dest": "/brain-stack.html" },
+    { "src": "/sklett-protocol", "dest": "/sklett-protocol.html" },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
