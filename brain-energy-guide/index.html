@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeuraLift: The 9 Essential Supplements for Brain Energy & Performance</title>
+<style>
+  :root {
+    --primary: #1a3a4a;
+    --accent: #2e7d9b;
+    --accent2: #e67e22;
+    --light-bg: #f4f7f9;
+    --card-bg: #ffffff;
+    --border: #d0dce4;
+    --text: #1c2b36;
+    --text-muted: #5a7080;
+    --success: #27ae60;
+    --warning: #e67e22;
+    --danger: #c0392b;
+    --core5: #1a6b3a;
+    --advanced: #1a3a7a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Georgia', serif;
+    background: var(--light-bg);
+    color: var(--text);
+    line-height: 1.75;
+    font-size: 16px;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #0d2535 0%, #1a3a4a 50%, #0d4060 100%);
+    color: white;
+    padding: 60px 40px 50px;
+    text-align: center;
+  }
+  .hero .tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 5px 16px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  .hero h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+  .hero h1 span { color: #7ecde8; }
+  .hero .subtitle {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.82);
+    font-style: italic;
+    margin-bottom: 28px;
+    font-family: 'Arial', sans-serif;
+  }
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+  }
+  .hero-stat {
+    text-align: center;
+  }
+  .hero-stat .num {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #7ecde8;
+    display: block;
+  }
+  .hero-stat .lbl {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.7);
+    font-family: 'Arial', sans-serif;
+  }
+
+  /* CONTAINER */
+  .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+  /* SECTIONS */
+  .section { padding: 48px 0; }
+  .section-title {
+    font-size: 1.7rem;
+    color: var(--primary);
+    margin-bottom: 8px;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 10px;
+    display: inline-block;
+  }
+  .section-lead {
+    color: var(--text-muted);
+    font-size: 0.97rem;
+    margin-bottom: 28px;
+    font-family: 'Arial', sans-serif;
+  }
+
+  /* INTRO CALLOUT */
+  .intro-box {
+    background: #fff;
+    border-left: 5px solid var(--accent);
+    padding: 28px 30px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 28px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  }
+  .intro-box h2 { font-size: 1.3rem; color: var(--primary); margin-bottom: 10px; }
+  .intro-box p { margin-bottom: 10px; font-size: 0.97rem; }
+  .intro-box p:last-child { margin-bottom: 0; }
+
+  /* PARADOX CALLOUT */
+  .paradox-box {
+    background: linear-gradient(135deg, #1a3a4a, #0d4060);
+    color: white;
+    border-radius: 10px;
+    padding: 28px 32px;
+    margin: 28px 0;
+    text-align: center;
+  }
+  .paradox-box h3 { font-size: 1.1rem; color: #7ecde8; margin-bottom: 10px; font-family: 'Arial', sans-serif; text-transform: uppercase; letter-spacing: 0.08em; }
+  .paradox-box .big { font-size: 1.6rem; font-weight: 700; color: #fff; line-height: 1.3; }
+  .paradox-box p { color: rgba(255,255,255,0.82); font-size: 0.93rem; margin-top: 10px; font-family: 'Arial', sans-serif; }
+
+  /* PRINCIPLES */
+  .principles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .principle-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px;
+    text-align: center;
+  }
+  .principle-card .icon { font-size: 1.8rem; margin-bottom: 8px; }
+  .principle-card h4 { font-size: 0.9rem; color: var(--primary); margin-bottom: 4px; font-family: 'Arial', sans-serif; }
+  .principle-card p { font-size: 0.82rem; color: var(--text-muted); font-family: 'Arial', sans-serif; }
+
+  /* TIER BADGE */
+  .tier-header {
+    border-radius: 10px;
+    padding: 20px 28px;
+    margin: 40px 0 28px;
+    color: white;
+  }
+  .tier-header.core { background: linear-gradient(135deg, #1a6b3a, #2e9e5b); }
+  .tier-header.advanced { background: linear-gradient(135deg, #1a3a7a, #2e5db5); }
+  .tier-header h2 { font-size: 1.5rem; margin-bottom: 4px; }
+  .tier-header .tier-sub { font-size: 0.9rem; color: rgba(255,255,255,0.85); font-family: 'Arial', sans-serif; }
+
+  /* SUPPLEMENT CARD */
+  .supp-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 32px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .supp-header {
+    padding: 18px 24px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .supp-header.core { background: linear-gradient(90deg, #e8f5ec, #f4faf6); border-left: 5px solid var(--core5); }
+  .supp-header.advanced { background: linear-gradient(90deg, #e8ecf5, #f0f4fc); border-left: 5px solid var(--advanced); }
+  .supp-num { font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; font-family: 'Arial', sans-serif; }
+  .supp-name { font-size: 1.35rem; font-weight: 700; color: var(--primary); }
+  .supp-form { font-size: 0.85rem; color: var(--text-muted); font-family: 'Arial', sans-serif; font-style: italic; }
+  .dose-pill {
+    background: var(--primary);
+    color: white;
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 0.82rem;
+    font-family: 'Arial', sans-serif;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .dose-pill.core { background: var(--core5); }
+  .dose-pill.advanced { background: var(--advanced); }
+  .supp-body { padding: 22px 26px; }
+  .supp-body p { margin-bottom: 14px; font-size: 0.95rem; }
+  .supp-body h4 {
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin: 20px 0 8px;
+    font-family: 'Arial', sans-serif;
+  }
+  .supp-body ul { padding-left: 20px; margin-bottom: 14px; }
+  .supp-body ul li { margin-bottom: 6px; font-size: 0.93rem; }
+
+  /* SCIENCE CITATIONS */
+  .science-list { list-style: none; padding: 0; margin: 0 0 14px; }
+  .science-list li {
+    padding: 6px 0 6px 18px;
+    position: relative;
+    font-size: 0.9rem;
+    border-bottom: 1px dashed #e0e8ed;
+  }
+  .science-list li:before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 0.8rem;
+    top: 8px;
+  }
+  .science-list li:last-child { border-bottom: none; }
+
+  /* SOURCING BOX */
+  .sourcing-box {
+    background: #fef9f0;
+    border: 1px solid #f0c875;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    font-size: 0.88rem;
+    font-family: 'Arial', sans-serif;
+  }
+  .sourcing-box strong { color: #7a5a00; }
+
+  /* BRAND COMPARE */
+  .brand-table { width: 100%; border-collapse: collapse; font-size: 0.87rem; margin: 12px 0; font-family: 'Arial', sans-serif; }
+  .brand-table th { background: #f0f4f7; padding: 8px 12px; text-align: left; color: var(--primary); border: 1px solid var(--border); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; }
+  .brand-table td { padding: 9px 12px; border: 1px solid var(--border); vertical-align: top; }
+  .brand-table tr:nth-child(even) { background: #f9fbfd; }
+  .brand-table .winner { color: var(--success); font-weight: 600; }
+  .brand-table .caution { color: var(--warning); font-weight: 600; }
+  .brand-table .fail { color: var(--danger); font-weight: 600; }
+
+  /* HOW TO USE */
+  .how-to-use {
+    background: #f4f9f4;
+    border-left: 3px solid var(--success);
+    padding: 14px 18px;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.9rem;
+    font-family: 'Arial', sans-serif;
+    margin-top: 8px;
+  }
+  .how-to-use strong { color: var(--core5); }
+
+  /* MYTH BUSTER / CALLOUT */
+  .callout {
+    background: #fff8e6;
+    border: 1px solid #f0c875;
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 0.88rem;
+    font-family: 'Arial', sans-serif;
+    margin: 12px 0;
+  }
+  .callout.warning { background: #fff3f3; border-color: #f5b3b3; }
+  .callout strong { display: block; margin-bottom: 4px; font-size: 0.9rem; }
+
+  /* B VITAMIN TABLE */
+  .bvit-table { width: 100%; border-collapse: collapse; font-size: 0.83rem; margin: 12px 0; font-family: 'Arial', sans-serif; }
+  .bvit-table th { background: #1a3a7a; color: white; padding: 9px 12px; text-align: left; border: 1px solid #2e5db5; }
+  .bvit-table td { padding: 9px 12px; border: 1px solid var(--border); vertical-align: top; }
+  .bvit-table tr:nth-child(even) { background: #f4f7fc; }
+  .bvit-table .avoid { color: var(--danger); font-size: 0.8rem; }
+  .bvit-table .use { color: var(--success); font-weight: 600; }
+  .bvit-note { background: #e8f0ff; border-left: 3px solid var(--advanced); padding: 10px 14px; font-size: 0.85rem; font-family: 'Arial', sans-serif; border-radius: 0 6px 6px 0; margin: 8px 0; }
+
+  /* NMN/NR COMPARE */
+  .nmn-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 12px 0; font-family: 'Arial', sans-serif; }
+  .nmn-table th { background: #0d4060; color: white; padding: 8px 12px; text-align: left; border: 1px solid #1a6080; }
+  .nmn-table td { padding: 9px 12px; border: 1px solid var(--border); vertical-align: top; }
+  .nmn-table tr:nth-child(even) { background: #f4f9fb; }
+  .nmn-table .rec { color: var(--success); font-weight: 600; }
+
+  /* QUICK REF TABLE */
+  .quick-ref-table { width: 100%; border-collapse: collapse; font-size: 0.84rem; font-family: 'Arial', sans-serif; }
+  .quick-ref-table th { background: var(--primary); color: white; padding: 10px 14px; text-align: left; border: 1px solid #2e5070; }
+  .quick-ref-table td { padding: 10px 14px; border: 1px solid var(--border); vertical-align: top; }
+  .quick-ref-table tr:nth-child(even) { background: #f4f7f9; }
+  .quick-ref-table .core-row td:first-child { border-left: 3px solid var(--core5); }
+  .quick-ref-table .adv-row td:first-child { border-left: 3px solid var(--advanced); }
+
+  /* SCHEDULE */
+  .schedule-block { margin-bottom: 20px; }
+  .schedule-time {
+    font-size: 0.85rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+    color: white;
+    background: var(--accent);
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+  .schedule-time.morning { background: #c07a00; }
+  .schedule-time.midday { background: #1a6b3a; }
+  .schedule-time.evening { background: var(--advanced); }
+  .schedule-time.anytime { background: #555; }
+  .schedule-items { list-style: none; padding: 0; }
+  .schedule-items li {
+    padding: 7px 12px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    font-family: 'Arial', sans-serif;
+  }
+  .schedule-items li strong { color: var(--primary); }
+
+  /* COST */
+  .cost-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
+  .cost-card { background: white; border: 1px solid var(--border); border-radius: 8px; padding: 20px; }
+  .cost-card h4 { font-size: 0.95rem; color: var(--primary); margin-bottom: 12px; }
+  .cost-card ul { list-style: none; padding: 0; }
+  .cost-card ul li { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px dashed #e4eaee; font-size: 0.88rem; font-family: 'Arial', sans-serif; }
+  .cost-card .total { font-weight: 700; color: var(--primary); padding-top: 10px; font-size: 0.95rem; }
+  @media (max-width: 600px) { .cost-grid { grid-template-columns: 1fr; } }
+
+  /* TIMELINE */
+  .timeline { position: relative; padding-left: 30px; }
+  .timeline:before { content: ''; position: absolute; left: 10px; top: 0; bottom: 0; width: 2px; background: var(--border); }
+  .timeline-item { position: relative; margin-bottom: 24px; }
+  .timeline-item:before {
+    content: '';
+    position: absolute;
+    left: -24px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+  .timeline-item h4 { font-size: 0.95rem; color: var(--primary); margin-bottom: 4px; }
+  .timeline-item p { font-size: 0.9rem; color: var(--text-muted); font-family: 'Arial', sans-serif; }
+
+  /* SAFETY */
+  .safety-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin: 20px 0; }
+  .safety-card { background: white; border: 1px solid #f5b3b3; border-radius: 8px; padding: 16px 18px; border-top: 3px solid var(--danger); }
+  .safety-card h4 { font-size: 0.9rem; color: var(--danger); margin-bottom: 6px; font-family: 'Arial', sans-serif; }
+  .safety-card p { font-size: 0.85rem; color: var(--text-muted); font-family: 'Arial', sans-serif; }
+
+  /* QUALITY */
+  .quality-list { list-style: none; padding: 0; }
+  .quality-list li { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 0.92rem; display: flex; gap: 10px; align-items: flex-start; }
+  .quality-list li:last-child { border-bottom: none; }
+  .quality-list .badge { background: var(--accent); color: white; border-radius: 4px; padding: 2px 8px; font-size: 0.75rem; font-family: 'Arial', sans-serif; white-space: nowrap; flex-shrink: 0; margin-top: 2px; }
+
+  /* FAQ */
+  .faq-item { background: white; border: 1px solid var(--border); border-radius: 8px; padding: 18px 22px; margin-bottom: 14px; }
+  .faq-item h4 { font-size: 0.97rem; color: var(--primary); margin-bottom: 8px; }
+  .faq-item p { font-size: 0.9rem; color: var(--text-muted); font-family: 'Arial', sans-serif; }
+
+  /* CLIENT SCRIPT */
+  .client-script { background: #f0f7ee; border: 1px solid #b0d8a0; border-radius: 10px; padding: 24px 28px; border-left: 5px solid var(--success); margin: 20px 0; }
+  .client-script h3 { color: var(--core5); margin-bottom: 10px; font-size: 1.05rem; }
+  .client-script blockquote { font-style: italic; color: var(--text); font-size: 0.97rem; border: none; padding: 0; line-height: 1.8; }
+
+  /* BIBLIOGRAPHY */
+  .bib-category { margin-bottom: 28px; }
+  .bib-category h4 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--border); font-family: 'Arial', sans-serif; }
+  .bib-list { list-style: none; padding: 0; }
+  .bib-list li { padding: 5px 0 5px 18px; position: relative; font-size: 0.88rem; font-family: 'Arial', sans-serif; }
+  .bib-list li:before { content: '→'; position: absolute; left: 0; color: var(--accent); font-size: 0.78rem; top: 6px; }
+  .bib-list a { color: var(--accent); word-break: break-word; }
+  .bib-list a:hover { text-decoration: underline; }
+
+  /* DISCLAIMER */
+  .disclaimer { background: #f9f9f9; border: 1px solid #ddd; border-radius: 8px; padding: 16px 20px; margin-top: 40px; font-size: 0.8rem; color: #888; font-family: 'Arial', sans-serif; text-align: center; }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 1.6rem; }
+    .supp-header { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== HERO ========== -->
+<div class="hero">
+  <div class="tag">Physician-Curated | Updated 2026</div>
+  <h1>NeuraLift: The <span>9 Essential Supplements</span><br>for Brain Energy &amp; Performance</h1>
+  <div class="subtitle">Active Forms, Honest Sourcing, No Marketing Noise — A Physician-Curated Protocol</div>
+  <div class="hero-stats">
+    <div class="hero-stat"><span class="num">9</span><span class="lbl">Supplements</span></div>
+    <div class="hero-stat"><span class="num">47+</span><span class="lbl">Peer-Reviewed Sources</span></div>
+    <div class="hero-stat"><span class="num">2</span><span class="lbl">Tiered Entry Levels</span></div>
+    <div class="hero-stat"><span class="num">6+</span><span class="lbl">Month Protocol</span></div>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- ========== OPENING SECTION ========== -->
+<div class="section">
+
+  <div class="intro-box">
+    <h2>Why Most Supplement Guides Are Wrong</h2>
+    <p>The supplement industry is largely unregulated. The FDA does not review supplements before they reach the market. Most brands source raw ingredients from the same 2–3 global manufacturers — the differentiation is in the molecular form of the ingredient (active vs. inactive), the dose, and whether a third party verified what's actually in the bottle.</p>
+    <p>This guide cuts through the noise. Every recommendation is based on the specific molecular form your body can actually use, the actual science behind each ingredient, third-party quality verification standards, and honest comparison of leading brands. <strong>The forms and brands listed here are not marketing preferences — they reflect the specific molecules used in the research that generated the results.</strong></p>
+  </div>
+
+  <div class="intro-box">
+    <h2>The Brain Energy Crisis: Why You're Running on Fumes</h2>
+    <p>Think of your brain as a bustling city that never sleeps. It runs 24/7 on a power grid so demanding that <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11022390/" target="_blank">neurons consume roughly 20% of the body's oxygen</a> despite making up only 2% of body mass. A single neuron can house <a href="https://bodybio.com/blogs/blog/the-mitochondria-brain-connection-why-cellular-energy-powers-mental-clarity" target="_blank">up to 2 million mitochondria</a> — more than any other cell type.</p>
+    <p>But here's the clinical reality: <strong>mitochondria decline with age, chronic stress, and environmental toxins.</strong> By your 40s, you may have lost 30–50% of peak mitochondrial function. The result is not a vague complaint — it is a measurable deficit: brain fog, memory lapses, sluggish processing, poor stress resilience, and the chronic sense of running at half capacity.</p>
+    <p>The following nine supplements work synergistically to stimulate mitochondrial biogenesis, enhance energy production, and protect existing cellular machinery from oxidative damage. They are tiered deliberately — five foundational compounds first, four advanced compounds after your system has adapted.</p>
+  </div>
+
+  <div class="paradox-box">
+    <h3>🧠 The 20/2 Brain Energy Paradox</h3>
+    <div class="big">2% of body weight &nbsp;|&nbsp; 20% of total energy</div>
+    <p>Every thought, memory, and decision costs ATP — the cellular currency your mitochondria produce. When mitochondrial output drops, cognitive performance follows. This isn't a willpower problem. It's a fuel problem. These supplements rebuild the fuel infrastructure.</p>
+  </div>
+
+  <div class="principles-grid">
+    <div class="principle-card"><div class="icon">🔬</div><h4>Active Molecular Forms</h4><p>Only forms your body uses directly — no inactive precursors that require impaired conversion</p></div>
+    <div class="principle-card"><div class="icon">🏭</div><h4>Sourcing Reality</h4><p>Who actually manufactures each ingredient globally — not brand stories</p></div>
+    <div class="principle-card"><div class="icon">✅</div><h4>Third-Party Verified</h4><p>NSF, USP, or IFOS certification — not self-reported quality claims</p></div>
+    <div class="principle-card"><div class="icon">📊</div><h4>Peer-Reviewed Evidence</h4><p>47+ citations — human trials prioritized over animal models</p></div>
+  </div>
+
+</div><!-- /section -->
+
+<!-- ========== CORE 5 TIER ========== -->
+<div class="tier-header core">
+  <h2>✦ The Core 5 Foundation</h2>
+  <div class="tier-sub">Start here. Establish these five for 4–6 weeks before advancing. These address energy production, biogenesis, rapid ATP replenishment, coenzyme restoration, and membrane architecture — in that order of mechanistic logic.</div>
+</div>
+
+<!-- SUPP 1: CoQ10 -->
+<div class="supp-card">
+  <div class="supp-header core">
+    <div>
+      <div class="supp-num">Core Foundation · #1</div>
+      <div class="supp-name">CoQ10 (Ubiquinol)</div>
+      <div class="supp-form">Reduced, active form — not ubiquinone</div>
+    </div>
+    <div class="dose-pill core">200–400 mg daily · with fat-containing meal</div>
+  </div>
+  <div class="supp-body">
+    <h4>What It Does</h4>
+    <p>CoQ10 is an electron shuttle in the mitochondrial electron transport chain — the final assembly line where ATP is manufactured. It also functions as a potent fat-soluble antioxidant protecting mitochondrial membranes from oxidative damage. Without adequate CoQ10, energy production stalls at the most critical step.</p>
+
+    <h4>Why Ubiquinol, Not Ubiquinone</h4>
+    <p>CoQ10 exists in two forms: ubiquinone (oxidized) and ubiquinol (reduced, active). Your body must convert ubiquinone to ubiquinol before it can be used — a conversion that declines significantly with age and statin use. After age 40, ubiquinol is the only form worth taking. A <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7146408/" target="_blank">head-to-head trial confirmed ubiquinol achieves meaningfully higher plasma levels</a> than ubiquinone in adults over 50. A <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7278738/" target="_blank">meta-analysis of 1,126 participants</a> found significant reductions in fatigue with CoQ10 supplementation. Ubiquinol skips the conversion bottleneck entirely.</p>
+
+    <div class="sourcing-box">
+      <strong>🏭 Sourcing Reality:</strong> Virtually all commercial ubiquinol originates from <strong>Kaneka Corporation</strong> (Japan/Texas), regardless of brand. This is a commodity ingredient with one dominant global supplier. What differentiates products is dose, delivery form, and whether the brand has verified purity — not the brand story.
+    </div>
+
+    <h4>The Science</h4>
+    <ul class="science-list">
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7278738/" target="_blank">CoQ10 absorption, tissue uptake, and metabolism — comprehensive review</a></li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7278738/" target="_blank">Meta-analysis on fatigue reduction (n=1,126)</a></li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7146408/" target="_blank">Comparative bioavailability: ubiquinol vs. ubiquinone</a></li>
+    </ul>
+
+    <h4>Brand Comparison</h4>
+    <table class="brand-table">
+      <tr><th>Brand</th><th>Form</th><th>Source</th><th>Verdict</th></tr>
+      <tr><td>Life Extension Super Ubiquinol CoQ10</td><td>Ubiquinol softgel</td><td>Kaneka</td><td class="winner">✓ Recommended</td></tr>
+      <tr><td>Thorne CoQ10</td><td>Ubiquinol softgel</td><td>Kaneka</td><td class="winner">✓ Recommended</td></tr>
+      <tr><td>Generic/store brands</td><td>Often ubiquinone</td><td>Unverified</td><td class="fail">✗ Avoid after 40</td></tr>
+    </table>
+    <p style="font-size:0.85rem; color:var(--text-muted); font-family:'Arial',sans-serif;">At equivalent Kaneka sourcing, compare price per dose — the ingredient is identical.</p>
+
+    <div class="how-to-use">
+      <strong>⏱ How to Use:</strong> Take 200–400 mg with a fat-containing meal (olive oil, eggs, avocado, salmon). Fat is required for absorption — ubiquinol is fat-soluble. Splitting into two doses (200 mg with lunch + 200 mg with dinner) maintains more stable plasma levels. Note: Physician clinical experience supports doses up to 400 mg twice daily for therapeutic applications.
+    </div>
+  </div>
+</div>
+
+<!-- SUPP 2: PQQ -->
+<div class="supp-card">
+  <div class="supp-header core">
+    <div>
+      <div class="supp-num">Core Foundation · #2</div>
+      <div class="supp-name">PQQ (Pyrroloquinoline Quinone)</div>
+      <div class="supp-form">BioPQQ only — bacterial fermentation origin</div>
+    </div>
+    <div class="dose-pill core">10–20 mg daily · with breakfast</div>
+  </div>
+  <div class="supp-body">
+    <h4>What It Does</h4>
+    <p>PQQ is the construction foreman of your mitochondrial renovation. While CoQ10 optimizes your existing mitochondria, PQQ stimulates <em>mitochondrial biogenesis</em> — the growth of entirely new mitochondria. It activates PGC-1α and CREB signaling pathways, which control not only new mitochondrial growth but also neuroprotection and cognitive function. PQQ also stimulates Nerve Growth Factor (NGF), supporting neuronal survival and synaptic plasticity.</p>
+    <p>These are complementary mechanisms. CoQ10 and PQQ are not redundant — one runs existing machinery; one builds new machinery.</p>
+
+    <div class="sourcing-box">
+      <strong>🏭 Sourcing Reality:</strong> Nearly all commercial PQQ is <strong>BioPQQ®</strong>, produced by <strong>Mitsubishi Gas Chemical Company</strong> (Japan) via bacterial fermentation. This is the ingredient used in every published human trial. If a product does not specify "BioPQQ" on the label, you cannot verify what form you're getting or whether it matches the research.
+    </div>
+
+    <h4>The Science</h4>
+    <ul class="science-list">
+      <li><a href="https://www.sciencedirect.com/science/article/pii/S0891584926001127" target="_blank">PQQ improves mitochondrial membrane structure in human cells</a></li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11541945/" target="_blank">PQQ and mitochondrial biogenesis via PGC-1α (mouse models)</a></li>
+      <li><a href="https://www.frontiersin.org/journals/aging/articles/10.3389/fragi.2024.1351860/full" target="_blank">Dietary PQQ supports mitochondrial function during aging (2024)</a></li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11246121/" target="_blank">Neuroprotective effects of PQQ in Alzheimer's and Parkinson's preclinical models</a></li>
+      <li><a href="https://pubs.rsc.org/en/content/articlehtml/2023/fo/d2fo01515c" target="_blank">8-week Japanese RCT (n=41): significant memory and attention improvements vs. placebo</a></li>
+      <li><a href="https://pubmed.ncbi.nlm.nih.gov/7764070/" target="_blank">PQQ stimulates Nerve Growth Factor production</a></li>
+    </ul>
+
+    <h4>Brand Guidance</h4>
+    <p style="font-family:'Arial',sans-serif; font-size:0.9rem;">Any brand that specifies <strong>BioPQQ at 10–20 mg</strong> is acceptable: Life Extension, Jarrow Formulas, and Thorne all meet this standard. The critical verification is the BioPQQ designation on the label — without it, the ingredient source is unconfirmed.</p>
+
+    <div class="how-to-use">
+      <strong>⏱ How to Use:</strong> Take 10–20 mg with your first meal. PQQ is fat-soluble — pair with dietary fat (eggs, avocado, nuts) to enhance absorption.
+    </div>
+  </div>
+</div>
+
+<!-- SUPP 3: Creatine -->
+<div class="supp-card">
+  <div class="supp-header core">
+    <div>
+      <div class="supp-num">Core Foundation · #3</div>
+      <div class="supp-name">Creatine Monohydrate</div>
+      <div class="supp-form">Creapure® only — no "advanced" forms needed</div>
+    </div>
+    <div class="dose-pill core">5 g daily · anytime</div>
+  </div>
+  <div class="supp-body">
+    <h4>What It Does</h4>
+    <p>Creatine is not just for muscles. Your brain uses <strong>phosphocreatine</strong> as a rapid-response energy buffer — a backup battery that kicks in during intense cognitive tasks. Creatine supplementation replenishes phosphocreatine stores in neurons, improving working memory, processing speed, and mental fatigue resistance. The evidence for cognitive benefit is strong and still underappreciated in clinical practice.</p>
+
+    <h4>Why Monohydrate — Not "Advanced" Forms</h4>
+    <p>Creatine HCl, buffered creatine, and ethyl ester formulations are marketing innovations, not scientific advances. The entire evidence base — including all cognitive studies — is built on creatine monohydrate. There is no RCT evidence that any other form outperforms monohydrate at equivalent doses.</p>
+
+    <div class="sourcing-box">
+      <strong>🏭 Sourcing Reality:</strong> <strong>Creapure®</strong> (AlzChem, Germany) is the quality standard — 99.99% pure creatine monohydrate, produced via a controlled synthesis process that eliminates common impurities (dicyandiamide, dihydrotriazine). Multiple commodity creatine products from unverified Asian manufacturers have failed independent purity testing. Creapure specification on the label is the non-negotiable marker.
+    </div>
+
+    <h4>The Science</h4>
+    <ul class="science-list">
+      <li><a href="https://pubmed.ncbi.nlm.nih.gov/39070254/" target="_blank">Creatine and cognition: systematic review (2024) — memory, processing speed, executive function</a></li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6093191/" target="_blank">6-month RCT in healthy older adults (n=95, age 66–76) — memory improvements</a></li>
+      <li><a href="https://www.nature.com/articles/s41598-024-54249-9" target="_blank">MRS imaging: single 20g dose increased brain phosphocreatine 5–15% within 2 hours</a></li>
+      <li><a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2024.1424972/full" target="_blank">Meta-analysis of 26 studies: consistent cognitive benefit (SMD = 0.22)</a></li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7246861/" target="_blank">Vegetarians show greater cognitive gains due to lower baseline stores</a></li>
+      <li><a href="https://pubmed.ncbi.nlm.nih.gov/16416332/" target="_blank">5g/day preserves cognition and mood during 24-hour sleep deprivation</a></li>
+    </ul>
+
+    <div class="callout">
+      <strong>💡 Myth Buster: Creatine and Water Retention</strong>
+      Yes, creatine causes 1–3 lbs water retention — <em>inside muscle cells</em>. This is part of the mechanism, not bloating. Brain benefits occur regardless of intracellular water retention.
+    </div>
+
+    <h4>Brand Guidance</h4>
+    <table class="brand-table">
+      <tr><th>Brand</th><th>Source</th><th>Certification</th><th>Verdict</th></tr>
+      <tr><td>Thorne Creatine</td><td>Creapure</td><td>NSF Certified for Sport</td><td class="winner">✓ Top Pick</td></tr>
+      <tr><td>Klean Athlete Creatine</td><td>Creapure</td><td>NSF Certified for Sport</td><td class="winner">✓ Recommended</td></tr>
+      <tr><td>Generic unlabeled</td><td>Unverified</td><td>None</td><td class="fail">✗ Avoid</td></tr>
+    </table>
+
+    <div class="how-to-use">
+      <strong>⏱ How to Use:</strong> 5 g anytime — timing is irrelevant for cognitive benefit. Mix into water, coffee, or a protein shake. No loading phase required for cognitive applications.
+    </div>
+  </div>
+</div>
+
+<!-- SUPP 4: NAD+ -->
+<div class="supp-card">
+  <div class="supp-header core">
+    <div>
+      <div class="supp-num">Core Foundation · #4</div>
+      <div class="supp-name">NAD⁺ Precursor (NR)</div>
+      <div class="supp-form">Nicotinamide Riboside · Tru Niagen (ChromaDex) sourced</div>
+    </div>
+    <div class="dose-pill core">300 mg NR daily · morning on empty stomach</div>
+  </div>
+  <div class="supp-body">
+    <h4>What It Does</h4>
+    <p>NAD⁺ (nicotinamide adenine dinucleotide) is a master coenzyme required for mitochondrial respiration and the required substrate for sirtuins (SIRT1–7) — the longevity-associated enzymes governing DNA repair, mitochondrial regulation, and cellular stress response. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5107309/" target="_blank">NAD⁺ levels decline approximately 50% between ages 20 and 40</a>, directly driving age-related cognitive and metabolic decline.</p>
+
+    <h4>NR vs. NMN: The 2025/2026 Evidence Update</h4>
+    <p>Both NR and NMN effectively raise circulating NAD⁺ levels. The current evidence gives NR a clear edge:</p>
+    <table class="nmn-table">
+      <tr><th>Factor</th><th>NR (Nicotinamide Riboside)</th><th>NMN (Nicotinamide Mononucleotide)</th></tr>
+      <tr><td>Human trial quality</td><td class="rec">Stronger — including Lancet 2025 RCT</td><td>Emerging, fewer large RCTs</td></tr>
+      <tr><td>NAD⁺ elevation</td><td class="rec">2-fold+ increase; Nature Metabolism 2025 shows NR raises NAD⁺ over 2× more than NMN in some comparisons</td><td>Effective, but gut conversion pathway more complex than initially claimed</td></tr>
+      <tr><td>Sourcing</td><td class="rec">Tru Niagen / ChromaDex — ingredient used in published human trials</td><td>Multiple manufacturers; fewer trials use a single standardized source</td></tr>
+      <tr><td>Dose</td><td>300 mg</td><td>250–500 mg</td></tr>
+      <tr><td>Verdict</td><td class="rec"><strong>Preferred at this time</strong></td><td>Solid alternative if NR unavailable</td></tr>
+    </table>
+    <div class="callout warning">
+      <strong>⚠️ Important 2026 Update:</strong> Plain nicotinamide (NAM) — a cheaper, widely available B3 form — does <em>not</em> meaningfully raise NAD⁺ levels. Confirmed in a 2026 direct comparison trial. NAM is not an acceptable substitute for NR or NMN in this protocol.
+    </div>
+
+    <div class="sourcing-box">
+      <strong>🏭 Sourcing Reality:</strong> <strong>Tru Niagen® / ChromaDex</strong> holds the primary NR patents and produces the NR ingredient used in most published human trials, including the Lancet 2025 study. Life Extension's NAD+ Cell Regenerator uses Tru Niagen NR. This is a meaningful sourcing distinction — not marketing.
+    </div>
+
+    <h4>The Science</h4>
+    <ul class="science-list">
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5107309/" target="_blank">NAD⁺ metabolism and aging — foundational research documenting tissue-level decline</a></li>
+      <li><a href="https://www.thelancet.com/journals/eclinm/article/PIIS2589-5370(25)00567-X/fulltext" target="_blank">Lancet eClinicalMedicine RCT 2025 (n=132, age 55–80): 300mg NR improved memory and executive function vs. placebo</a></li>
+      <li><a href="https://www.nad.com/news/nad-booster-restores-brain-immune-cells-improves-memory-new-study-reveals" target="_blank">NAD⁺ booster restores microglial (brain immune cell) function and spatial memory in aged models</a></li>
+      <li><a href="https://www.sciencedirect.com/science/article/pii/S0092867413007551" target="_blank">NAD⁺ as required cofactor for sirtuins SIRT1–7 (Cell journal)</a></li>
+    </ul>
+
+    <h4>Brand Comparison</h4>
+    <table class="brand-table">
+      <tr><th>Brand</th><th>Source</th><th>Verdict</th></tr>
+      <tr><td>Life Extension NAD+ Cell Regenerator</td><td>Tru Niagen (ChromaDex)</td><td class="winner">✓ Recommended</td></tr>
+      <tr><td>Tru Niagen (direct)</td><td>ChromaDex</td><td class="winner">✓ Recommended</td></tr>
+      <tr><td>Thorne NiaCel</td><td>NR-based</td><td class="winner">✓ Acceptable</td></tr>
+    </table>
+
+    <div class="how-to-use">
+      <strong>⏱ How to Use:</strong> Take 300 mg in the morning on an empty stomach, 30 minutes before breakfast. Some users split: morning + early afternoon. Mild nausea on empty stomach for some — try with a small amount of food if needed.
+    </div>
+  </div>
+</div>
+
+<!-- SUPP 5: Omega-3 -->
+<div class="supp-card">
+  <div class="supp-header core">
+    <div>
+      <div class="supp-num">Core Foundation · #5</div>
+      <div class="supp-name">Omega-3 EPA/DHA</div>
+      <div class="supp-form">rTG (re-esterified triglyceride) form · IFOS certified only</div>
+    </div>
+    <div class="dose-pill core">2–3 g EPA+DHA daily · split between meals</div>
+  </div>
+  <div class="supp-body">
+    <h4>What It Does</h4>
+    <p>DHA (docosahexaenoic acid) constitutes approximately 40% of polyunsaturated fats in the brain, integrating into mitochondrial and neuronal membranes at synapses — improving fluidity, electron transport efficiency, and ATP output. EPA (eicosapentaenoic acid) drives anti-inflammatory signaling in neural tissue. Together they address both structural membrane architecture and neuroinflammatory load.</p>
+
+    <h4>Two Non-Negotiable Quality Requirements</h4>
+
+    <p><strong>1. rTG Form (Re-esterified Triglyceride):</strong> Fish oil exists as ethyl ester (EE), triglyceride (TG), or re-esterified triglyceride (rTG). rTG form provides approximately 70% better absorption than ethyl ester. Most cheap fish oils are ethyl ester. The rTG form designation must appear on the label.</p>
+
+    <p><strong>2. IFOS Certification:</strong> Rancid fish oil is pro-inflammatory — the exact opposite of the intended effect. Rancidity is common and largely invisible at low levels — you cannot reliably taste or smell it. IFOS (International Fish Oil Standards) is the gold standard for independent oxidation and purity testing. It is non-negotiable for therapeutic use.</p>
+
+    <div class="callout warning">
+      <strong>⚠️ Nordic Naturals Note:</strong> Nordic Naturals is widely marketed as a premium fish oil brand. It is not IFOS certified. Given that rancidity is the primary safety and efficacy concern with fish oil supplementation, IFOS certification takes precedence over brand reputation. Verify certification before recommending any brand.
+    </div>
+
+    <div class="sourcing-box">
+      <strong>🏭 Quality Standard:</strong> Look for: rTG form specified · IFOS certified · Peroxide value &lt;5 mEq/kg · Third-party heavy metal testing (mercury, PCBs) · Balanced EPA:DHA ratio (1:1 to 2:1) or DHA-dominant for brain focus.
+    </div>
+
+    <h4>The Science</h4>
+    <ul class="science-list">
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12787927/" target="_blank">Dietary omega-3s and brain/mood — comprehensive review</a></li>
+      <li><a href="https://www.scitechnol.com/peer-review/omega3-fatty-acids-and-mitochondrial-function-implications-for-metabolic-health-YbBj.php?article_id=26247" target="_blank">Omega-3 and mitochondrial membrane function (2024)</a></li>
+      <li><a href="https://www.sciencedirect.com/science/article/pii/S0952327824002765" target="_blank">6-month supplementation: MRS imaging confirmed brain EPA and DHA increase</a></li>
+      <li><a href="https://journals.lww.com/co-clinicalnutrition/fulltext/2025/03000/recent_studies_confirm_the_utility_of_the_omega_3.8.aspx" target="_blank">2025 study: Omega-3 Index &gt;8% correlated with larger hippocampal volume and better cognition (65+)</a></li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9641984/" target="_blank">32-study systematic review: benefits for learning, memory, overall cognition</a></li>
+      <li><a href="https://mghpsychnews.org/high-dose-omega-3-fatty-acids-improve-aspects-of-cognition-and-motivation/" target="_blank">MGH study: 3–4 g/day improved motivation and executive function in adults with depression</a></li>
+      <li><a href="https://www.nature.com/articles/s41598-025-16129-8" target="_blank">Meta-analysis: optimal cognitive benefit at 2–3 g/day EPA+DHA</a></li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12723386/" target="_blank">2025 review: DHA deficiency linked to increased Alzheimer's risk</a></li>
+      <li><a href="https://brain-feed.com/blogs/the-science/omega-3-brain-benefits-in-2024-key-dementia-iq-deficiencies-findings" target="_blank">Omega-3 brain benefits: 2024 summary of dementia and IQ research</a></li>
+    </ul>
+
+    <h4>Brand Comparison</h4>
+    <table class="brand-table">
+      <tr><th>Brand</th><th>Form</th><th>IFOS</th><th>Verdict</th></tr>
+      <tr><td>Thorne Super EPA</td><td>rTG</td><td class="winner">✓ Certified</td><td class="winner">✓ Recommended</td></tr>
+      <tr><td>Life Extension Mega EPA/DHA</td><td>rTG</td><td class="winner">✓ Certified</td><td class="winner">✓ Recommended</td></tr>
+      <tr><td>Nordic Naturals</td><td>TG</td><td class="fail">✗ Not certified</td><td class="caution">⚠ Use with caution</td></tr>
+      <tr><td>Generic ethyl ester brands</td><td>EE</td><td class="fail">✗ Not certified</td><td class="fail">✗ Avoid</td></tr>
+    </table>
+
+    <div class="how-to-use">
+      <strong>⏱ How to Use:</strong> Split the dose between meals — 1–1.5 g with lunch, 1–1.5 g with dinner. Take with dietary fat for maximum absorption. Store in refrigerator to prevent oxidation after opening.
+    </div>
+
+    <div class="callout warning">
+      <strong>⚠️ Blood Thinner Interaction:</strong> Omega-3s have mild anticoagulant effects. If taking warfarin, aspirin, or Plavix, consult physician before supplementing and monitor INR levels.
+    </div>
+  </div>
+</div>
+
+<!-- ========== ADVANCED STACK ========== -->
+<div class="tier-header advanced">
+  <h2>◆ The Advanced Stack</h2>
+  <div class="tier-sub">Add these four after 4–6 weeks on the Core 5. Each has distinct mechanisms that complement the foundation. These are not optional extras — they are clinically meaningful additions for patients seeking comprehensive mitochondrial and cognitive optimization.</div>
+</div>
+
+<!-- SUPP 6: ALCAR -->
+<div class="supp-card">
+  <div class="supp-header advanced">
+    <div>
+      <div class="supp-num">Advanced Stack · #6</div>
+      <div class="supp-name">ALCAR (Acetyl-L-Carnitine)</div>
+      <div class="supp-form">Acetylated form only — not plain L-carnitine</div>
+    </div>
+    <div class="dose-pill advanced">500–1,000 mg daily · morning or early afternoon</div>
+  </div>
+  <div class="supp-body">
+    <h4>What It Does — Two Mechanisms in One Molecule</h4>
+    <p><strong>Mechanism 1 — Fat Transport:</strong> Shuttles long-chain fatty acids across the inner mitochondrial membrane for beta-oxidation (energy production). This is the carnitine function most people know.</p>
+    <p><strong>Mechanism 2 — Acetylcholine Precursor:</strong> The acetyl group crosses the blood-brain barrier and donates directly to acetyl-CoA — the immediate precursor for <strong>acetylcholine</strong> synthesis. This is why ALCAR has neurological effects that plain L-carnitine does not. Regular L-carnitine does not meaningfully cross the blood-brain barrier.</p>
+
+    <h4>Why ALCAR — Not L-Carnitine</h4>
+    <p>L-carnitine is primarily a fat transport molecule for muscle and cardiac tissue. The neurologically active form — the one used in brain cognitive research — is ALCAR. Substituting L-carnitine for ALCAR in a brain-optimization context is mechanistically incorrect.</p>
+
+    <div class="sourcing-box">
+      <strong>🏭 Sourcing Reality:</strong> Unlike CoQ10 or PQQ, ALCAR has no single dominant global branded supplier — it is a commodity amino acid derivative. This means brand quality control matters more here. ConsumerLab testing has documented ALCAR products that failed label claims. Choose brands with NSF or USP verification.
+    </div>
+
+    <h4>The Science</h4>
+    <ul class="science-list">
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7284336/" target="_blank">Meta-analysis of 21 trials: ALCAR may slow cognitive decline in mild Alzheimer's</a></li>
+      <li><a href="https://www.alzdiscovery.org/cognitive-vitality/ratings/acetyl-lcarnitine" target="_blank">ADDF Cognitive Vitality Review: ALCAR boosts mitochondrial fatty acid oxidation and neurotransmitter synthesis</a></li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5621476/" target="_blank">ALCAR reduces oxidative stress in aging brain models</a></li>
+      <li><a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/jnr.490300313" target="_blank">ALCAR and dopamine metabolism modulation</a></li>
+      <li><a href="https://caringsunshine.com/relationships/relationship-acetylcholine-and-acetyl-l-carnitine-2/" target="_blank">ALCAR and acetylcholine support pathway</a></li>
+      <li><a href="https://www.pnas.org/doi/10.1073/pnas.261709299" target="_blank">ALCAR + ALA combination reverses age-related mitochondrial decay (PNAS landmark study, 1999)</a></li>
+    </ul>
+
+    <h4>Brand Comparison</h4>
+    <table class="brand-table">
+      <tr><th>Brand</th><th>Verification</th><th>Verdict</th></tr>
+      <tr><td>Thorne Acetyl-L-Carnitine</td><td>Third-party tested, solid QC</td><td class="winner">✓ Recommended</td></tr>
+      <tr><td>Life Extension ALCAR</td><td>Third-party tested, solid QC</td><td class="winner">✓ Recommended</td></tr>
+      <tr><td>Unverified commodity brands</td><td>ConsumerLab failures documented</td><td class="fail">✗ Avoid</td></tr>
+    </table>
+
+    <div class="how-to-use">
+      <strong>⏱ How to Use:</strong> Take 500–1,000 mg in the morning or early afternoon — ALCAR can be mildly stimulating and may interfere with sleep if taken in the evening.
+    </div>
+  </div>
+</div>
+
+<!-- SUPP 7: R-ALA -->
+<div class="supp-card">
+  <div class="supp-header advanced">
+    <div>
+      <div class="supp-num">Advanced Stack · #7</div>
+      <div class="supp-name">R-ALA (R-Alpha Lipoic Acid)</div>
+      <div class="supp-form">Sodium R-lipoate form — not racemic ALA</div>
+    </div>
+    <div class="dose-pill advanced">100–300 mg sodium R-lipoate · with meals</div>
+  </div>
+  <div class="supp-body">
+    <h4>What It Does</h4>
+    <p>R-ALA is a mitochondrial antioxidant with a uniquely broad reach — it neutralizes free radicals in both water-soluble and fat-soluble environments, making it effective throughout the cell. It regenerates vitamins C, E, and glutathione after they've been oxidized. It crosses the blood-brain barrier, supports insulin sensitivity and glucose metabolism, and — in combination with ALCAR — produces synergistic mitochondrial effects documented in landmark research.</p>
+
+    <h4>Why Sodium R-Lipoate — Not Racemic ALA</h4>
+    <p>Standard ALA supplements are racemic — a 50/50 mixture of R and S isomers. Only the R isomer is biologically active; it is the form your body produces endogenously. More critically, the S isomer may compete with and actually reduce R-ALA uptake. Sodium R-lipoate (the stabilized salt form of R-ALA) produces approximately 2× the plasma levels of racemic ALA at equivalent doses. This is not a minor form preference — it is a meaningful pharmacokinetic difference.</p>
+
+    <div class="sourcing-box">
+      <strong>🏭 Brand Reality — Thorne vs. Life Extension:</strong> Thorne's R-Lipoic Acid product uses <strong>sodium R-lipoate</strong> — the correct, stabilized active form. Life Extension's standard R-ALA products often use racemic (R+S) ALA. <strong>Check the Life Extension label carefully</strong> — their R-form specific products exist but are not their default offering. At this level of form specificity, brand default matters.
+    </div>
+
+    <h4>The Science</h4>
+    <ul class="science-list">
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9409376/" target="_blank">R-ALA reduces amyloid-beta toxicity and restores mitochondrial membrane potential in Alzheimer's cell models</a></li>
+      <li><a href="https://onlinelibrary.wiley.com/doi/10.1155/2019/8409329" target="_blank">Alpha-lipoic acid pharmacokinetics review: R-ALA has 40% higher bioavailability than racemic mix</a></li>
+      <li><a href="https://www.frontiersin.org/articles/10.3389/fnins.2017.00651/full" target="_blank">9-week ALA supplementation improved spatial memory and reduced hippocampal oxidative damage in aging rats</a></li>
+      <li><a href="https://www.pnas.org/doi/10.1073/pnas.261709299" target="_blank">ALCAR + ALA combination reverses age-related mitochondrial decay — PNAS landmark 1999</a></li>
+    </ul>
+
+    <h4>Brand Comparison</h4>
+    <table class="brand-table">
+      <tr><th>Brand</th><th>Form</th><th>Verdict</th></tr>
+      <tr><td>Thorne R-Lipoic Acid</td><td>Sodium R-lipoate ✓</td><td class="winner">✓ Clear Winner</td></tr>
+      <tr><td>Life Extension (standard)</td><td>Often racemic R+S ALA</td><td class="caution">⚠ Check label — default may be racemic</td></tr>
+      <tr><td>Generic "ALA" products</td><td>Racemic R+S</td><td class="fail">✗ Not optimal for brain use</td></tr>
+    </table>
+
+    <div class="how-to-use">
+      <strong>⏱ How to Use:</strong> Take 100–300 mg with meals — can cause nausea on an empty stomach. Take alongside ALCAR when possible for synergistic mitochondrial effect.
+    </div>
+  </div>
+</div>
+
+<!-- SUPP 8: B COMPLEX -->
+<div class="supp-card">
+  <div class="supp-header advanced">
+    <div>
+      <div class="supp-num">Advanced Stack · #8</div>
+      <div class="supp-name">Active B Complex</div>
+      <div class="supp-form">All five vitamins in active forms — not standard B-complex</div>
+    </div>
+    <div class="dose-pill advanced">1 capsule daily · morning with food</div>
+  </div>
+  <div class="supp-body">
+    <h4>Why Active Forms Matter</h4>
+    <p>B vitamins exist in inactive (cheap) and active (bioavailable) forms. Your liver must convert inactive forms before they can be used — a process impaired by aging, liver stress, alcohol, and genetic variants. <strong>The MTHFR gene variant (affecting approximately 40% of the population)</strong> impairs folate metabolism specifically. In a brain-optimization context, you cannot afford to guess whether conversion is occurring. Use active forms directly and eliminate the variable.</p>
+
+    <h4>The Five B Vitamins That Require Active-Form Selection</h4>
+    <table class="bvit-table">
+      <tr><th>Vitamin</th><th>Inactive Form (avoid)</th><th>Active Form (use)</th><th>Key Reason</th></tr>
+      <tr><td><strong>B1</strong></td><td class="avoid">Thiamine HCl</td><td class="use">Benfotiamine</td><td>Fat-soluble; crosses cell membranes; superior metabolic uptake into cells</td></tr>
+      <tr><td><strong>B2</strong></td><td class="avoid">Riboflavin</td><td class="use">Riboflavin-5-Phosphate (R5P)</td><td>Required cofactor to activate the B6 and folate pathways — the most commonly missed B vitamin in premium formulations</td></tr>
+      <tr><td><strong>B6</strong></td><td class="avoid">Pyridoxine HCl</td><td class="use">P5P (Pyridoxal-5-Phosphate)</td><td>Hepatic conversion to active form impaired in aging and genetic variants</td></tr>
+      <tr><td><strong>B9</strong></td><td class="avoid">Folic acid</td><td class="use">5-MTHF (Methyltetrahydrofolate)</td><td>Folic acid fails entirely in MTHFR variants; may mask deficiency while leaving the methylation pathway unfueled</td></tr>
+      <tr><td><strong>B12</strong></td><td class="avoid">Cyanocobalamin</td><td class="use">Methylcobalamin</td><td>Directly supports methylation cycle for neurotransmitter synthesis and DNA repair</td></tr>
+    </table>
+
+    <div class="bvit-note">
+      <strong>Note on B2:</strong> Riboflavin-5-phosphate (R5P) is the activation cofactor for both the folate and B6 pathways. If B2 is in its inactive riboflavin form, your methylfolate and P5P are operating at reduced efficiency regardless of dose. This is the single most commonly overlooked B vitamin even in "premium" formulations — including Thorne's Basic B Complex.
+    </div>
+
+    <div class="sourcing-box">
+      <strong>🏭 Brand Reality — Life Extension vs. Thorne:</strong>
+      <strong>Life Extension BioActive B-Complex</strong> uses fully active forms across all five critical B vitamins: benfotiamine (B1), R5P (B2), P5P (B6), 5-MTHF (B9), and methylcobalamin (B12). This is the clear winner for brain-optimization use.
+      <strong>Thorne Basic B Complex</strong> uses folic acid (not methylfolate) and standard thiamine HCl (not benfotiamine) — two meaningful gaps that matter for patients with MTHFR variants or impaired hepatic conversion.
+    </div>
+
+    <h4>The Science</h4>
+    <ul class="science-list">
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4772032/" target="_blank">B vitamins and energy metabolism: systematic review — fat oxidation during cognitive tasks</a></li>
+      <li><a href="https://www.mygenefood.com/blog/do-mthfr-variants-affect-the-metabolism-of-all-b-vitamins/" target="_blank">MTHFR variants and B-vitamin metabolism — C677T and A1298C impact (~40% of population)</a></li>
+      <li><a href="https://www.mdpi.com/2072-6643/12/9/2867" target="_blank">B vitamins and one-carbon metabolism: comprehensive review</a></li>
+    </ul>
+
+    <h4>Brand Comparison</h4>
+    <table class="brand-table">
+      <tr><th>Brand</th><th>B1 Form</th><th>B2 Form</th><th>B9 Form</th><th>Verdict</th></tr>
+      <tr><td>Life Extension BioActive B-Complex</td><td class="winner">Benfotiamine ✓</td><td class="winner">R5P ✓</td><td class="winner">5-MTHF ✓</td><td class="winner">✓ Clear Winner</td></tr>
+      <tr><td>Thorne Basic B Complex</td><td class="fail">Thiamine HCl ✗</td><td>Riboflavin</td><td class="fail">Folic acid ✗</td><td class="caution">⚠ Two meaningful gaps</td></tr>
+    </table>
+
+    <div class="how-to-use">
+      <strong>⏱ How to Use:</strong> 1 capsule in the morning with food. B vitamins are water-soluble — consistent daily use is more important than precise timing.
+    </div>
+  </div>
+</div>
+
+<!-- SUPP 9: MgT -->
+<div class="supp-card">
+  <div class="supp-header advanced">
+    <div>
+      <div class="supp-num">Advanced Stack · #9</div>
+      <div class="supp-name">Magnesium L-Threonate</div>
+      <div class="supp-form">Magtein® form only — not glycinate, malate, or generic MgT</div>
+    </div>
+    <div class="dose-pill advanced">1,500–2,000 mg Magtein daily · evening</div>
+  </div>
+  <div class="supp-body">
+    <h4>What It Does</h4>
+    <p>Magnesium L-threonate raises magnesium levels specifically in the brain — supporting synaptic plasticity, NMDA receptor density, working memory, and executive function. This is the most defensible form differentiation in all of mineral supplementation, because it is the only magnesium form demonstrated to raise brain (not just serum) magnesium levels.</p>
+
+    <h4>Why This Form — Not Glycinate or Malate</h4>
+    <table class="bvit-table">
+      <tr><th>Form</th><th>Absorption</th><th>Brain Penetration</th><th>Best Use</th></tr>
+      <tr><td>Magnesium Glycinate</td><td>High</td><td class="fail">Low</td><td>Sleep, relaxation, general Mg deficiency</td></tr>
+      <tr><td>Magnesium Malate</td><td>Moderate–High</td><td class="fail">Low</td><td>Energy, muscle function</td></tr>
+      <tr><td><strong>Magnesium L-Threonate</strong></td><td>Moderate</td><td class="use">High (BBB crossing)</td><td><strong>Cognitive function, synaptic density</strong></td></tr>
+    </table>
+    <p style="font-size:0.88rem; font-family:'Arial',sans-serif; margin-top: 10px;">The threonate ion acts as a specific transporter across the blood-brain barrier. Glycinate is excellent for general use and sleep, but does not replicate the cognitive effects of MgT observed in human RCTs.</p>
+
+    <div class="sourcing-box">
+      <strong>🏭 Sourcing Reality:</strong> <strong>Magtein®</strong> is the patented magnesium L-threonate form developed at MIT (Guosong Liu lab). It is the ingredient used in all published human clinical trials. Generic MgT products have not been independently validated in RCTs — they may or may not be the same compound. Life Extension's Neuro-Mag uses Magtein. This sourcing distinction matters in a way it doesn't for every supplement category.
+    </div>
+
+    <h4>The Science</h4>
+    <ul class="science-list">
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9786204/" target="_blank">12-week RCT (n=44, age 50–70): significant improvements in episodic memory and executive function</a></li>
+      <li><a href="https://dspace.mit.edu/handle/1721.1/96066" target="_blank">MIT 2010 study: Magtein raised brain Mg 15%, increased synaptic density, improved spatial learning</a></li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11381753/" target="_blank">Mg-L-Threonate improves sleep onset latency, REM duration, and next-day cognitive focus</a></li>
+      <li><a href="https://www.lifeextension.com/magazine/2020/6/magnesium-l-threonate-regenerates-brain-structures" target="_blank">Magnesium L-threonate and brain structural regeneration</a></li>
+    </ul>
+
+    <h4>Brand Comparison</h4>
+    <table class="brand-table">
+      <tr><th>Brand</th><th>Source</th><th>Verdict</th></tr>
+      <tr><td>Life Extension Neuro-Mag</td><td>Magtein (MIT patent)</td><td class="winner">✓ Recommended</td></tr>
+      <tr><td>Thorne Magnesium Bisglycinate</td><td>Glycinate form</td><td class="caution">⚠ Different use case — sleep/relaxation only</td></tr>
+      <tr><td>Generic "Magnesium L-Threonate"</td><td>Unverified — not Magtein</td><td class="caution">⚠ Unvalidated form</td></tr>
+    </table>
+
+    <div class="how-to-use">
+      <strong>⏱ How to Use:</strong> Take 1,500–2,000 mg in the evening, 1–2 hours before bed. Magnesium supports sleep quality as a secondary benefit, making evening timing doubly useful.
+    </div>
+  </div>
+</div>
+
+<!-- ========== QUICK REFERENCE ========== -->
+<div class="section">
+  <h2 class="section-title">Quick Reference: The Complete Stack</h2>
+  <p class="section-lead">All 9 supplements, primary mechanism, active form, and top brand at a glance.</p>
+  <table class="quick-ref-table">
+    <tr><th>#</th><th>Supplement</th><th>Active Form Required</th><th>Primary Mechanism</th><th>Top Pick</th></tr>
+    <tr class="core-row"><td>1</td><td><strong>CoQ10</strong></td><td>Ubiquinol (Kaneka)</td><td>Mitochondrial electron transport + antioxidant</td><td>Life Extension / Thorne</td></tr>
+    <tr class="core-row"><td>2</td><td><strong>PQQ</strong></td><td>BioPQQ (Mitsubishi)</td><td>Mitochondrial biogenesis, NGF, neuroprotection</td><td>Any brand specifying BioPQQ 10–20mg</td></tr>
+    <tr class="core-row"><td>3</td><td><strong>Creatine</strong></td><td>Creapure monohydrate</td><td>Phosphocreatine ATP buffer — brain + muscle</td><td>Thorne (NSF Certified)</td></tr>
+    <tr class="core-row"><td>4</td><td><strong>NAD⁺ (NR)</strong></td><td>Tru Niagen NR (ChromaDex)</td><td>Sirtuin activation, DNA repair, mitochondrial regulation</td><td>Life Extension NAD+ Cell Regenerator</td></tr>
+    <tr class="core-row"><td>5</td><td><strong>Omega-3 EPA/DHA</strong></td><td>rTG form, IFOS certified</td><td>Neuroinflammation ↓, membrane fluidity, synaptic function</td><td>Thorne Super EPA / LE Mega EPA/DHA</td></tr>
+    <tr class="adv-row"><td>6</td><td><strong>ALCAR</strong></td><td>Acetyl-L-Carnitine (NSF verified)</td><td>Fatty acid transport + acetylcholine precursor</td><td>Thorne or Life Extension</td></tr>
+    <tr class="adv-row"><td>7</td><td><strong>R-ALA</strong></td><td>Sodium R-lipoate</td><td>Mitochondrial antioxidant, glutathione regeneration</td><td>Thorne R-Lipoic Acid</td></tr>
+    <tr class="adv-row"><td>8</td><td><strong>B Complex</strong></td><td>All active forms (benfotiamine, R5P, P5P, 5-MTHF, methylcobalamin)</td><td>Methylation, neurotransmitter synthesis, one-carbon metabolism</td><td>Life Extension BioActive B-Complex</td></tr>
+    <tr class="adv-row"><td>9</td><td><strong>Magnesium L-Threonate</strong></td><td>Magtein (MIT patent)</td><td>Brain Mg ↑, synaptic density, executive function</td><td>Life Extension Neuro-Mag</td></tr>
+  </table>
+  <p style="font-size:0.8rem; color:var(--text-muted); margin-top:10px; font-family:'Arial',sans-serif;">Green border = Core 5 Foundation &nbsp;|&nbsp; Blue border = Advanced Stack (add after 4–6 weeks)</p>
+</div>
+
+<!-- ========== DAILY SCHEDULE ========== -->
+<div class="section" style="background:white; padding: 48px 0;">
+<div class="container">
+  <h2 class="section-title">Daily Protocol &amp; Timing</h2>
+  <p class="section-lead">Timing affects absorption and efficacy. Follow this schedule for optimal results.</p>
+
+  <div class="schedule-block">
+    <div class="schedule-time morning">☀️ Morning — 30 min before breakfast (empty stomach)</div>
+    <ul class="schedule-items">
+      <li><strong>NAD⁺ (NR)</strong> — 300 mg · Best absorbed on empty stomach</li>
+    </ul>
+  </div>
+
+  <div class="schedule-block">
+    <div class="schedule-time morning">🍳 Morning — with breakfast (fat-containing)</div>
+    <ul class="schedule-items">
+      <li><strong>PQQ</strong> — 10–20 mg · Fat-soluble; pair with eggs, avocado, or nuts</li>
+      <li><strong>CoQ10/Ubiquinol</strong> — 200 mg · Fat required for absorption</li>
+      <li><strong>Active B Complex</strong> (Advanced Stack) — 1 capsule</li>
+      <li><strong>Omega-3</strong> — 1–1.5 g · First half of split dose</li>
+    </ul>
+  </div>
+
+  <div class="schedule-block">
+    <div class="schedule-time midday">🥗 Midday — with lunch</div>
+    <ul class="schedule-items">
+      <li><strong>CoQ10/Ubiquinol</strong> — 200 mg (split-dose option for 400 mg/day target)</li>
+      <li><strong>ALCAR</strong> (Advanced Stack) — 500–1,000 mg · Avoid evening to prevent sleep disruption</li>
+    </ul>
+  </div>
+
+  <div class="schedule-block">
+    <div class="schedule-time evening">🌙 Evening — with dinner or 1–2 hrs before bed</div>
+    <ul class="schedule-items">
+      <li><strong>Omega-3</strong> — 1–1.5 g · Second half of split dose</li>
+      <li><strong>R-ALA</strong> (Advanced Stack) — 100–300 mg · Take with food; synergistic with ALCAR</li>
+      <li><strong>Magnesium L-Threonate</strong> (Advanced Stack) — 1,500–2,000 mg · Evening supports sleep</li>
+    </ul>
+  </div>
+
+  <div class="schedule-block">
+    <div class="schedule-time anytime">⏱ Anytime — no timing dependency</div>
+    <ul class="schedule-items">
+      <li><strong>Creatine Monohydrate</strong> — 5 g · Mix into water, coffee, or protein shake</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- ========== COST BREAKDOWN ========== -->
+<div class="section">
+  <h2 class="section-title">Monthly Investment Breakdown</h2>
+  <p class="section-lead">Estimated monthly cost using recommended brands at therapeutic doses.</p>
+  <div class="cost-grid">
+    <div class="cost-card">
+      <h4>✦ Core 5 Foundation</h4>
+      <ul>
+        <li><span>PQQ 10–20 mg</span><span>$15–25</span></li>
+        <li><span>CoQ10/Ubiquinol 200–400 mg</span><span>$30–50</span></li>
+        <li><span>Creatine 5 g (Creapure)</span><span>$10–15</span></li>
+        <li><span>NAD⁺ NR 300 mg</span><span>$25–40</span></li>
+        <li><span>Omega-3 rTG 2–3 g</span><span>$20–30</span></li>
+        <li class="total"><span>Core 5 Total</span><span>$100–160/mo</span></li>
+      </ul>
+    </div>
+    <div class="cost-card">
+      <h4>◆ Advanced Stack (add-on)</h4>
+      <ul>
+        <li><span>ALCAR 500–1,000 mg</span><span>$15–25</span></li>
+        <li><span>R-ALA (sodium R-lipoate)</span><span>$15–25</span></li>
+        <li><span>Active B Complex (LE BioActive)</span><span>$10–20</span></li>
+        <li><span>Magnesium L-Threonate (Magtein)</span><span>$20–30</span></li>
+        <li class="total"><span>Advanced Add-on</span><span>$60–100/mo</span></li>
+      </ul>
+    </div>
+  </div>
+  <div style="background: #f0f7fa; border-radius:8px; padding:16px 20px; font-family:'Arial',sans-serif; font-size:0.9rem; margin-top: 8px;">
+    <strong>Full Stack Total: $160–260/month.</strong> Compare this to the compounding cost of cognitive decline, suboptimal clinical performance, and the downstream consequences of untreated mitochondrial dysfunction. Your brain is your primary professional asset.
+  </div>
+</div>
+
+<!-- ========== TIMELINE ========== -->
+<div class="section" style="background:white; padding:48px 0;">
+<div class="container">
+  <h2 class="section-title">What to Expect: The 6-Month Timeline</h2>
+  <p class="section-lead">These are not stimulants. You are rebuilding cellular infrastructure — cumulative effects build over weeks to months.</p>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h4>Weeks 1–2: The Loading Phase</h4>
+      <p>Subtle improvements in energy stability. Some patients report a clearer morning mental state. Cells are beginning to incorporate these compounds into mitochondrial machinery. Creatine phosphocreatine stores are loading.</p>
+    </div>
+    <div class="timeline-item">
+      <h4>Weeks 3–4: Noticeable Shifts</h4>
+      <p>Reduced afternoon cognitive slumps. Improved focus during demanding tasks. Memory recall becomes measurably faster. Creatine phosphocreatine stores are saturated. Most patients first consciously notice something different here.</p>
+    </div>
+    <div class="timeline-item">
+      <h4>Weeks 6–8: Consolidation</h4>
+      <p>Consistent cognitive performance baseline established. Mental fatigue takes longer to set in. Stress resilience improves — faster recovery from sleep disruption or cognitively demanding days. This is when Advanced Stack additions begin contributing.</p>
+    </div>
+    <div class="timeline-item">
+      <h4>Months 2–3: Mitochondrial Remodeling</h4>
+      <p>Mitochondrial biogenesis — driven by PQQ and NAD⁺ — reaches measurable levels. Improved problem-solving, verbal fluency, and working memory. The cumulative effect becomes a new functional baseline, not a temporary boost.</p>
+    </div>
+    <div class="timeline-item">
+      <h4>Month 6+: Long-Term Neuroprotection</h4>
+      <p>Peak performance plateau. The primary value at this stage is <strong>prevention</strong> — actively countering age-related mitochondrial decline and building cognitive reserve. This is the compounding return on investment that makes early initiation worthwhile.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ========== SAFETY ========== -->
+<div class="section">
+  <h2 class="section-title">Safety, Interactions &amp; Contraindications</h2>
+  <p class="section-lead">Always disclose supplements to your prescribing physician. These interactions are clinically significant.</p>
+  <div class="safety-grid">
+    <div class="safety-card">
+      <h4>⚠️ Blood Thinners</h4>
+      <p>CoQ10, Omega-3, and ALCAR have mild anticoagulant effects. Monitor INR closely if on warfarin. Consult physician before starting. Aspirin and Plavix combinations increase bleeding risk.</p>
+    </div>
+    <div class="safety-card">
+      <h4>⚠️ Diabetes Medications</h4>
+      <p>R-ALA may lower blood glucose. If on insulin or oral hypoglycemics (metformin, sulfonylureas), monitor glucose closely and adjust medications in consultation with your physician.</p>
+    </div>
+    <div class="safety-card">
+      <h4>⚠️ Bipolar Disorder</h4>
+      <p>High-dose ALCAR or strong methyl donors (methylated B vitamins) may trigger mania in susceptible individuals. Start at lowest dose, monitor mood carefully. Consult psychiatrist before initiating.</p>
+    </div>
+    <div class="safety-card">
+      <h4>⚠️ Pregnancy &amp; Breastfeeding</h4>
+      <p>Most of these supplements lack robust pregnancy/lactation data. Omega-3 (high-quality fish oil, rTG form) is generally considered safe. Consult OB-GYN before supplementing anything in this protocol.</p>
+    </div>
+    <div class="safety-card">
+      <h4>⚠️ Statins &amp; CoQ10</h4>
+      <p>Statins deplete endogenous CoQ10. Patients on statins have a stronger clinical rationale for ubiquinol supplementation. This is one context where even higher doses (400 mg twice daily) may be appropriate under physician supervision.</p>
+    </div>
+    <div class="safety-card">
+      <h4>ℹ️ General Side Effects</h4>
+      <p>Digestive upset (CoQ10, Omega-3, MgT) — take with food, start at lower doses. Mild nausea (NAD⁺ on empty stomach) — take with small amount of food. Loose stools (any magnesium) — reduce dose or switch to Magtein. Fishy aftertaste (Omega-3) — enteric-coated or refrigerated capsules.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ========== QUALITY STANDARDS ========== -->
+<div class="section" style="background:white; padding:48px 0;">
+<div class="container">
+  <h2 class="section-title">How to Verify Supplement Quality</h2>
+  <p class="section-lead">The FDA does not verify supplements before market. Third-party certification is the only external validation available.</p>
+  <ul class="quality-list">
+    <li><span class="badge">NSF International</span><span>Verifies label accuracy, tests for contaminants and banned substances. "NSF Certified for Sport" adds athlete-grade testing.</span></li>
+    <li><span class="badge">USP Verified</span><span>Tests for purity, potency, and dissolution. Rigorous program; fewer brands qualify.</span></li>
+    <li><span class="badge">IFOS</span><span>Fish oil-specific: tests for oxidation (rancidity), heavy metals, and PCBs. Non-negotiable for any therapeutic fish oil use.</span></li>
+    <li><span class="badge">ConsumerLab</span><span>Independent analysis of popular brands. Has documented multiple high-profile failures including ALCAR and fish oil products.</span></li>
+    <li><span class="badge">Branded Ingredients</span><span>BioPQQ, Kaneka Ubiquinol, Creapure, Tru Niagen, Magtein — these designations mean the ingredient was produced by the manufacturer whose compound appears in the research.</span></li>
+  </ul>
+
+  <h4 style="margin-top:24px; margin-bottom:12px; color:var(--primary);">Trusted Brands with Consistent QC</h4>
+  <p style="font-family:'Arial',sans-serif; font-size:0.93rem;">Thorne, Life Extension, Pure Encapsulations, Designs for Health, Jarrow Formulas, NOW Foods (NSF-certified lines). Note: No single brand is optimal across all 9 supplements — the brand comparison tables above identify the winner for each specific product.</p>
+</div>
+</div>
+
+<!-- ========== FAQ ========== -->
+<div class="section">
+  <h2 class="section-title">Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <h4>Can I take all of these at once, or should I start one at a time?</h4>
+    <p>Start conservatively with the Core 3 (PQQ, CoQ10, Creatine) for 2 weeks, then add NAD⁺ and Omega-3. This allows you to identify individual sensitivities. Add the Advanced Stack only after the Core 5 is established (4–6 weeks). The tiered approach also allows you to attribute any positive changes to specific compounds.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Will I notice immediate effects like I would from caffeine?</h4>
+    <p>No. These are not stimulants — they have no acute neurotransmitter release mechanism. Effects are cumulative: you are rebuilding cellular infrastructure, not triggering acute neurochemical responses. Most patients notice meaningful changes around weeks 3–4. The real value compounds over months.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>I'm vegetarian or vegan. Are there alternatives to fish oil?</h4>
+    <p>Yes. Algal oil provides DHA and EPA from marine algae — the original source fish get it from. The omega-3 content is equivalent. Recommended brands: Nordic Naturals Algae Omega, Ovega-3, NuTru. Note: vegetarians also tend to show greater cognitive gains from creatine supplementation due to lower baseline stores from food sources.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Can I get therapeutic doses from food alone without supplementing?</h4>
+    <p>Diet is foundational, but achieving therapeutic doses from food alone is not practical for most people. As a reference: PQQ 20 mg = approximately 5 lbs of spinach. CoQ10 200 mg = approximately 2 lbs of sardines. Creatine 5 g = approximately 2.5 lbs of raw beef. Supplementation ensures consistent, therapeutic dosing regardless of dietary variation.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Do I need to cycle these supplements?</h4>
+    <p>No cycling required. These are nutrients and cofactors your body uses continuously. Long-term use is not only safe — it is necessary for sustained mitochondrial support. The 6-month timeline shows that benefits continue accruing over time, particularly for neuroprotection.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>NMN is marketed aggressively. Is it actually better than NR?</h4>
+    <p>The 2025/2026 evidence does not support NMN's premium pricing or marketing claims. Current best evidence, including a Nature Metabolism 2025 analysis, gives NR a moderate advantage in raising circulating NAD⁺ levels. The "NMN is one step closer to NAD⁺" argument is mechanistically weaker than it sounded three years ago — gut conversion pathways complicate the direct absorption story. Start with NR (Tru Niagen). NMN is a reasonable alternative if NR is unavailable.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>Should patients on statins take a higher CoQ10 dose?</h4>
+    <p>Yes. Statins inhibit the mevalonate pathway, which reduces endogenous CoQ10 synthesis. Patients on statins have a stronger clinical rationale for ubiquinol supplementation, and doses of 400 mg twice daily are used in clinical practice. Starting at 200–400 mg/day and adjusting based on clinical response is a reasonable approach.</p>
+  </div>
+
+  <div class="faq-item">
+    <h4>What about interactions with my medications?</h4>
+    <p>Always disclose supplements to your physician, particularly if you take: anticoagulants (warfarin, aspirin, Plavix), diabetes medications (insulin, metformin, sulfonylureas), blood pressure medications (some magnesium caution), or psychiatric medications (ALCAR with MAOIs; methyl donors with bipolar disorder history). The safety section above details the specific interactions for each compound.</p>
+  </div>
+</div>
+
+<!-- ========== WHAT TO TELL CLIENTS ========== -->
+<div class="section" style="background:white; padding:48px 0;">
+<div class="container">
+  <h2 class="section-title">What to Tell Your Patients</h2>
+  <div class="client-script">
+    <h3>📋 Physician Communication Script</h3>
+    <blockquote>
+      "The supplement industry is largely unregulated — the FDA does not review supplements before they go to market. Most brands source from the same two or three global ingredient manufacturers. What protects you is third-party testing and choosing active molecular forms your body can actually use without relying on conversion pathways that decline with age and genetics.
+      <br><br>
+      These nine supplements have the strongest combined evidence base for brain energy, mitochondrial function, and cognitive performance. The specific forms and brands we've recommended are not marketing preferences — they reflect the exact molecules used in the clinical research that produced these results. A product with the right name on the label but the wrong molecular form is not the same intervention.
+      <br><br>
+      This is a 6-month protocol minimum. You are not taking a pill — you are rebuilding cellular infrastructure. Expect to notice changes around weeks 3–4. The more important benefits — neuroprotection, mitochondrial biogenesis, cognitive reserve — build over months and compound over years."
+    </blockquote>
+  </div>
+</div>
+</div>
+
+<!-- ========== BIBLIOGRAPHY ========== -->
+<div class="section">
+  <h2 class="section-title">Complete Research Bibliography</h2>
+  <p class="section-lead">All peer-reviewed sources cited in this guide. Click any link to read the full research.</p>
+
+  <div class="bib-category">
+    <h4>Foundational Brain Energy Science</h4>
+    <ul class="bib-list">
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11022390/" target="_blank">Focusing on mitochondria in the brain — neurons consume ~20% of body's oxygen from 2% of body weight</a></li>
+      <li><a href="https://bodybio.com/blogs/blog/the-mitochondria-brain-connection-why-cellular-energy-powers-mental-clarity" target="_blank">The Mitochondria–Brain Connection — neuronal mitochondrial density (up to 2 million per neuron)</a></li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5687842/" target="_blank">Mitostasis in Neurons — oxygen consumption and mitochondrial maintenance in neurons</a></li>
+    </ul>
+  </div>
+
+  <div class="bib-category">
+    <h4>CoQ10 / Ubiquinol</h4>
+    <ul class="bib-list">
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7278738/" target="_blank">CoQ10: absorption, tissue uptake, and metabolism — comprehensive review</a></li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7278738/" target="_blank">Meta-analysis on CoQ10 and fatigue reduction (n=1,126)</a></li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7146408/" target="_blank">Comparative bioavailability: ubiquinol vs. ubiquinone in adults 50+</a></li>
+    </ul>
+  </div>
+
+  <div class="bib-category">
+    <h4>PQQ (Pyrroloquinoline Quinone)</h4>
+    <ul class="bib-list">
+      <li><a href="https://www.sciencedirect.com/science/article/pii/S0891584926001127" target="_blank">PQQ improves mitochondrial structure in human lung cells</a></li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11541945/" target="_blank">PQQ and mitochondrial biogenesis via PGC-1α</a></li>
+      <li><a href="https://www.frontiersin.org/journals/aging/articles/10.3389/fragi.2024.1351860/full" target="_blank">Dietary PQQ supports mitochondrial biogenesis in aging (2024)</a></li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11246121/" target="_blank">Neuroprotective effects of PQQ in Alzheimer's and Parkinson's preclinical models</a></li>
+      <li><a href="https://pubs.rsc.org/en/content/articlehtml/2023/fo/d2fo01515c" target="_blank">Effect of PQQ on cognitive function: 8-week Japanese RCT (n=41)</a></li>
+      <li><a href="https://pubmed.ncbi.nlm.nih.gov/7764070/" target="_blank">PQQ stimulates Nerve Growth Factor production</a></li>
+    </ul>
+  </div>
+
+  <div class="bib-category">
+    <h4>Creatine Monohydrate</h4>
+    <ul class="bib-list">
+      <li><a href="https://pubmed.ncbi.nlm.nih.gov/39070254/" target="_blank">Effects of creatine on cognition: systematic review (2024)</a></li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6093191/" target="_blank">Creatine in healthy older adults (n=95, age 66–76) — 6-month RCT</a></li>
+      <li><a href="https://www.nature.com/articles/s41598-024-54249-9" target="_blank">Acute creatine loading enhances brain bioenergetics (MRS imaging)</a></li>
+      <li><a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2024.1424972/full" target="_blank">Creatine meta-analysis (26 studies) — cognitive benefit SMD = 0.22</a></li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7246861/" target="_blank">Creatine cognitive benefits for vegetarians — greater gains from lower baseline</a></li>
+      <li><a href="https://pubmed.ncbi.nlm.nih.gov/16416332/" target="_blank">Creatine mitigates cognitive decline during sleep deprivation</a></li>
+    </ul>
+  </div>
+
+  <div class="bib-category">
+    <h4>NAD⁺ Precursors (NR / NMN)</h4>
+    <ul class="bib-list">
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5107309/" target="_blank">NAD⁺ metabolism and aging — tissue-level decline documentation</a></li>
+      <li><a href="https://www.thelancet.com/journals/eclinm/article/PIIS2589-5370(25)00567-X/fulltext" target="_blank">NR improves cognitive function: Lancet eClinicalMedicine RCT 2025 (n=132, age 55–80)</a></li>
+      <li><a href="https://www.nad.com/news/nad-booster-restores-brain-immune-cells-improves-memory-new-study-reveals" target="_blank">NAD⁺ booster restores brain immune cells and spatial memory</a></li>
+      <li><a href="https://www.sciencedirect.com/science/article/pii/S0092867413007551" target="_blank">NAD⁺ biosynthesis, aging, and disease — sirtuin cofactor review (Cell journal)</a></li>
+    </ul>
+  </div>
+
+  <div class="bib-category">
+    <h4>Omega-3 EPA/DHA</h4>
+    <ul class="bib-list">
+      <li><a href="https://brain-feed.com/blogs/the-science/omega-3-brain-benefits-in-2024-key-dementia-iq-deficiencies-findings" target="_blank">Omega-3 brain benefits in 2024 — dementia, IQ, and deficiency research</a></li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12787927/" target="_blank">Nourishing the Brain: Dietary Omega-3s and cognition/mood</a></li>
+      <li><a href="https://www.scitechnol.com/peer-review/omega3-fatty-acids-and-mitochondrial-function-implications-for-metabolic-health-YbBj.php?article_id=26247" target="_blank">Omega-3 and mitochondrial function — metabolic health implications (2024)</a></li>
+      <li><a href="https://www.sciencedirect.com/science/article/pii/S0952327824002765" target="_blank">Long-term omega-3 supplementation and brain tissue DHA/EPA levels (MRS imaging)</a></li>
+      <li><a href="https://journals.lww.com/co-clinicalnutrition/fulltext/2025/03000/recent_studies_confirm_the_utility_of_the_omega_3.8.aspx" target="_blank">Omega-3 Index and brain volume in adults 65+ (2025)</a></li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9641984/" target="_blank">Effects of Omega-3 on brain functions: 32-study systematic review</a></li>
+      <li><a href="https://mghpsychnews.org/high-dose-omega-3-fatty-acids-improve-aspects-of-cognition-and-motivation/" target="_blank">High-dose omega-3 improves cognition and motivation — MGH study</a></li>
+      <li><a href="https://www.nature.com/articles/s41598-025-16129-8" target="_blank">Omega-3 dose-response meta-analysis — optimal at 2–3 g/day</a></li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12723386/" target="_blank">Role of fatty acids in neurodegenerative diseases — DHA deficiency and Alzheimer's risk (2025)</a></li>
+    </ul>
+  </div>
+
+  <div class="bib-category">
+    <h4>ALCAR (Acetyl-L-Carnitine)</h4>
+    <ul class="bib-list">
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7284336/" target="_blank">Acetyl-L-carnitine in dementia — meta-analysis of 21 trials</a></li>
+      <li><a href="https://www.alzdiscovery.org/cognitive-vitality/ratings/acetyl-lcarnitine" target="_blank">ALCAR: Cognitive Vitality Review (Alzheimer's Drug Discovery Foundation)</a></li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5621476/" target="_blank">ALCAR reduces oxidative stress in aging brain models</a></li>
+      <li><a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/jnr.490300313" target="_blank">ALCAR and dopamine metabolism modulation</a></li>
+      <li><a href="https://caringsunshine.com/relationships/relationship-acetylcholine-and-acetyl-l-carnitine-2/" target="_blank">ALCAR and acetylcholine synthesis pathway</a></li>
+      <li><a href="https://www.pnas.org/doi/10.1073/pnas.261709299" target="_blank">ALCAR + ALA reverse age-related mitochondrial decay — PNAS landmark study (1999)</a></li>
+    </ul>
+  </div>
+
+  <div class="bib-category">
+    <h4>R-Alpha Lipoic Acid (R-ALA / Sodium R-Lipoate)</h4>
+    <ul class="bib-list">
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9409376/" target="_blank">R-ALA reduces amyloid-beta toxicity and restores mitochondrial membrane potential in Alzheimer's cells</a></li>
+      <li><a href="https://onlinelibrary.wiley.com/doi/10.1155/2019/8409329" target="_blank">Alpha-lipoic acid pharmacokinetics: R-ALA has 40% higher bioavailability than racemic ALA</a></li>
+      <li><a href="https://www.frontiersin.org/articles/10.3389/fnins.2017.00651/full" target="_blank">ALA improves spatial memory and reduces hippocampal oxidative damage in aging rats</a></li>
+      <li><a href="https://www.pnas.org/doi/10.1073/pnas.261709299" target="_blank">ALCAR + ALA reverse mitochondrial decay — PNAS 1999 (landmark)</a></li>
+    </ul>
+  </div>
+
+  <div class="bib-category">
+    <h4>Active B Complex / Methylated B Vitamins</h4>
+    <ul class="bib-list">
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4772032/" target="_blank">B vitamins and energy metabolism: systematic review — fat oxidation and cognitive tasks</a></li>
+      <li><a href="https://www.mygenefood.com/blog/do-mthfr-variants-affect-the-metabolism-of-all-b-vitamins/" target="_blank">MTHFR variants and B-vitamin metabolism — C677T and A1298C (~40% of population)</a></li>
+      <li><a href="https://www.mdpi.com/2072-6643/12/9/2867" target="_blank">B vitamins and one-carbon metabolism — comprehensive review of folate, B12, B6, B2</a></li>
+    </ul>
+  </div>
+
+  <div class="bib-category">
+    <h4>Magnesium L-Threonate (Magtein)</h4>
+    <ul class="bib-list">
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9786204/" target="_blank">Magnesium L-threonate improves memory — 12-week RCT (n=44, age 50–70)</a></li>
+      <li><a href="https://dspace.mit.edu/handle/1721.1/96066" target="_blank">MIT 2010 study: brain magnesium elevation (15%) enhances synaptic density and spatial learning</a></li>
+      <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11381753/" target="_blank">Mg-L-Threonate improves sleep onset, REM duration, and next-day cognitive focus</a></li>
+      <li><a href="https://www.lifeextension.com/magazine/2020/6/magnesium-l-threonate-regenerates-brain-structures" target="_blank">Magnesium L-threonate and brain structural regeneration</a></li>
+    </ul>
+  </div>
+
+</div><!-- /section -->
+
+<!-- DISCLAIMER -->
+<div class="disclaimer">
+  This guide is for educational purposes only and does not constitute medical advice. Consult a qualified healthcare provider before starting any supplement regimen, especially if you have pre-existing medical conditions or take prescription medications. These statements have not been evaluated by the FDA. These products are not intended to diagnose, treat, cure, or prevent any disease.<br><br>
+  NeuraLift Supplement Guide — Physician Curated &nbsp;|&nbsp; Updated March 2026 &nbsp;|&nbsp; Based on 47+ peer-reviewed sources
+</div>
+
+</div><!-- /container -->
+</body>
+</html>
