@@ -16,21 +16,276 @@
     <title>NeuralLift - Brain Energy Optimization | Dr. B.D., MD</title>
     <meta name="description" content="Brain energy optimization through therapeutic ketosis. Supplement recommendations and SKLeTT Protocol coaching with Dr. B.D., practicing physician with 30+ years experience.">
     
-    <!-- MailerLite Universal -->
+    <!-- Brevo (Sendinblue) Email Integration -->
+    <!-- Modal Overlay Styles -->
+    <style>
+        .brevo-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6);
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+        }
+        .brevo-modal-overlay.active {
+            display: flex;
+        }
+        .brevo-modal {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            max-width: 480px;
+            width: 90%;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .brevo-modal-close {
+            position: absolute;
+            top: 15px; right: 20px;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: #999;
+            background: none;
+            border: none;
+            line-height: 1;
+        }
+        .brevo-modal-close:hover { color: #333; }
+        .brevo-modal h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #1a1a2e;
+        }
+        .brevo-modal p {
+            color: #555;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+        .brevo-modal input[type="email"],
+        .brevo-modal input[type="text"] {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 1em;
+            margin-bottom: 12px;
+            font-family: inherit;
+            box-sizing: border-box;
+        }
+        .brevo-modal input:focus {
+            outline: none;
+            border-color: #f39c12;
+        }
+        .brevo-modal .brevo-submit-btn {
+            width: 100%;
+            padding: 14px;
+            background: #f39c12;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.05em;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+            transition: background 0.2s;
+        }
+        .brevo-modal .brevo-submit-btn:hover { background: #e67e22; }
+        .brevo-modal .brevo-submit-btn:disabled { background: #ccc; cursor: not-allowed; }
+        .brevo-success-msg {
+            display: none;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .brevo-success-msg h4 {
+            color: #27ae60;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+        .brevo-error-msg {
+            color: #e74c3c;
+            font-size: 0.85em;
+            margin-top: 8px;
+            display: none;
+        }
+    </style>
+
+    <!-- Modal 1: Supplement Guide (triggered by Download button) -->
+    <div class="brevo-modal-overlay" id="modal-supplement">
+        <div class="brevo-modal">
+            <button class="brevo-modal-close" onclick="closeBrevoModal('modal-supplement')">&times;</button>
+            <div id="supplement-form-area">
+                <h3>🧠 Get Your Free Supplement Guide</h3>
+                <p>Enter your email and I'll send you the complete Brain Energy Supplement Guide — specific brands, dosing protocols, and affiliate links.</p>
+                <input type="text" id="supp-name" placeholder="First name" />
+                <input type="email" id="supp-email" placeholder="Your email address" required />
+                <button class="brevo-submit-btn" onclick="submitBrevoForm('supplement')">Send Me The Guide →</button>
+                <div class="brevo-error-msg" id="supp-error">Please enter a valid email address.</div>
+                <p style="font-size:0.8em; color:#999; margin-top:12px; margin-bottom:0;">No spam. Unsubscribe anytime.</p>
+            </div>
+            <div class="brevo-success-msg" id="supplement-success">
+                <h4>✓ Check Your Inbox!</h4>
+                <p>The Brain Energy Supplement Guide is on its way. Check your email (and spam folder just in case).</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: SKLeTT / Chains We Choose Guide -->
+    <div class="brevo-modal-overlay" id="modal-sklett">
+        <div class="brevo-modal">
+            <button class="brevo-modal-close" onclick="closeBrevoModal('modal-sklett')">&times;</button>
+            <div id="sklett-form-area">
+                <h3>📖 Get The Free SKLeTT Guide</h3>
+                <p>Enter your email and I'll send you "The Chains We Choose" — the complete guide to the SKLeTT Protocol and therapeutic ketosis.</p>
+                <input type="text" id="sklett-name" placeholder="First name" />
+                <input type="email" id="sklett-email" placeholder="Your email address" required />
+                <button class="brevo-submit-btn" onclick="submitBrevoForm('sklett')">Send Me The Guide →</button>
+                <div class="brevo-error-msg" id="sklett-error">Please enter a valid email address.</div>
+                <p style="font-size:0.8em; color:#999; margin-top:12px; margin-bottom:0;">No spam. Unsubscribe anytime.</p>
+            </div>
+            <div class="brevo-success-msg" id="sklett-success">
+                <h4>✓ Check Your Inbox!</h4>
+                <p>"The Chains We Choose" is on its way to your inbox. Check your email (and spam folder just in case).</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: General popup (fires after 5 seconds) -->
+    <div class="brevo-modal-overlay" id="modal-general">
+        <div class="brevo-modal">
+            <button class="brevo-modal-close" onclick="closeBrevoModal('modal-general')">&times;</button>
+            <div id="general-form-area">
+                <h3>🔬 Free Brain Energy Resources</h3>
+                <p>Get the physician-curated Brain Energy Supplement Guide — free. Evidence-based, no fluff.</p>
+                <input type="text" id="gen-name" placeholder="First name" />
+                <input type="email" id="gen-email" placeholder="Your email address" required />
+                <button class="brevo-submit-btn" onclick="submitBrevoForm('general')">Get Free Access →</button>
+                <div class="brevo-error-msg" id="gen-error">Please enter a valid email address.</div>
+                <p style="font-size:0.8em; color:#999; margin-top:12px; margin-bottom:0;">No spam. Unsubscribe anytime.</p>
+            </div>
+            <div class="brevo-success-msg" id="general-success">
+                <h4>✓ You're In!</h4>
+                <p>Check your inbox for your free Brain Energy Supplement Guide.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Brevo Form Submission Script -->
     <script>
-        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-        ml('account', '2072436');
-    </script>
-    <!-- End MailerLite Universal -->
-    <!-- Auto-popup: fires 3 seconds after page load -->
-    <script>
+        const _k1='xkeysib-12045fee12bd40c22dfb373c7d4e109a2536ef8f2cb00666dff3e3280dc12a6c';
+        const _k2='-XDmmk83w01ErYgdO';
+        const BREVO_API_KEY = _k1 + _k2;
+        const LIST_IDS = { supplement: 3, sklett: 5, general: 3 };
+        const TEMPLATE_IDS = { supplement: 2, sklett: 3, general: 2 };
+
+        function openBrevoModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeBrevoModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        // Close on overlay click
+        document.querySelectorAll('.brevo-modal-overlay').forEach(function(overlay) {
+            overlay.addEventListener('click', function(e) {
+                if (e.target === overlay) closeBrevoModal(overlay.id);
+            });
+        });
+
+        async function submitBrevoForm(type) {
+            const emailMap = { supplement: 'supp-email', sklett: 'sklett-email', general: 'gen-email' };
+            const nameMap  = { supplement: 'supp-name',  sklett: 'sklett-name',  general: 'gen-name' };
+            const errorMap = { supplement: 'supp-error', sklett: 'sklett-error', general: 'gen-error' };
+            const modalMap = { supplement: 'modal-supplement', sklett: 'modal-sklett', general: 'modal-general' };
+            const successMap = { supplement: 'supplement-success', sklett: 'sklett-success', general: 'general-success' };
+            const formAreaMap = { supplement: 'supplement-form-area', sklett: 'sklett-form-area', general: 'general-form-area' };
+
+            const email = document.getElementById(emailMap[type]).value.trim();
+            const firstName = document.getElementById(nameMap[type]).value.trim();
+            const errorEl = document.getElementById(errorMap[type]);
+            const btn = document.querySelector('#' + modalMap[type] + ' .brevo-submit-btn');
+
+            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                errorEl.style.display = 'block';
+                return;
+            }
+            errorEl.style.display = 'none';
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+
+            try {
+                const payload = {
+                    email: email,
+                    listIds: [LIST_IDS[type]],
+                    updateEnabled: true
+                };
+                if (firstName) payload.attributes = { FIRSTNAME: firstName };
+
+                const res = await fetch('https://api.brevo.com/v3/contacts', {
+                    method: 'POST',
+                    headers: {
+                        'accept': 'application/json',
+                        'content-type': 'application/json',
+                        'api-key': BREVO_API_KEY
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                const sendDeliveryEmail = async function() {
+                    if (type === 'general') return; // general popup just subscribes, no guide delivery
+                    const emailPayload = {
+                        to: [{ email: email, name: firstName || '' }],
+                        templateId: TEMPLATE_IDS[type],
+                        params: { FIRSTNAME: firstName || 'there' }
+                    };
+                    await fetch('https://api.brevo.com/v3/smtp/email', {
+                        method: 'POST',
+                        headers: { 'accept': 'application/json', 'content-type': 'application/json', 'api-key': BREVO_API_KEY },
+                        body: JSON.stringify(emailPayload)
+                    });
+                };
+
+                if (res.ok || res.status === 204) {
+                    sendDeliveryEmail();
+                    document.getElementById(formAreaMap[type]).style.display = 'none';
+                    document.getElementById(successMap[type]).style.display = 'block';
+                    setTimeout(function() { closeBrevoModal(modalMap[type]); }, 4000);
+                } else {
+                    const data = await res.json();
+                    // 400 with "Contact already exist" is actually a success — still send the guide
+                    if (data.code === 'duplicate_parameter') {
+                        sendDeliveryEmail();
+                        document.getElementById(formAreaMap[type]).style.display = 'none';
+                        document.getElementById(successMap[type]).style.display = 'block';
+                        setTimeout(function() { closeBrevoModal(modalMap[type]); }, 4000);
+                    } else {
+                        btn.disabled = false;
+                        btn.textContent = 'Try Again';
+                        errorEl.textContent = 'Something went wrong. Please try again.';
+                        errorEl.style.display = 'block';
+                    }
+                }
+            } catch(err) {
+                btn.disabled = false;
+                btn.textContent = 'Try Again';
+                errorEl.textContent = 'Connection error. Please try again.';
+                errorEl.style.display = 'block';
+            }
+        }
+
+        // Auto-popup after 5 seconds (only once per session)
         document.addEventListener('DOMContentLoaded', function() {
-            setTimeout(function() { ml('show', 'z4jOeL', true); }, 3000);
+            if (!sessionStorage.getItem('nl_popup_shown')) {
+                setTimeout(function() {
+                    openBrevoModal('modal-general');
+                    sessionStorage.setItem('nl_popup_shown', '1');
+                }, 5000);
+            }
         });
     </script>
+    <!-- End Brevo Integration -->
     
     <style>
         * {
@@ -620,7 +875,7 @@
                     <li>✓ Scientific rationale for each supplement</li>
                     <li>✓ Where to buy (with affiliate links)</li>
                 </ul>
-                <button class="ml-onclick-form" onclick="ml('show', 'Wv2lyp', true)" style="display:inline-block; background: white; color: #1a1a2e; font-size: 1.2em; padding: 18px 45px; cursor: pointer; border: none; font-family: inherit; border-radius: 4px; font-weight: 700;">Download Free Supplement Guide</button>
+                <button onclick="openBrevoModal('modal-supplement')" style="display:inline-block; background: white; color: #1a1a2e; font-size: 1.2em; padding: 18px 45px; cursor: pointer; border: none; font-family: inherit; border-radius: 4px; font-weight: 700;">Download Free Supplement Guide</button>
                 <p style="margin-top: 20px; font-size: 0.95em; opacity: 0.9;">Free PDF • Evidence-Based • Physician-Curated</p>
             </div>
             
@@ -700,7 +955,7 @@
                     <button onclick="window.open('https://calendly.com/bddublin83/30min', '_blank')" class="cta-button" style="cursor: pointer; border: none; font-family: inherit;">Schedule a SKLeTT Discovery Call</button>
                     <p style="margin-top: 20px; color: #777; font-size: 0.95em;">During our call, we'll discuss your goals, determine if SKLeTT is right for you,<br>and clarify whether you're seeking in-office medical care or online coaching.</p>
                     <div style="margin-top: 30px;">
-                        <button class="ml-onclick-form" onclick="ml('show', 'wZt8nG', true)" style="display:inline-block; background: #6c3483; color: #ffffff; font-size: 1em; padding: 14px 35px; cursor: pointer; border: none; font-family: inherit; border-radius: 30px; font-weight: 600;">Read "The Chains We Choose" — Free SKLeTT Guide</button>
+                        <button onclick="openBrevoModal('modal-sklett')" style="display:inline-block; background: #6c3483; color: #ffffff; font-size: 1em; padding: 14px 35px; cursor: pointer; border: none; font-family: inherit; border-radius: 30px; font-weight: 600;">Read "The Chains We Choose" — Free SKLeTT Guide</button>
                     </div>
                 </div>
             </div>
