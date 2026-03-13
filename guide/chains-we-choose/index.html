@@ -4,188 +4,222 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Chains We Choose</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 <style>
-
 * { box-sizing: border-box; margin: 0; padding: 0; }
+html { background: #060d1a; }
 body {
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 18px;
     line-height: 1.85;
-    color: #1a1a1a;
-    background: #fafaf8;
+    color: #b8cfe0;
+    background: #060d1a;
     max-width: 780px;
     margin: 0 auto;
-    padding: 60px 30px 100px;
+    padding: 0 0 100px;
+}
+.page-banner {
+    width: 100%;
+    display: block;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 8px 40px rgba(0,212,255,0.2);
+    margin-bottom: 0;
+}
+.page-inner {
+    padding: 48px 30px 0;
 }
 h1.doc-title {
-    font-size: 2.4em;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.5em;
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.15;
     margin-bottom: 0.2em;
-    color: #111;
+    color: #ffffff;
     letter-spacing: -0.02em;
 }
 h1.doc-subtitle {
-    font-size: 1.1em;
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
     font-weight: 400;
-    color: #555;
-    margin-bottom: 3em;
+    color: #5a8aaa;
+    margin-bottom: 2.5em;
     font-style: italic;
 }
 .part-header {
     margin: 4em 0 2em;
     padding-top: 2em;
-    border-top: 2px solid #1a1a1a;
+    border-top: 1px solid rgba(0,212,255,0.2);
 }
 .part-label {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 0.75em;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7em;
     font-weight: 700;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #888;
+    color: #00d4ff;
     margin-bottom: 0.4em;
 }
 h2.part-title {
-    font-size: 1.9em;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.85em;
     font-weight: 700;
     line-height: 1.2;
-    color: #111;
+    color: #e2eaf4;
     margin-bottom: 0.2em;
 }
 h2.part-subtitle {
-    font-size: 1.1em;
+    font-size: 1.05em;
     font-weight: 400;
     font-style: italic;
-    color: #555;
+    color: #5a8aaa;
     margin-bottom: 0;
 }
 h3 {
-    font-size: 1.3em;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.15em;
     font-weight: 700;
     margin: 2.5em 0 0.8em;
-    color: #111;
+    color: #90c4e0;
 }
 h4 {
-    font-size: 1.05em;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95em;
     font-weight: 700;
     margin: 2em 0 0.5em;
-    color: #333;
+    color: #6a9ec0;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
-p {
-    margin-bottom: 1.4em;
-}
+p { margin-bottom: 1.4em; }
 em { font-style: italic; }
-strong { font-weight: 700; }
+strong { font-weight: 700; color: #dde8f2; }
 a {
-    color: #1a5276;
+    color: #00d4ff;
     text-decoration: underline;
     text-underline-offset: 3px;
+    transition: color 0.15s;
 }
-a:hover { color: #2e86c1; }
+a:hover { color: #66e8ff; }
 hr {
     border: none;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid rgba(0,212,255,0.12);
     margin: 2.5em 0;
 }
 .section-break {
     text-align: center;
-    color: #aaa;
-    font-size: 1.2em;
+    color: #00d4ff;
+    font-size: 1em;
     margin: 2.5em 0;
-    letter-spacing: 0.4em;
+    letter-spacing: 0.5em;
+    opacity: 0.5;
 }
 .callout {
-    background: #f0f4f8;
-    border-left: 4px solid #1a5276;
+    background: rgba(0,212,255,0.05);
+    border-left: 3px solid #00d4ff;
     border-radius: 0 8px 8px 0;
     padding: 1.5em 2em;
     margin: 2.5em 0;
 }
 .callout-title {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-size: 0.75em;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7em;
     font-weight: 700;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: #1a5276;
+    color: #00d4ff;
     margin-bottom: 0.8em;
 }
 .callout p { margin-bottom: 0.8em; }
 .callout p:last-child { margin-bottom: 0; }
 .transition-bridge {
-    background: #f8f5ef;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(0,212,255,0.12);
     border-radius: 8px;
     padding: 1.8em 2.2em;
     margin: 3em 0;
     font-style: italic;
-    color: #444;
+    color: #7a9fbe;
     font-size: 0.95em;
 }
 blockquote {
-    border-left: 3px solid #ccc;
+    border-left: 3px solid rgba(0,212,255,0.35);
     margin: 1.5em 0;
     padding: 0.5em 1.5em;
-    color: #444;
+    color: #7090aa;
     font-style: italic;
 }
 .key-statement {
+    font-family: 'Playfair Display', Georgia, serif;
     font-size: 1.15em;
     font-weight: 700;
     text-align: center;
     margin: 2em 0;
-    padding: 1em;
-    color: #111;
+    padding: 1.2em 1.5em;
+    color: #ffffff;
+    background: rgba(0,212,255,0.06);
+    border-radius: 8px;
+    border: 1px solid rgba(0,212,255,0.18);
 }
 .timeline-item {
     margin-bottom: 1em;
     padding-left: 1.2em;
-    border-left: 3px solid #1a5276;
+    border-left: 3px solid #00d4ff;
 }
 .timeline-label {
     font-weight: 700;
-    color: #1a5276;
+    color: #00d4ff;
 }
 .bibliography {
     margin-top: 5em;
     padding-top: 2em;
-    border-top: 2px solid #1a1a1a;
+    border-top: 1px solid rgba(0,212,255,0.2);
 }
 .bibliography h2 {
-    font-size: 1.4em;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #e2eaf4;
     margin-bottom: 1.5em;
 }
 .bib-entry {
     margin-bottom: 1.2em;
     padding-left: 2em;
     text-indent: -2em;
-    font-size: 0.88em;
+    font-size: 0.86em;
     line-height: 1.6;
-    color: #333;
+    color: #7a9fbe;
 }
 .bib-entry a {
     font-size: 0.95em;
     word-break: break-all;
+    color: #00d4ff;
 }
 .nav-toc {
-    background: #f0f4f8;
+    background: rgba(0,212,255,0.05);
+    border: 1px solid rgba(0,212,255,0.18);
     border-radius: 8px;
     padding: 1.5em 2em;
-    margin: 3em 0;
+    margin: 2.5em 0;
 }
-.nav-toc h3 { margin-top: 0; font-size: 1em; color: #1a5276; }
+.nav-toc h3 { margin-top: 0; font-size: 0.95em; color: #00d4ff; font-family: 'Inter', sans-serif; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
 .nav-toc ul { list-style: none; padding: 0; }
-.nav-toc li { margin: 0.4em 0; font-size: 0.92em; }
-.nav-toc a { text-decoration: none; }
-.nav-toc a:hover { text-decoration: underline; }
+.nav-toc li { margin: 0.5em 0; font-size: 0.92em; }
+.nav-toc a { text-decoration: none; color: #90c4e0; }
+.nav-toc a:hover { color: #00d4ff; text-decoration: underline; }
+footer { color: #3a5a70 !important; }
+footer p { color: #3a5a70 !important; }
 @media (max-width: 600px) {
-    body { font-size: 16px; padding: 30px 18px 60px; }
+    .page-inner { padding: 30px 18px 0; }
     h1.doc-title { font-size: 1.8em; }
 }
-
 </style>
 </head>
 <body>
+
+<img class="page-banner" src="https://d2xsxph8kpxj0f.cloudfront.net/310419663030046074/WUeFF234WTou8GTDSA3rPH/neuralift_banner_v2_a6b6da8d.jpg" alt="NeuraLIFT" />
+
+<div class="page-inner">
 
 <h1 class="doc-title">The Chains We Choose</h1>
 <h1 class="doc-subtitle">A Physician&rsquo;s Account of Why We Stay Stuck &mdash; and the Biology That Can Set Us Free</h1>
@@ -707,5 +741,6 @@ What I&rsquo;m about to show you is the pattern I&rsquo;ve seen play out in exam
 <footer style="margin-top:5em; padding-top:2em; border-top:1px solid #ddd; font-size:0.82em; color:#888; font-family:'Helvetica Neue',Arial,sans-serif;">
   <p>All patient names and identifying details have been changed to protect privacy. The clinical observations described represent the physician&rsquo;s own practice experience. This document is for informational and educational purposes. Consult a qualified physician before beginning any therapeutic protocol.</p>
 </footer>
+</div><!-- /page-inner -->
 </body>
 </html>
