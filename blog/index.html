@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | NeuralLift — The Mitochondrial Decline Series</title>
+    <meta name="description" content="The Mitochondrial Decline: A five-part series on why children are getting sicker, why adults are aging faster, and what to do about it. By Dr. Barry Dublin, MD.">
+    <meta name="keywords" content="mitochondrial decline, mitochondrial dysfunction, chronic illness children, aging faster, environmental toxins, therapeutic ketosis, Dr. Barry Dublin">
+    <meta property="og:title" content="The Mitochondrial Decline Series | NeuralLift Blog">
+    <meta property="og:description" content="Why children are getting sicker and adults are aging faster — and what to do about it. A five-part plain-English guide by Dr. Barry Dublin, MD.">
+    <meta property="og:url" content="https://neuralift.co/blog">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://neuralift.co/blog">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #ffffff;
+        }
+        .disclaimer-bar {
+            background: #1a1a2e;
+            color: #f39c12;
+            padding: 12px 20px;
+            text-align: center;
+            font-size: 14px;
+            border-bottom: 3px solid #f39c12;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .disclaimer-bar a { color: #f39c12; text-decoration: underline; }
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.8em;
+            font-weight: 800;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+        .hero .subtitle {
+            font-size: 1.3em;
+            color: #ecf0f1;
+            font-weight: 300;
+            max-width: 800px;
+            margin: 0 auto 10px;
+        }
+        .hero .tagline {
+            font-size: 1.1em;
+            color: #f39c12;
+            font-weight: 600;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .series-intro {
+            font-size: 1.15em;
+            color: #555;
+            margin-bottom: 50px;
+            line-height: 1.8;
+            text-align: center;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .article-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 35px 40px;
+            margin-bottom: 25px;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: block;
+            color: inherit;
+        }
+        .article-card:hover {
+            border-color: #f39c12;
+            box-shadow: 0 8px 25px rgba(243, 156, 18, 0.15);
+            transform: translateY(-3px);
+        }
+        .article-card .part-label {
+            display: inline-block;
+            background: #f39c12;
+            color: white;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .article-card h2 {
+            font-size: 1.5em;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+        .article-card p {
+            font-size: 1.05em;
+            color: #666;
+            line-height: 1.6;
+        }
+        .cta-section {
+            background: #f8f9fa;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: 2em;
+            color: #1a1a2e;
+            margin-bottom: 15px;
+        }
+        .cta-section p {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #f39c12;
+            color: #1a1a2e;
+            padding: 16px 40px;
+            font-size: 1.1em;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+            border: 3px solid #f39c12;
+        }
+        .cta-button:hover {
+            background: transparent;
+            color: #f39c12;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(243, 156, 18, 0.3);
+        }
+        .footer {
+            background: #1a1a2e;
+            color: #bdc3c7;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        .footer a { color: #f39c12; text-decoration: none; }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #f39c12;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .back-link:hover { text-decoration: underline; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2em; }
+            .article-card { padding: 25px; }
+            .article-card h2 { font-size: 1.3em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="disclaimer-bar">
+        <a href="https://neuralift.co">← Back to NeuralLift Home</a> &nbsp;|&nbsp; Educational content by Dr. Barry Dublin, MD. Not medical advice.
+    </div>
+
+    <div class="hero">
+        <h1>The Mitochondrial Decline</h1>
+        <p class="subtitle">Why Our Children Are Sicker and We Are Aging Faster — and What to Do About It</p>
+        <p class="tagline">A Five-Part Series by Dr. Barry Dublin, MD</p>
+    </div>
+
+    <div class="container">
+        <p class="series-intro">
+            This series explains the single most useful biological framework for understanding why so many different illnesses are rising at the same time — in children and in adults — and what you can actually do about it. No clickbait. No supplement sales. Just the mechanism, the evidence, and the plan.
+        </p>
+
+        <a href="/blog/mitochondrial-decline/part-1-why-your-cells-have-power-plants.html" class="article-card">
+            <span class="part-label">Part 1</span>
+            <h2>Why Your Cells Have Power Plants — and Why That Should Worry You</h2>
+            <p>The mechanism explained: what mitochondria are, why they are the key to understanding modern chronic illness, and why the same interventions keep working across very different conditions.</p>
+        </a>
+
+        <a href="/blog/mitochondrial-decline/part-2-the-damage-starts-before-the-first-breath.html" class="article-card">
+            <span class="part-label">Part 2</span>
+            <h2>The Damage Starts Before the First Breath</h2>
+            <p>Microplastics in every placenta tested. PFAS in cord blood. Newborns showing ten times more DNA damage per unit of exposure than the mothers carrying them. The prenatal evidence is in.</p>
+        </a>
+
+        <a href="/blog/mitochondrial-decline/part-3-how-modern-life-poisons-the-power-plants.html" class="article-card">
+            <span class="part-label">Part 3</span>
+            <h2>How Modern Life Poisons the Power Plants</h2>
+            <p>The six doorways through which modern life damages mitochondria: air, plastic, PFAS, pesticides, ultra-processed food, and metals and medications. The mental map you need.</p>
+        </a>
+
+        <a href="/blog/mitochondrial-decline/part-4-why-adults-feel-the-same-damage-as-a-slow-burn.html" class="article-card">
+            <span class="part-label">Part 4</span>
+            <h2>Why Adults Feel the Same Damage as a Slow Burn</h2>
+            <p>How mitochondrial decline explains the modern adult symptom cluster — fatigue, brain fog, joint pain, metabolic creep — and why it is not just aging. Plus: what centenarians tell us.</p>
+        </a>
+
+        <a href="/blog/mitochondrial-decline/part-5-the-fix-a-real-doable-plan.html" class="article-card">
+            <span class="part-label">Part 5</span>
+            <h2>The Fix: A Real, Doable Plan to Rebuild Your Mitochondria</h2>
+            <p>Eight concrete, prioritized, affordable steps any family can start this week — from daily movement to therapeutic ketosis. The order of operations that actually works.</p>
+        </a>
+    </div>
+
+    <div class="cta-section">
+        <h2>Get the Complete Reference Guide</h2>
+        <p>Every toxin category, every practical alternative, the Dirty Dozen list, and the full daily-life action guide — in one downloadable PDF.</p>
+        <a href="/guide/chains-we-choose" class="cta-button">Download the Free Guide →</a>
+    </div>
+
+    <div class="footer">
+        <p>Dr. Barry Dublin, MD | <a href="https://neuralift.co">neuralift.co</a> | <a href="https://neuralift.co/sklett/protocol">SKLeTT Protocol</a></p>
+        <p style="margin-top: 10px;">© 2026 NeuralLift. All rights reserved.</p>
+    </div>
+</body>
+</html>
